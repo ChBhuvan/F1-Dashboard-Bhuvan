@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-26T07:00:52.826677+00:00",
+  "updated_at": "2026-04-26T07:11:51.533516+00:00",
   "drivers": [
     {
       "pos": 1,
@@ -424,6 +424,10 @@
     "champ_leader": "A. Antonelli",
     "champ_runner_up": "G. Russell",
     "fastest_lap": "1:32.432",
-    "fastest_lap_driver": "Antonelli"
+    "fastest_lap_driver": "Antonelli",
+    "top_speed_kmh": "\u2014",
+    "top_speed_driver": "\u2014",
+    "top_speed_code": "\u2014",
+    "top_speed_race": "\u2014"
   }
 }
