@@ -1,0 +1,407 @@
+{
+  "updated_at": "2026-04-26T06:31:21.950760+00:00",
+  "drivers": [
+    {
+      "pos": 1,
+      "code": "ANT",
+      "name": "A. Antonelli",
+      "team": "Mercedes",
+      "pts": 72,
+      "nat": "Italian"
+    },
+    {
+      "pos": 2,
+      "code": "RUS",
+      "name": "G. Russell",
+      "team": "Mercedes",
+      "pts": 63,
+      "nat": "British"
+    },
+    {
+      "pos": 3,
+      "code": "LEC",
+      "name": "C. Leclerc",
+      "team": "Ferrari",
+      "pts": 49,
+      "nat": "Monegasque"
+    },
+    {
+      "pos": 4,
+      "code": "HAM",
+      "name": "L. Hamilton",
+      "team": "Ferrari",
+      "pts": 41,
+      "nat": "British"
+    },
+    {
+      "pos": 5,
+      "code": "NOR",
+      "name": "L. Norris",
+      "team": "McLaren",
+      "pts": 25,
+      "nat": "British"
+    },
+    {
+      "pos": 6,
+      "code": "PIA",
+      "name": "O. Piastri",
+      "team": "McLaren",
+      "pts": 21,
+      "nat": "Australian"
+    },
+    {
+      "pos": 7,
+      "code": "BEA",
+      "name": "O. Bearman",
+      "team": "Haas F1 Team",
+      "pts": 17,
+      "nat": "British"
+    },
+    {
+      "pos": 8,
+      "code": "GAS",
+      "name": "P. Gasly",
+      "team": "Alpine F1 Team",
+      "pts": 15,
+      "nat": "French"
+    },
+    {
+      "pos": 9,
+      "code": "VER",
+      "name": "M. Verstappen",
+      "team": "Red Bull",
+      "pts": 12,
+      "nat": "Dutch"
+    },
+    {
+      "pos": 10,
+      "code": "LAW",
+      "name": "L. Lawson",
+      "team": "RB F1 Team",
+      "pts": 10,
+      "nat": "New Zealander"
+    }
+  ],
+  "constructors": [
+    {
+      "pos": 1,
+      "name": "Mercedes",
+      "pts": 135,
+      "bar_pct": 100.0,
+      "nat": "German"
+    },
+    {
+      "pos": 2,
+      "name": "Ferrari",
+      "pts": 90,
+      "bar_pct": 66.7,
+      "nat": "Italian"
+    },
+    {
+      "pos": 3,
+      "name": "McLaren",
+      "pts": 46,
+      "bar_pct": 34.1,
+      "nat": "British"
+    },
+    {
+      "pos": 4,
+      "name": "Haas F1 Team",
+      "pts": 18,
+      "bar_pct": 13.3,
+      "nat": "American"
+    },
+    {
+      "pos": 5,
+      "name": "Alpine F1 Team",
+      "pts": 16,
+      "bar_pct": 11.9,
+      "nat": "French"
+    },
+    {
+      "pos": 6,
+      "name": "Red Bull",
+      "pts": 16,
+      "bar_pct": 11.9,
+      "nat": "Austrian"
+    },
+    {
+      "pos": 7,
+      "name": "RB F1 Team",
+      "pts": 14,
+      "bar_pct": 10.4,
+      "nat": "Italian"
+    },
+    {
+      "pos": 8,
+      "name": "Audi",
+      "pts": 2,
+      "bar_pct": 1.5,
+      "nat": "German"
+    },
+    {
+      "pos": 9,
+      "name": "Williams",
+      "pts": 2,
+      "bar_pct": 1.5,
+      "nat": "British"
+    },
+    {
+      "pos": 10,
+      "name": "Cadillac F1 Team",
+      "pts": 0,
+      "bar_pct": 0.0,
+      "nat": "American"
+    },
+    {
+      "pos": 11,
+      "name": "Aston Martin",
+      "pts": 0,
+      "bar_pct": 0.0,
+      "nat": "British"
+    }
+  ],
+  "last_race": {
+    "name": "Japanese Grand Prix",
+    "circuit": "Suzuka Circuit",
+    "round": 3,
+    "date": "2026-03-29",
+    "podium": [
+      {
+        "pos": 1,
+        "name": "Andrea Kimi Antonelli",
+        "team": "Mercedes",
+        "time": "1:28:03.403"
+      },
+      {
+        "pos": 2,
+        "name": "Oscar Piastri",
+        "team": "McLaren",
+        "time": "+13.722"
+      },
+      {
+        "pos": 3,
+        "name": "Charles Leclerc",
+        "team": "Ferrari",
+        "time": "+15.270"
+      }
+    ],
+    "fastest_lap": {
+      "driver": "Antonelli",
+      "time": "1:32.432"
+    }
+  },
+  "next_race": {
+    "name": "Miami Grand Prix",
+    "circuit": "Miami International Autodrome",
+    "location": "Miami",
+    "country": "USA",
+    "round": 4,
+    "date": "2026-05-03",
+    "datetime": "2026-05-03T20:00:00+00:00",
+    "flag": "USA"
+  },
+  "calendar": [
+    {
+      "round": 1,
+      "name": "Australian Grand Prix",
+      "circuit": "Albert Park Grand Prix Circuit",
+      "country": "Australia",
+      "date": "2026-03-08",
+      "status": "done"
+    },
+    {
+      "round": 2,
+      "name": "Chinese Grand Prix",
+      "circuit": "Shanghai International Circuit",
+      "country": "China",
+      "date": "2026-03-15",
+      "status": "done"
+    },
+    {
+      "round": 3,
+      "name": "Japanese Grand Prix",
+      "circuit": "Suzuka Circuit",
+      "country": "Japan",
+      "date": "2026-03-29",
+      "status": "done"
+    },
+    {
+      "round": 4,
+      "name": "Miami Grand Prix",
+      "circuit": "Miami International Autodrome",
+      "country": "USA",
+      "date": "2026-05-03",
+      "status": "upcoming"
+    },
+    {
+      "round": 5,
+      "name": "Canadian Grand Prix",
+      "circuit": "Circuit Gilles Villeneuve",
+      "country": "Canada",
+      "date": "2026-05-24",
+      "status": "upcoming"
+    },
+    {
+      "round": 6,
+      "name": "Monaco Grand Prix",
+      "circuit": "Circuit de Monaco",
+      "country": "Monaco",
+      "date": "2026-06-07",
+      "status": "upcoming"
+    },
+    {
+      "round": 7,
+      "name": "Barcelona Grand Prix",
+      "circuit": "Circuit de Barcelona-Catalunya",
+      "country": "Spain",
+      "date": "2026-06-14",
+      "status": "upcoming"
+    },
+    {
+      "round": 8,
+      "name": "Austrian Grand Prix",
+      "circuit": "Red Bull Ring",
+      "country": "Austria",
+      "date": "2026-06-28",
+      "status": "upcoming"
+    },
+    {
+      "round": 9,
+      "name": "British Grand Prix",
+      "circuit": "Silverstone Circuit",
+      "country": "UK",
+      "date": "2026-07-05",
+      "status": "upcoming"
+    },
+    {
+      "round": 10,
+      "name": "Belgian Grand Prix",
+      "circuit": "Circuit de Spa-Francorchamps",
+      "country": "Belgium",
+      "date": "2026-07-19",
+      "status": "upcoming"
+    },
+    {
+      "round": 11,
+      "name": "Hungarian Grand Prix",
+      "circuit": "Hungaroring",
+      "country": "Hungary",
+      "date": "2026-07-26",
+      "status": "upcoming"
+    },
+    {
+      "round": 12,
+      "name": "Dutch Grand Prix",
+      "circuit": "Circuit Park Zandvoort",
+      "country": "Netherlands",
+      "date": "2026-08-23",
+      "status": "upcoming"
+    },
+    {
+      "round": 13,
+      "name": "Italian Grand Prix",
+      "circuit": "Autodromo Nazionale di Monza",
+      "country": "Italy",
+      "date": "2026-09-06",
+      "status": "upcoming"
+    },
+    {
+      "round": 14,
+      "name": "Spanish Grand Prix",
+      "circuit": "Madring",
+      "country": "Spain",
+      "date": "2026-09-13",
+      "status": "upcoming"
+    },
+    {
+      "round": 15,
+      "name": "Azerbaijan Grand Prix",
+      "circuit": "Baku City Circuit",
+      "country": "Azerbaijan",
+      "date": "2026-09-26",
+      "status": "upcoming"
+    },
+    {
+      "round": 16,
+      "name": "Singapore Grand Prix",
+      "circuit": "Marina Bay Street Circuit",
+      "country": "Singapore",
+      "date": "2026-10-11",
+      "status": "upcoming"
+    },
+    {
+      "round": 17,
+      "name": "United States Grand Prix",
+      "circuit": "Circuit of the Americas",
+      "country": "USA",
+      "date": "2026-10-25",
+      "status": "upcoming"
+    },
+    {
+      "round": 18,
+      "name": "Mexico City Grand Prix",
+      "circuit": "Aut\u00f3dromo Hermanos Rodr\u00edguez",
+      "country": "Mexico",
+      "date": "2026-11-01",
+      "status": "upcoming"
+    },
+    {
+      "round": 19,
+      "name": "Brazilian Grand Prix",
+      "circuit": "Aut\u00f3dromo Jos\u00e9 Carlos Pace",
+      "country": "Brazil",
+      "date": "2026-11-08",
+      "status": "upcoming"
+    },
+    {
+      "round": 20,
+      "name": "Las Vegas Grand Prix",
+      "circuit": "Las Vegas Strip Street Circuit",
+      "country": "USA",
+      "date": "2026-11-22",
+      "status": "upcoming"
+    },
+    {
+      "round": 21,
+      "name": "Qatar Grand Prix",
+      "circuit": "Losail International Circuit",
+      "country": "Qatar",
+      "date": "2026-11-29",
+      "status": "upcoming"
+    },
+    {
+      "round": 22,
+      "name": "Abu Dhabi Grand Prix",
+      "circuit": "Yas Marina Circuit",
+      "country": "UAE",
+      "date": "2026-12-06",
+      "status": "upcoming"
+    }
+  ],
+  "news": [
+    {
+      "headline": "BREAKING: The Turkish Grand Prix will return to the calendar from 2027 as part of a new five-year agreement",
+      "url": "https://www.reddit.com/r/formula1/comments/1sudubo/breaking_the_turkish_grand_prix_will_return_to/"
+    },
+    {
+      "headline": "Red Bull confirms it won't upgrade its power unit despite coming under ADUO",
+      "url": "https://www.reddit.com/r/formula1/comments/1svdt7h/red_bull_confirms_it_wont_upgrade_its_power_unit/"
+    },
+    {
+      "headline": "Jean Alesi crashes historic Ferrari",
+      "url": "https://www.reddit.com/r/formula1/comments/1svb1o3/jean_alesi_crashes_historic_ferrari/"
+    },
+    {
+      "headline": "James Vowles sets realistic expectations for Williams in 2026",
+      "url": "https://www.reddit.com/r/formula1/comments/1sugie2/james_vowles_sets_realistic_expectations_for/"
+    }
+  ],
+  "stats": {
+    "champ_gap": 9,
+    "champ_leader": "A. Antonelli",
+    "champ_runner_up": "G. Russell",
+    "fastest_lap": "1:32.432",
+    "fastest_lap_driver": "Antonelli"
+  }
+}
