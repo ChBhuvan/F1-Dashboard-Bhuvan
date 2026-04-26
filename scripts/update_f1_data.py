@@ -308,85 +308,73 @@ def champ_gap(drivers):
         return drivers[0]["pts"] - drivers[1]["pts"]
     return 0
 
-# ── 8. Top speed across all completed races this season ───────────────
-#
-# Jolpica does not expose a dedicated top-speed endpoint, so we pull
-# lap-time data for each completed race and use the qualifying/race
-# results to find the fastest speed trap reading.
-# OpenF1 has real speed-trap data — we use that here via a simple fetch.
+# ── 8. Qualifying gap between P1 and P2 from the last race weekend ──
 
-def fetch_top_speed():
+def fetch_quali_gap():
     """
-    Fetches the highest speed trap value recorded this season from OpenF1.
-    Returns a dict: { speed_kmh, driver_name, driver_code, race_name, round }
-    Falls back to a sensible default if the API is unavailable.
+    Fetches the most recent qualifying result and returns the
+    gap in milliseconds between pole and P2, formatted as a string.
+    Returns: { gap, pole_driver, p2_driver, race_name }
     """
     try:
-        # OpenF1: get all sessions for current year
-        year = datetime.now(timezone.utc).year
-        sessions_url = f"https://api.openf1.org/v1/sessions?year={year}&session_type=Race"
-        sessions_res = requests.get(sessions_url, headers=HEADERS, timeout=15)
-        sessions_res.raise_for_status()
-        sessions = sessions_res.json()
-
-        if not sessions:
+        data  = get(f"{BASE}/current/last/qualifying.json")
+        races = data["MRData"]["RaceTable"]["Races"]
+        if not races:
             return {}
 
-        best = {"speed": 0}
-
-        # Check up to the last 5 completed races to keep requests manageable
-        for session in sessions[-5:]:
-            session_key = session.get("session_key")
-            if not session_key:
-                continue
-
-            # Fetch car data (speed trap readings) — limit to 1000 rows
-            speed_url = (
-                f"https://api.openf1.org/v1/car_data"
-                f"?session_key={session_key}&speed>={best['speed']}&fields=speed,driver_number"
-            )
-            speed_res = requests.get(speed_url, headers=HEADERS, timeout=20)
-            if not speed_res.ok:
-                continue
-
-            readings = speed_res.json()
-            if not readings:
-                continue
-
-            # Find the max speed reading in this session
-            top = max(readings, key=lambda x: x.get("speed", 0), default=None)
-            if not top or top.get("speed", 0) <= best["speed"]:
-                continue
-
-            # Get driver info for this number
-            driver_num = top.get("driver_number")
-            driver_url = (
-                f"https://api.openf1.org/v1/drivers"
-                f"?session_key={session_key}&driver_number={driver_num}"
-            )
-            driver_res = requests.get(driver_url, headers=HEADERS, timeout=10)
-            driver_info = driver_res.json()[0] if driver_res.ok and driver_res.json() else {}
-
-            best = {
-                "speed":       top["speed"],
-                "driver_name": driver_info.get("full_name", f"#{driver_num}"),
-                "driver_code": driver_info.get("name_acronym", "—"),
-                "race_name":   session.get("meeting_name", "—"),
-                "round":       session.get("meeting_key", "—"),
-            }
-
-        if best["speed"] == 0:
+        race    = races[0]
+        results = race.get("QualifyingResults", [])
+        if len(results) < 2:
             return {}
+
+        race_name = race["raceName"].replace(" Grand Prix", " GP")
+
+        p1 = results[0]
+        p2 = results[1]
+
+        # Use Q3 time if available, fall back to Q2 then Q1
+        def best_time(r):
+            return r.get("Q3") or r.get("Q2") or r.get("Q1") or ""
+
+        def parse_ms(t):
+            """Convert m:ss.mmm or ss.mmm to milliseconds."""
+            if not t:
+                return None
+            try:
+                if ":" in t:
+                    mins, rest = t.split(":")
+                    return int(mins) * 60000 + round(float(rest) * 1000)
+                return round(float(t) * 1000)
+            except Exception:
+                return None
+
+        t1 = parse_ms(best_time(p1))
+        t2 = parse_ms(best_time(p2))
+
+        if t1 is None or t2 is None:
+            return {}
+
+        gap_ms  = t2 - t1
+        gap_sec = gap_ms / 1000.0
+
+        # Format as +0.000s
+        gap_str = f"+{gap_sec:.3f}s"
+
+        p1_driver = p1["Driver"]
+        p2_driver = p2["Driver"]
 
         return {
-            "speed_kmh":   best["speed"],
-            "driver_name": best["driver_name"],
-            "driver_code": best["driver_code"],
-            "race_name":   best["race_name"],
+            "gap":         gap_str,
+            "gap_ms":      gap_ms,
+            "pole_driver": f"{p1_driver['givenName'][0]}. {p1_driver['familyName']}",
+            "pole_code":   p1_driver.get("code", p1_driver["familyName"][:3].upper()),
+            "p2_driver":   f"{p2_driver['givenName'][0]}. {p2_driver['familyName']}",
+            "p2_code":     p2_driver.get("code", p2_driver["familyName"][:3].upper()),
+            "race_name":   race_name,
         }
 
     except Exception as e:
-        print(f"  ⚠️  Top speed fetch failed: {e}")
+        print(f"  ⚠️  Qualifying gap fetch failed: {e}")
         return {}
 
 # ── Assemble and write ───────────────────────────────────────────────
@@ -410,8 +398,8 @@ def main():
     print("Fetching r/formula1 news …")
     news = safe(fetch_reddit_news, [])
 
-    print("Fetching top speed …")
-    top_speed = safe(fetch_top_speed, {})
+    print("Fetching qualifying gap …")
+    quali_gap = safe(fetch_quali_gap, {})
 
     payload = {
         "updated_at":    datetime.now(timezone.utc).isoformat(),
@@ -423,14 +411,14 @@ def main():
         "news":          news,
         "stats": {
             "champ_gap":          champ_gap(drivers),
-            "champ_leader":       drivers[0]["name"]    if drivers else "—",
-            "champ_runner_up":    drivers[1]["name"]    if len(drivers) > 1 else "—",
+            "champ_leader":       drivers[0]["name"]  if drivers else "—",
+            "champ_runner_up":    drivers[1]["name"]  if len(drivers) > 1 else "—",
             "fastest_lap":        last_race.get("fastest_lap", {}).get("time", "—"),
             "fastest_lap_driver": last_race.get("fastest_lap", {}).get("driver", "—"),
-            "top_speed_kmh":      top_speed.get("speed_kmh", "—"),
-            "top_speed_driver":   top_speed.get("driver_name", "—"),
-            "top_speed_code":     top_speed.get("driver_code", "—"),
-            "top_speed_race":     top_speed.get("race_name", "—"),
+            "quali_gap":          quali_gap.get("gap", "—"),
+            "quali_pole":         quali_gap.get("pole_driver", "—"),
+            "quali_p2":           quali_gap.get("p2_driver", "—"),
+            "quali_race":         quali_gap.get("race_name", "—"),
         },
     }
 
@@ -439,7 +427,8 @@ def main():
 
     print(f"✅  data.json written — {len(drivers)} drivers, "
           f"{len(constructors)} constructors, {len(news)} news items, "
-          f"top speed: {payload['stats']['top_speed_kmh']} km/h.")
+          f"quali gap: {payload['stats']['quali_gap']} "
+          f"({payload['stats']['quali_pole']} vs {payload['stats']['quali_p2']}).")
 
 if __name__ == "__main__":
     main()
