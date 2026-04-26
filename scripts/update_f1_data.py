@@ -137,35 +137,153 @@ def fetch_calendar():
 
 # ── 6. r/formula1 RSS headlines ──────────────────────────────────────
 
-def fetch_reddit_news():
-    RSS_URL = "https://www.reddit.com/r/formula1/hot.rss?limit=20"
-    r = requests.get(RSS_URL, headers={"User-Agent": "BhuvanF1Dashboard/1.0"}, timeout=15)
-    r.raise_for_status()
+# Posts containing these words are immediately discarded
+SKIP_ALWAYS = [
+    "megathread", "mod post", "daily discussion", "weekly",
+    "rate the race", "what did you think", "hot take",
+    "unpopular opinion", "rant", "meme", "karma",
+    "fantasy", "f1 game", "f1 23", "f1 24", "f1 25",
+    "fan art", "wallpaper", "appreciation post",
+    "[serious]", "who else", "just me or",
+]
 
-    ns = {"atom": "http://www.w3.org/2005/Atom"}
-    root = ET.fromstring(r.content)
-    entries = root.findall("atom:entry", ns)
+# Posts containing these words are actively preferred — real F1 news signals
+NEWS_SIGNALS = [
+    # Teams & manufacturers
+    "mclaren", "ferrari", "mercedes", "red bull", "alpine",
+    "aston martin", "williams", "haas", "racing bulls", "cadillac", "audi",
+    # Drivers (2026 grid)
+    "norris", "piastri", "leclerc", "hamilton", "russell", "antonelli",
+    "verstappen", "sainz", "alonso", "stroll", "gasly", "ocon",
+    "bearman", "lawson", "hadjar", "doohan", "bortoleto",
+    # Race/season keywords
+    "grand prix", " gp ", "qualifying", "race result", "fastest lap",
+    "pole position", "podium", "championship", "standings",
+    "contract", "signed", "confirmed", "announced", "penalty",
+    "investigation", "protest", "disqualified", "upgrade",
+    "power unit", "engine", "fia", "regulation", "technical",
+    "crash", "collision", "retirement", "dnf", "safety car",
+    "virtual safety car", "red flag", "pit stop", "strategy",
+    "breaking", "exclusive", "report", "sources say",
+]
 
-    news = []
-    for entry in entries:
-        title = entry.findtext("atom:title", "", ns).strip()
-        link  = entry.findtext("atom:link", "", ns).strip()
-        # atom:link can also be an element with href attribute
-        link_el = entry.find("atom:link", ns)
-        if link_el is not None and link_el.get("href"):
-            link = link_el.get("href")
+# These flair tags in the title (Reddit adds them as prefixes) signal real news
+NEWS_FLAIRS = [
+    "news", "breaking", "rumour", "technical", "race",
+    "qualifying", "feature", "video", "official",
+]
 
-        # Skip stickied/mod posts and mega-threads
-        skip_keywords = ["megathread", "mod post", "daily discussion", "weekly"]
-        if any(kw in title.lower() for kw in skip_keywords):
+def score_post(title: str) -> int:
+    """
+    Returns a relevance score for a Reddit post title.
+    Higher = more likely to be real F1 news worth showing.
+    Returns -1 if the post should be skipped entirely.
+    """
+    t = title.lower()
+
+    # Hard skip
+    if any(kw in t for kw in SKIP_ALWAYS):
+        return -1
+
+    # Skip posts that are clearly questions from fans
+    if t.strip().endswith("?") and len(t) < 80:
+        return -1
+
+    # Skip posts starting with "I " — personal stories
+    if t.strip().lower().startswith("i "):
+        return -1
+
+    score = 0
+
+    # Bonus for news-looking flair prefix e.g. "[News]" or "News |"
+    if any(t.startswith(f) or f"[{f}]" in t or f"{f} |" in t
+           for f in NEWS_FLAIRS):
+        score += 10
+
+    # Bonus for each news signal keyword found
+    for kw in NEWS_SIGNALS:
+        if kw in t:
+            score += 2
+
+    # Bonus for titles that read like headlines (contain a verb suggesting action)
+    action_verbs = [
+        "wins", "takes", "confirms", "signs", "extends", "joins",
+        "leaves", "announces", "reveals", "claims", "secures",
+        "loses", "crashes", "penalised", "penalized", "disqualified",
+        "beats", "dominates", "struggles", "upgrades", "sets",
+    ]
+    if any(v in t for v in action_verbs):
+        score += 5
+
+    return score
+
+
+def fetch_reddit_news(target: int = 4):
+    """
+    Fetches r/formula1 hot posts, scores each one, returns the
+    top `target` most news-worthy headlines with their Reddit links.
+    Falls back to new.rss if hot doesn't yield enough results.
+    """
+    scored = []
+
+    for feed in ["hot", "new"]:
+        url = f"https://www.reddit.com/r/formula1/{feed}.rss?limit=50"
+        try:
+            r = requests.get(
+                url,
+                headers={"User-Agent": "BhuvanF1Dashboard/1.0"},
+                timeout=15,
+            )
+            r.raise_for_status()
+        except Exception:
             continue
 
-        # Prefer news-looking titles (contains GP names, team names, driver names, etc.)
-        news.append({"headline": title, "url": link})
-        if len(news) == 4:
+        ns   = {"atom": "http://www.w3.org/2005/Atom"}
+        root = ET.fromstring(r.content)
+
+        for entry in root.findall("atom:entry", ns):
+            title = entry.findtext("atom:title", "", ns).strip()
+            if not title:
+                continue
+
+            # Prefer the href attribute on <link>, fall back to text content
+            link_el = entry.find("atom:link", ns)
+            link = (
+                link_el.get("href")
+                if link_el is not None and link_el.get("href")
+                else entry.findtext("atom:link", "", ns).strip()
+            )
+
+            s = score_post(title)
+            if s >= 0:
+                scored.append((s, title, link))
+
+        # If we already have enough good candidates, no need to hit /new
+        if len([x for x in scored if x[0] >= 5]) >= target * 2:
             break
 
-    return news
+    # Sort by score descending, deduplicate by title
+    seen   = set()
+    result = []
+    for score, title, link in sorted(scored, key=lambda x: -x[0]):
+        key = title.lower()[:60]
+        if key in seen:
+            continue
+        seen.add(key)
+        result.append({"headline": title, "url": link, "score": score})
+        if len(result) == target:
+            break
+
+    # Last resort — if nothing scored well, just return top posts
+    # that aren't hard-skipped
+    if not result:
+        result = [
+            {"headline": t, "url": l, "score": s}
+            for s, t, l in scored[:target]
+        ]
+
+    # Remove score from final output (it's just for internal ranking)
+    return [{"headline": x["headline"], "url": x["url"]} for x in result]
 
 # ── 7. Championship gap stat ─────────────────────────────────────────
 
