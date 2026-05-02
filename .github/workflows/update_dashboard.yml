@@ -1,11 +1,15 @@
 name: F1 Dashboard Auto-Update
 
 on:
-  # Runs every Sunday at 18:00 UTC (covers most race finish windows)
-  # and Monday at 02:00 UTC as a safety net for late-finishing races
+  # Sunday 18:00 UTC  — main race finish window
+  # Monday 02:00 UTC  — safety net for late-finishing main races
+  # Saturday 18:00 UTC — sprint race finish window
+  # Sunday 02:00 UTC  — safety net for late-finishing sprints
   schedule:
     - cron: '0 18 * * 0'
     - cron: '0 2  * * 1'
+    - cron: '0 18 * * 6'
+    - cron: '0 2  * * 0'
   # Also lets you trigger it manually from the GitHub Actions tab
   workflow_dispatch:
 
