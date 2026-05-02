@@ -3,13 +3,14 @@ update_f1_data.py
 ─────────────────
 Fetches from:
   • Jolpica F1 API  — driver standings, constructor standings,
-                      last race result, next race details
-  • r/formula1 RSS  — top 4 recent headlines with links
+                      last event result (GP or Sprint, whichever is more recent),
+                      next race details, qualifying gap
+  • Reddit JSON API — top 4 filtered F1 news headlines with links
 
 Writes:  data.json  (consumed by the dashboard on page load)
 """
 
-import json, requests, xml.etree.ElementTree as ET
+import json, requests
 from datetime import datetime, timezone
 
 BASE    = "https://api.jolpi.ca/ergast/f1"
@@ -60,23 +61,20 @@ def fetch_constructors():
         for s in standings
     ]
 
-# ── 3. Last race result (podium + fastest lap) ───────────────────────
+# ── 3. Last event result (Grand Prix or Sprint, whichever is more recent) ──
 
-def fetch_last_race():
-    data = get(f"{BASE}/current/last/results.json")
-    race  = data["MRData"]["RaceTable"]["Races"][0]
-    results = race["Results"]
-
-    podium = []
+def parse_race_result(race, results_key="Results", event_type="Race"):
+    """Shared parser for both GP and Sprint results."""
+    results = race.get(results_key, [])
+    podium  = []
     for r in results[:3]:
         podium.append({
-            "pos":    int(r["position"]),
-            "name":   f"{r['Driver']['givenName']} {r['Driver']['familyName']}",
-            "team":   r["Constructor"]["name"],
-            "time":   r.get("Time", {}).get("time", r.get("status", "—")),
+            "pos":  int(r["position"]),
+            "name": f"{r['Driver']['givenName']} {r['Driver']['familyName']}",
+            "team": r["Constructor"]["name"],
+            "time": r.get("Time", {}).get("time", r.get("status", "—")),
         })
 
-    # fastest lap
     fl_driver, fl_time = "—", "—"
     for r in results:
         if r.get("FastestLap", {}).get("rank") == "1":
@@ -84,14 +82,50 @@ def fetch_last_race():
             fl_time   = r["FastestLap"]["Time"]["time"]
             break
 
+    # Sprint date is stored under "Sprint" key, GP under "date"
+    date = race.get("Sprint", {}).get("date") if event_type == "Sprint" else race.get("date", "")
+
     return {
-        "name":        race["raceName"],
+        "name":        race["raceName"] + (" · Sprint" if event_type == "Sprint" else ""),
         "circuit":     race["Circuit"]["circuitName"],
         "round":       int(race["round"]),
-        "date":        race["date"],
+        "date":        date or race.get("date", ""),
+        "event_type":  event_type,
         "podium":      podium,
         "fastest_lap": {"driver": fl_driver, "time": fl_time},
     }
+
+
+def fetch_last_race():
+    """
+    Returns the most recent completed event — either a Grand Prix or a
+    Sprint race, whichever happened most recently.
+    """
+    # Always fetch the last GP result
+    gp_data  = get(f"{BASE}/current/last/results.json")
+    gp_races = gp_data["MRData"]["RaceTable"]["Races"]
+    gp       = parse_race_result(gp_races[0]) if gp_races else None
+
+    # Try to fetch the last sprint result
+    sprint = None
+    try:
+        sp_data  = get(f"{BASE}/current/last/sprint.json")
+        sp_races = sp_data["MRData"]["RaceTable"]["Races"]
+        if sp_races and sp_races[0].get("SprintResults"):
+            sprint = parse_race_result(sp_races[0], "SprintResults", "Sprint")
+    except Exception:
+        pass  # No sprint this round — that is fine
+
+    # Return whichever event is more recent
+    if sprint and gp:
+        gp_date     = datetime.strptime(gp["date"][:10],     "%Y-%m-%d").date()
+        sprint_date = datetime.strptime(sprint["date"][:10], "%Y-%m-%d").date()
+        today       = datetime.now(timezone.utc).date()
+        # Only prefer sprint if it is more recent than the GP AND already happened
+        if sprint_date > gp_date and sprint_date <= today:
+            return sprint
+
+    return gp or {}
 
 # ── 4. Next race details + countdown target ──────────────────────────
 
@@ -236,45 +270,44 @@ def score_post(title: str) -> int:
 
 def fetch_reddit_news(target: int = 4):
     """
-    Fetches r/formula1 hot posts, scores each one, returns the
-    top `target` most news-worthy headlines with their Reddit links.
-    Falls back to new.rss if hot doesn't yield enough results.
+    Fetches r/formula1 posts using Reddit's JSON API (works from CI servers
+    unlike RSS which gets blocked). Scores each post and returns the top
+    `target` most news-worthy headlines with their Reddit links.
     """
     scored = []
 
+    # Reddit JSON API — works reliably from GitHub Actions
+    # Using a descriptive User-Agent avoids 429s from Reddit
+    reddit_headers = {
+        "User-Agent": "Mozilla/5.0 (compatible; F1DashboardBot/1.0; +https://github.com/bhuvan/f1-dashboard)"
+    }
+
     for feed in ["hot", "new"]:
-        url = f"https://www.reddit.com/r/formula1/{feed}.rss?limit=50"
+        url = f"https://www.reddit.com/r/formula1/{feed}.json?limit=50&raw_json=1"
         try:
-            r = requests.get(
-                url,
-                headers={"User-Agent": "BhuvanF1Dashboard/1.0"},
-                timeout=15,
-            )
+            r = requests.get(url, headers=reddit_headers, timeout=20)
             r.raise_for_status()
-        except Exception:
+            data = r.json()
+        except Exception as e:
+            print(f"  ⚠️  Reddit {feed} fetch failed: {e}")
             continue
 
-        ns   = {"atom": "http://www.w3.org/2005/Atom"}
-        root = ET.fromstring(r.content)
+        posts = data.get("data", {}).get("children", [])
+        for post in posts:
+            p     = post.get("data", {})
+            title = p.get("title", "").strip()
+            # Build the full Reddit permalink
+            link  = "https://www.reddit.com" + p.get("permalink", "")
 
-        for entry in root.findall("atom:entry", ns):
-            title = entry.findtext("atom:title", "", ns).strip()
-            if not title:
+            # Skip stickied mod posts
+            if p.get("stickied") or p.get("distinguished") == "moderator":
                 continue
-
-            # Prefer the href attribute on <link>, fall back to text content
-            link_el = entry.find("atom:link", ns)
-            link = (
-                link_el.get("href")
-                if link_el is not None and link_el.get("href")
-                else entry.findtext("atom:link", "", ns).strip()
-            )
 
             s = score_post(title)
             if s >= 0:
                 scored.append((s, title, link))
 
-        # If we already have enough good candidates, no need to hit /new
+        # If we already have enough good candidates, skip /new
         if len([x for x in scored if x[0] >= 5]) >= target * 2:
             break
 
@@ -290,15 +323,14 @@ def fetch_reddit_news(target: int = 4):
         if len(result) == target:
             break
 
-    # Last resort — if nothing scored well, just return top posts
-    # that aren't hard-skipped
+    # Last resort — return top posts that aren't hard-skipped
     if not result:
         result = [
             {"headline": t, "url": l, "score": s}
             for s, t, l in scored[:target]
         ]
 
-    # Remove score from final output (it's just for internal ranking)
+    # Remove score from final output
     return [{"headline": x["headline"], "url": x["url"]} for x in result]
 
 # ── 7. Championship gap stat ─────────────────────────────────────────
