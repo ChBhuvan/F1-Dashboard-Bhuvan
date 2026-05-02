@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-27T05:28:37.836660+00:00",
+  "updated_at": "2026-05-02T16:51:49.472645+00:00",
   "drivers": [
     {
       "pos": 1,
@@ -166,6 +166,7 @@
     "circuit": "Suzuka Circuit",
     "round": 3,
     "date": "2026-03-29",
+    "event_type": "Race",
     "podium": [
       {
         "pos": 1,
@@ -401,24 +402,7 @@
       "winner": ""
     }
   ],
-  "news": [
-    {
-      "headline": "BREAKING: The Turkish Grand Prix will return to the calendar from 2027 as part of a new five-year agreement",
-      "url": "https://www.reddit.com/r/formula1/comments/1sudubo/breaking_the_turkish_grand_prix_will_return_to/"
-    },
-    {
-      "headline": "Red Bull confirms it won't upgrade its power unit despite coming under ADUO",
-      "url": "https://www.reddit.com/r/formula1/comments/1svdt7h/red_bull_confirms_it_wont_upgrade_its_power_unit/"
-    },
-    {
-      "headline": "Jean Alesi crashes historic Ferrari",
-      "url": "https://www.reddit.com/r/formula1/comments/1svb1o3/jean_alesi_crashes_historic_ferrari/"
-    },
-    {
-      "headline": "The Renault Clio Williams used as a Safety Car for the 1996 Argentine Grand Prix is being exhibitied during Franco Colapinto's Roadshow.",
-      "url": "https://www.reddit.com/r/formula1/comments/1swap8g/the_renault_clio_williams_used_as_a_safety_car/"
-    }
-  ],
+  "news": [],
   "stats": {
     "champ_gap": 9,
     "champ_leader": "A. Antonelli",
