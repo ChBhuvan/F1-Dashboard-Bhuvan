@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-05-03T18:44:58.442697+00:00",
+  "updated_at": "2026-05-04T05:38:11.059061+00:00",
   "drivers": [
     {
       "pos": 1,
       "code": "ANT",
       "name": "A. Antonelli",
       "team": "Mercedes",
-      "pts": 75,
+      "pts": 100,
       "nat": "Italian"
     },
     {
@@ -14,7 +14,7 @@
       "code": "RUS",
       "name": "G. Russell",
       "team": "Mercedes",
-      "pts": 68,
+      "pts": 80,
       "nat": "British"
     },
     {
@@ -22,23 +22,23 @@
       "code": "LEC",
       "name": "C. Leclerc",
       "team": "Ferrari",
-      "pts": 55,
+      "pts": 59,
       "nat": "Monegasque"
     },
     {
       "pos": 4,
-      "code": "HAM",
-      "name": "L. Hamilton",
-      "team": "Ferrari",
-      "pts": 43,
+      "code": "NOR",
+      "name": "L. Norris",
+      "team": "McLaren",
+      "pts": 51,
       "nat": "British"
     },
     {
       "pos": 5,
-      "code": "NOR",
-      "name": "L. Norris",
-      "team": "McLaren",
-      "pts": 33,
+      "code": "HAM",
+      "name": "L. Hamilton",
+      "team": "Ferrari",
+      "pts": 51,
       "nat": "British"
     },
     {
@@ -46,11 +46,19 @@
       "code": "PIA",
       "name": "O. Piastri",
       "team": "McLaren",
-      "pts": 28,
+      "pts": 43,
       "nat": "Australian"
     },
     {
       "pos": 7,
+      "code": "VER",
+      "name": "M. Verstappen",
+      "team": "Red Bull",
+      "pts": 26,
+      "nat": "Dutch"
+    },
+    {
+      "pos": 8,
       "code": "BEA",
       "name": "O. Bearman",
       "team": "Haas F1 Team",
@@ -58,20 +66,12 @@
       "nat": "British"
     },
     {
-      "pos": 8,
+      "pos": 9,
       "code": "GAS",
       "name": "P. Gasly",
       "team": "Alpine F1 Team",
       "pts": 16,
       "nat": "French"
-    },
-    {
-      "pos": 9,
-      "code": "VER",
-      "name": "M. Verstappen",
-      "team": "Red Bull",
-      "pts": 16,
-      "nat": "Dutch"
     },
     {
       "pos": 10,
@@ -86,65 +86,65 @@
     {
       "pos": 1,
       "name": "Mercedes",
-      "pts": 143,
+      "pts": 180,
       "bar_pct": 100.0,
       "nat": "German"
     },
     {
       "pos": 2,
       "name": "Ferrari",
-      "pts": 98,
-      "bar_pct": 68.5,
+      "pts": 110,
+      "bar_pct": 61.1,
       "nat": "Italian"
     },
     {
       "pos": 3,
       "name": "McLaren",
-      "pts": 61,
-      "bar_pct": 42.7,
+      "pts": 94,
+      "bar_pct": 52.2,
       "nat": "British"
     },
     {
       "pos": 4,
       "name": "Red Bull",
-      "pts": 20,
-      "bar_pct": 14.0,
+      "pts": 30,
+      "bar_pct": 16.7,
       "nat": "Austrian"
     },
     {
       "pos": 5,
-      "name": "Haas F1 Team",
-      "pts": 18,
-      "bar_pct": 12.6,
-      "nat": "American"
+      "name": "Alpine F1 Team",
+      "pts": 23,
+      "bar_pct": 12.8,
+      "nat": "French"
     },
     {
       "pos": 6,
-      "name": "Alpine F1 Team",
-      "pts": 17,
-      "bar_pct": 11.9,
-      "nat": "French"
+      "name": "Haas F1 Team",
+      "pts": 18,
+      "bar_pct": 10.0,
+      "nat": "American"
     },
     {
       "pos": 7,
       "name": "RB F1 Team",
       "pts": 14,
-      "bar_pct": 9.8,
+      "bar_pct": 7.8,
       "nat": "Italian"
     },
     {
       "pos": 8,
-      "name": "Audi",
-      "pts": 2,
-      "bar_pct": 1.4,
-      "nat": "German"
+      "name": "Williams",
+      "pts": 5,
+      "bar_pct": 2.8,
+      "nat": "British"
     },
     {
       "pos": 9,
-      "name": "Williams",
+      "name": "Audi",
       "pts": 2,
-      "bar_pct": 1.4,
-      "nat": "British"
+      "bar_pct": 1.1,
+      "nat": "German"
     },
     {
       "pos": 10,
@@ -162,45 +162,45 @@
     }
   ],
   "last_race": {
-    "name": "Japanese Grand Prix",
-    "circuit": "Suzuka Circuit",
-    "round": 3,
-    "date": "2026-03-29",
+    "name": "Miami Grand Prix",
+    "circuit": "Miami International Autodrome",
+    "round": 4,
+    "date": "2026-05-03",
     "event_type": "Race",
     "podium": [
       {
         "pos": 1,
         "name": "Andrea Kimi Antonelli",
         "team": "Mercedes",
-        "time": "1:28:03.403"
+        "time": "1:33:19.273"
       },
       {
         "pos": 2,
-        "name": "Oscar Piastri",
+        "name": "Lando Norris",
         "team": "McLaren",
-        "time": "+13.722"
+        "time": "+3.264"
       },
       {
         "pos": 3,
-        "name": "Charles Leclerc",
-        "team": "Ferrari",
-        "time": "+15.270"
+        "name": "Oscar Piastri",
+        "team": "McLaren",
+        "time": "+27.092"
       }
     ],
     "fastest_lap": {
-      "driver": "Antonelli",
-      "time": "1:32.432"
+      "driver": "Norris",
+      "time": "1:31.869"
     }
   },
   "next_race": {
-    "name": "Miami Grand Prix",
-    "circuit": "Miami International Autodrome",
-    "location": "Miami",
-    "country": "USA",
-    "round": 4,
-    "date": "2026-05-03",
-    "datetime": "2026-05-03T20:00:00+00:00",
-    "flag": "USA"
+    "name": "Canadian Grand Prix",
+    "circuit": "Circuit Gilles Villeneuve",
+    "location": "Montreal",
+    "country": "Canada",
+    "round": 5,
+    "date": "2026-05-24",
+    "datetime": "2026-05-24T20:00:00+00:00",
+    "flag": "Canada"
   },
   "calendar": [
     {
@@ -236,8 +236,8 @@
       "circuit": "Miami International Autodrome",
       "country": "USA",
       "date": "2026-05-03",
-      "status": "upcoming",
-      "winner": ""
+      "status": "done",
+      "winner": "A. Antonelli"
     },
     {
       "round": 5,
@@ -404,14 +404,14 @@
   ],
   "news": [],
   "stats": {
-    "champ_gap": 7,
+    "champ_gap": 20,
     "champ_leader": "A. Antonelli",
     "champ_runner_up": "G. Russell",
-    "fastest_lap": "1:32.432",
-    "fastest_lap_driver": "Antonelli",
-    "quali_gap": "+0.298s",
+    "fastest_lap": "1:31.869",
+    "fastest_lap_driver": "Norris",
+    "quali_gap": "+0.166s",
     "quali_pole": "A. Antonelli",
-    "quali_p2": "G. Russell",
-    "quali_race": "Japanese GP"
+    "quali_p2": "M. Verstappen",
+    "quali_race": "Miami GP"
   }
 }
