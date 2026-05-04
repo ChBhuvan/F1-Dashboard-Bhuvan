@@ -943,7 +943,10 @@ body {
 .news-num { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--ink-3); font-weight: 500; }
 .news-headline { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 500; line-height: 1.35; color: var(--ink); letter-spacing: -0.01em; margin-bottom: 7px; }
 .news-item.lead .news-headline { font-size: 17px; font-weight: 700; }
-.news-body { font-size: 12px; line-height: 1.6; color: var(--ink-2); }
+.news-headline a { color: inherit; text-decoration: none; border-bottom: 1px dashed currentColor; cursor: pointer; }
+.news-headline a:hover { color: var(--racing); border-bottom-color: var(--racing); }
+.news-body a { color: var(--racing); text-decoration: none; cursor: pointer; }
+.news-body a:hover { text-decoration: underline; }
 
 .stats-ribbon { max-width: 1440px; margin: 0 auto; padding: 48px 36px 0; }
 .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); border: 2px solid var(--ink); background: var(--carbon); }
@@ -2209,24 +2212,8 @@ body {
 
       <div class="news-block">
         <article class="news-item lead">
-          <div class="news-meta"><span class="news-kicker">The Story</span><span class="news-num">01</span></div>
-          <h3 class="news-headline">Antonelli's rookie surge rewrites Mercedes' championship math</h3>
-          <p class="news-body">Three rounds in, the 19-year-old Italian has back-to-back wins and sits atop the drivers' table. Wolff has already shifted team orders mid-weekend. Russell now races his own teammate for the title.</p>
-        </article>
-        <article class="news-item neutral">
-          <div class="news-meta"><span class="news-kicker">Engine Wars</span><span class="news-num">02</span></div>
-          <h3 class="news-headline">Red Bull's new PU is down 15hp to Mercedes, paddock sources say</h3>
-          <p class="news-body">Despite the full Ford works programme, Red Bull's 2026 power unit appears weakest on the grid. Verstappen's P5 in Japan came from chassis, not pace.</p>
-        </article>
-        <article class="news-item neutral">
-          <div class="news-meta"><span class="news-kicker">Debut</span><span class="news-num">03</span></div>
-          <h3 class="news-headline">Cadillac goal is simple: finish races, learn fast, build for 2029</h3>
-          <p class="news-body">GM's eleventh team runs Ferrari PUs until its in-house unit is ready. Herta confirmed for four FP1 outings this year.</p>
-        </article>
-        <article class="news-item">
-          <div class="news-meta"><span class="news-kicker">Calendar</span><span class="news-num">04</span></div>
-          <h3 class="news-headline">FIA confirms Bahrain and Saudi cancellations, no replacements</h3>
-          <p class="news-body">Iran war fallout leaves the season at 23 rounds, Australia to Abu Dhabi. Feeder series affected too.</p>
+          <div class="news-meta"><span class="news-kicker">Loading</span><span class="news-num">01</span></div>
+          <h3 class="news-headline" style="opacity:0.4">Fetching latest F1 news from r/formula1…</h3>
         </article>
       </div>
     </div>
@@ -2263,7 +2250,7 @@ body {
 
 <div class="footer-wrap">
   <footer class="footer">
-    <div class="f-note">For Bhuvan · eyes only<span class="f-dot"></span>Lights out and away we go</div>
+    <div class="f-note">Lights out and away we go 🟠</div>
     <div class="f-brand">The <em>Pit Wall</em></div>
   </footer>
 
@@ -2426,10 +2413,17 @@ body {
 })();
 
 (function(){
-  const target = new Date('2026-05-03T20:00:00Z').getTime();
+  // Use live datetime from data.json if available, else fall back to hardcoded
+  function getTarget() {
+    if (window._nextRaceDatetime) {
+      const t = new Date(window._nextRaceDatetime).getTime();
+      if (!isNaN(t)) return t;
+    }
+    return new Date('2026-05-18T13:00:00Z').getTime(); // Emilia Romagna fallback
+  }
   const pad = (n) => String(n).padStart(2,'0');
   function tick() {
-    const diff = target - Date.now();
+    const diff = getTarget() - Date.now();
     if (diff <= 0) {
       ['cd-d','cd-h','cd-m','cd-s'].forEach(id => document.getElementById(id).textContent = '00');
       return;
@@ -2922,6 +2916,7 @@ body {
   }
   document.addEventListener('click', autoStart);
   document.addEventListener('keydown', autoStart);
+})();
 </script>
 
 <!-- ================================================================
