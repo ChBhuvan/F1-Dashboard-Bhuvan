@@ -2920,614 +2920,345 @@ body {
 </script>
 
 <!-- ================================================================
-     STRATEGIES PAGE JS
+     STRATEGIES PAGE JS — reads from data.json
      ================================================================ -->
 <script>
-window._stratLoaded  = false;
-window._stratRaces   = [];
-window._stratTab     = 'tyres';
-
-const OPENF1_BASE = 'https://api.openf1.org/v1';
-const JOLPICA_BASE = 'https://api.jolpi.ca/ergast/f1';
+window._stratLoaded = false;
 
 const COMPOUND_COLOURS = {
   SOFT: '#e8002d', MEDIUM: '#ffd700', HARD: '#e8e8e8',
-  INTERMEDIATE: '#39b54a', WET: '#0067ff', UNKNOWN: '#555'
+  INTERMEDIATE: '#39b54a', WET: '#0067ff', UNKNOWN: '#666'
 };
 
 function initStrategies() {
   window._stratLoaded = true;
-  const sel = document.getElementById('strat-race-select');
-  const tabs = document.querySelectorAll('.strat-tab');
+  const sel     = document.getElementById('strat-race-select');
+  const tabs    = document.querySelectorAll('.strat-tab');
+  const content = document.getElementById('strat-content');
 
-  // Wire up tabs
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
       tabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
       window._stratTab = tab.dataset.tab;
-      if (sel.value) loadStratData(sel.value, window._stratTab);
+      renderStrategy(window._currentStratData, window._stratTab);
     });
   });
 
-  // Wire up race selector
   sel.addEventListener('change', () => {
-    if (sel.value) loadStratData(sel.value, window._stratTab);
+    const race = window._stratAllRaces?.find(r => String(r.session_key) === sel.value);
+    if (race) {
+      window._currentStratData = race;
+      renderStrategy(race, window._stratTab || 'tyres');
+    }
   });
 
-  // Populate race selector from data.json calendar
+  // Load from data.json
   fetch('data.json?_=' + Date.now())
     .then(r => r.json())
     .then(data => {
-      const today = new Date();
-      const done  = (data.calendar || []).filter(r => new Date(r.date) < today);
-      window._stratRaces = done;
-      sel.innerHTML = '<option value="">Select a race…</option>' +
-        done.map(r => `<option value="${r.round}">${r.name.replace(' Grand Prix','')} GP · R${r.round}</option>`).join('');
-      // Auto-load last completed race
-      if (done.length > 0) {
-        const last = done[done.length - 1];
-        sel.value = last.round;
-        loadStratData(last.round, window._stratTab);
+      const strategies = data.strategies || [];
+      window._stratAllRaces = strategies;
+
+      if (strategies.length === 0) {
+        content.innerHTML = '<div class="strat-loading">No strategy data available yet — check back after the next race</div>';
+        return;
       }
+
+      sel.innerHTML = '<option value="">Select a race…</option>' +
+        strategies.map(r =>
+          `<option value="${r.session_key}">${r.name} · ${r.date}</option>`
+        ).join('');
+
+      // Auto-load most recent
+      const latest = strategies[strategies.length - 1];
+      sel.value = latest.session_key;
+      window._currentStratData = latest;
+      renderStrategy(latest, 'tyres');
     })
-    .catch(() => {
-      document.getElementById('strat-content').innerHTML =
-        '<div class="strat-loading">Could not load race list</div>';
+    .catch(e => {
+      content.innerHTML = `<div class="strat-loading">Could not load data.json: ${e.message}</div>`;
     });
 }
 
-async function loadStratData(round, tab) {
+function renderStrategy(race, tab) {
   const content = document.getElementById('strat-content');
-  content.innerHTML = '<div class="strat-loading">⏳ Fetching data from OpenF1…</div>';
-
-  try {
-    // Get session key for this round's race
-    const year = 2026;
-    const sessRes = await fetch(`${OPENF1_BASE}/sessions?year=${year}&session_name=Race&meeting_key=${round}`);
-    const sessions = await sessRes.json();
-
-    // Fallback: try matching by round number via meeting info
-    let sessionKey = null;
-    if (sessions && sessions.length > 0) {
-      sessionKey = sessions[0].session_key;
-    } else {
-      // Try getting all race sessions and pick by index
-      const allSess = await fetch(`${OPENF1_BASE}/sessions?year=${year}&session_name=Race`).then(r=>r.json());
-      const sorted  = allSess.sort((a,b) => new Date(a.date_start) - new Date(b.date_start));
-      sessionKey    = sorted[round - 1]?.session_key;
-    }
-
-    if (!sessionKey) {
-      content.innerHTML = '<div class="strat-loading">No data available for this race yet</div>';
-      return;
-    }
-
-    if (tab === 'tyres') {
-      await renderTyreStrategy(sessionKey, content);
-    } else {
-      await renderPitStops(sessionKey, content);
-    }
-  } catch(e) {
-    content.innerHTML = `<div class="strat-loading">Error loading data: ${e.message}</div>`;
-  }
+  if (!race) { content.innerHTML = '<div class="strat-loading">Select a race</div>'; return; }
+  if (tab === 'tyres') renderTyres(race, content);
+  else renderPits(race, content);
 }
 
-async function renderTyreStrategy(sessionKey, container) {
-  const [stintsRes, driversRes] = await Promise.all([
-    fetch(`${OPENF1_BASE}/stints?session_key=${sessionKey}`),
-    fetch(`${OPENF1_BASE}/drivers?session_key=${sessionKey}`)
-  ]);
-  const stints  = await stintsRes.json();
-  const drivers = await driversRes.json();
-
-  if (!stints || stints.length === 0) {
-    container.innerHTML = '<div class="strat-loading">Tyre data not available for this race</div>';
+function renderTyres(race, container) {
+  const drivers = race.drivers || [];
+  if (!drivers.length) {
+    container.innerHTML = '<div class="strat-loading">No tyre data for this race</div>';
     return;
   }
+  const maxLap = race.total_laps || 60;
 
-  // Build driver map
-  const driverMap = {};
-  drivers.forEach(d => { driverMap[d.driver_number] = d; });
-
-  // Group stints by driver
-  const byDriver = {};
-  stints.forEach(s => {
-    if (!byDriver[s.driver_number]) byDriver[s.driver_number] = [];
-    byDriver[s.driver_number].push(s);
-  });
-
-  // Sort each driver's stints by stint number
-  Object.keys(byDriver).forEach(dn => {
-    byDriver[dn].sort((a,b) => a.stint_number - b.stint_number);
-  });
-
-  // Find total laps
-  const maxLap = Math.max(...stints.map(s => s.lap_end || 0));
-
-  // Sort drivers by finishing position (use driver number as proxy)
-  const driverNums = Object.keys(byDriver).sort((a,b) => {
-    const da = driverMap[a]; const db = driverMap[b];
-    return (da?.team_name || '').localeCompare(db?.team_name || '');
-  });
-
-  const legend = Object.entries(COMPOUND_COLOURS).map(([c,col]) =>
+  const legend = Object.entries(COMPOUND_COLOURS).map(([c, col]) =>
     `<div class="tyre-legend-item">
       <div class="tyre-legend-dot" style="background:${col}"></div>${c}
     </div>`
   ).join('');
 
-  const rows = driverNums.map(dn => {
-    const d      = driverMap[dn] || {};
-    const stintList = byDriver[dn];
-    const name   = d.last_name || `#${dn}`;
-    const abbr   = d.name_acronym || dn;
-
-    const bars = stintList.map(s => {
-      const laps    = (s.lap_end || maxLap) - (s.lap_start || 1) + 1;
-      const pct     = Math.max(4, (laps / maxLap) * 100);
-      const compound = (s.compound || 'UNKNOWN').toUpperCase();
-      const col     = COMPOUND_COLOURS[compound] || '#555';
-      const textCol = ['MEDIUM','HARD'].includes(compound) ? '#000' : '#fff';
-      return `<div class="tyre-stint" data-compound="${compound}"
+  const rows = drivers.map(d => {
+    const bars = (d.stints || []).map(s => {
+      const laps    = Math.max(1, (s.lap_end || maxLap) - (s.lap_start || 1) + 1);
+      const pct     = Math.max(3, (laps / maxLap) * 100);
+      const col     = COMPOUND_COLOURS[s.compound] || '#666';
+      const textCol = ['MEDIUM','HARD'].includes(s.compound) ? '#000' : '#fff';
+      return `<div class="tyre-stint" data-compound="${s.compound}"
         style="width:${pct}%;background:${col};color:${textCol}"
-        title="${compound} · ${laps} laps">${laps}</div>`;
+        title="${s.compound} · ${laps} laps (L${s.lap_start}–L${s.lap_end})">${laps}</div>`;
     }).join('');
-
-    const totalLaps = stintList.reduce((acc, s) =>
-      acc + ((s.lap_end||maxLap)-(s.lap_start||1)+1), 0);
-
+    const totalLaps = (d.stints || []).reduce((a, s) =>
+      a + Math.max(1, (s.lap_end || maxLap) - (s.lap_start || 1) + 1), 0);
     return `<div class="tyre-row">
-      <div class="tyre-driver">${abbr}</div>
+      <div class="tyre-driver">${d.code}</div>
       <div class="tyre-bar">${bars}</div>
       <div class="tyre-laps">${totalLaps}L</div>
     </div>`;
   }).join('');
 
-  container.innerHTML = `
-    <div class="tyre-legend">${legend}</div>
-    <div class="tyre-chart">${rows}</div>`;
+  container.innerHTML = `<div class="tyre-legend">${legend}</div><div class="tyre-chart">${rows}</div>`;
 }
 
-async function renderPitStops(sessionKey, container) {
-  const pitsRes = await fetch(`${OPENF1_BASE}/pit?session_key=${sessionKey}`);
-  const pits    = await pitsRes.json();
-  const driversRes = await fetch(`${OPENF1_BASE}/drivers?session_key=${sessionKey}`);
-  const drivers    = await driversRes.json();
+function renderPits(race, container) {
+  const drivers = race.drivers || [];
+  const allStops = [];
+  drivers.forEach(d => {
+    (d.pits || []).forEach(p => {
+      allStops.push({ code: d.code, name: d.name, lap: p.lap, duration: p.duration });
+    });
+  });
 
-  if (!pits || pits.length === 0) {
-    container.innerHTML = '<div class="strat-loading">Pit stop data not available for this race</div>';
+  if (!allStops.length) {
+    container.innerHTML = '<div class="strat-loading">No pit stop data for this race</div>';
     return;
   }
 
-  const driverMap = {};
-  drivers.forEach(d => { driverMap[d.driver_number] = d; });
+  allStops.sort((a, b) => a.duration - b.duration);
+  const fastest = allStops[0];
 
-  // Find fastest stop
-  const withDur = pits.filter(p => p.pit_duration && p.pit_duration > 0);
-  const fastest = withDur.length > 0
-    ? withDur.reduce((a,b) => a.pit_duration < b.pit_duration ? a : b)
-    : null;
-
-  const sorted = [...withDur].sort((a,b) => a.pit_duration - b.pit_duration);
-
-  const rows = sorted.map(p => {
-    const d    = driverMap[p.driver_number] || {};
-    const name = d.last_name || `#${p.driver_number}`;
-    const abbr = d.name_acronym || p.driver_number;
-    const isFastest = fastest && p === fastest;
+  const rows = allStops.map(s => {
+    const isFastest = s === fastest;
     return `<tr class="${isFastest ? 'fastest' : ''}">
-      <td>${abbr} <span style="opacity:0.5;font-size:10px">${name}</span></td>
-      <td>Lap ${p.lap_number || '—'}</td>
-      <td>${p.pit_duration?.toFixed(3)}s ${isFastest ? '<span class=\"pit-badge-fast\">FASTEST</span>' : ''}</td>
+      <td>${s.code} <span style="opacity:0.5;font-size:10px">${s.name}</span></td>
+      <td>Lap ${s.lap}</td>
+      <td>${s.duration.toFixed(3)}s ${isFastest ? '<span class="pit-badge-fast">FASTEST</span>' : ''}</td>
     </tr>`;
   }).join('');
 
-  container.innerHTML = `
-    <table class="pit-table">
-      <thead><tr>
-        <th>Driver</th><th>Lap</th><th>Stop Time</th>
-      </tr></thead>
-      <tbody>${rows}</tbody>
-    </table>`;
+  container.innerHTML = `<table class="pit-table">
+    <thead><tr><th>Driver</th><th>Lap</th><th>Stop Time</th></tr></thead>
+    <tbody>${rows}</tbody>
+  </table>`;
 }
+
+window._stratTab = 'tyres';
+window._currentStratData = null;
+window._stratAllRaces = [];
 </script>
 
+
 <!-- ================================================================
-     TEAMMATES PAGE JS
+     TEAMMATES PAGE JS — reads from data.json
      ================================================================ -->
 <script>
 window._tmLoaded = false;
 
-const TEAM_PAIRINGS_2026 = [
-  { team: 'McLaren',       color: '#FF8000', drivers: ['norris',    'piastri']    },
-  { team: 'Mercedes',      color: '#27F4D2', drivers: ['russell',   'antonelli']  },
-  { team: 'Ferrari',       color: '#E8002D', drivers: ['leclerc',   'hamilton']   },
-  { team: 'Red Bull',      color: '#3671C6', drivers: ['verstappen','lawson']      },
-  { team: 'Aston Martin',  color: '#229971', drivers: ['alonso',    'stroll']     },
-  { team: 'Alpine',        color: '#0093CC', drivers: ['gasly',     'doohan']     },
-  { team: 'Williams',      color: '#64C4FF', drivers: ['sainz',     'albon']      },
-  { team: 'Racing Bulls',  color: '#6692FF', drivers: ['hadjar',    'bearman']    },
-  { team: 'Haas',          color: '#B6BABD', drivers: ['ocon',      'bortoleto']  },
-  { team: 'Audi',          color: '#00877C', drivers: ['hulkenberg', 'schumacher']},
-];
-
-const METRICS = [
-  { key:'points',   label:'Points',       fmt: v => v },
-  { key:'wins',     label:'Wins',         fmt: v => v },
-  { key:'podiums',  label:'Podiums',      fmt: v => v },
-  { key:'poles',    label:'Poles',        fmt: v => v },
-  { key:'fastlaps', label:'Fastest Laps', fmt: v => v },
-  { key:'dnfs',     label:'DNFs',         fmt: v => v },
-  { key:'p10plus',  label:'Points Finishes', fmt: v => v },
-];
-
-async function initTeammates() {
+function initTeammates() {
   window._tmLoaded = true;
   const grid = document.getElementById('tm-grid');
-  grid.innerHTML = '<div class="strat-loading">⏳ Loading standings data…</div>';
+  grid.innerHTML = '<div class="strat-loading">⏳ Loading teammate data…</div>';
 
-  try {
-    // Fetch all data in parallel
-    const [driversRes, resultsRes, qualiRes] = await Promise.all([
-      fetch(`${JOLPICA_BASE}/current/driverStandings.json`),
-      fetch(`${JOLPICA_BASE}/current/results.json?limit=1000`),
-      fetch(`${JOLPICA_BASE}/current/qualifying.json?limit=1000`),
-    ]);
-    const driversData = await driversRes.json();
-    const resultsData = await resultsRes.json();
-    const qualiData   = await qualiRes.json();
+  fetch('data.json?_=' + Date.now())
+    .then(r => r.json())
+    .then(data => {
+      const teams = data.teammates || [];
+      if (!teams.length) {
+        grid.innerHTML = '<div class="strat-loading">No teammate data available yet</div>';
+        return;
+      }
 
-    const standings = driversData.MRData.StandingsTable.StandingsLists[0]?.DriverStandings || [];
-    const allRaces  = resultsData.MRData.RaceTable.Races || [];
-    const allQuali  = qualiData.MRData.RaceTable.Races   || [];
+      const METRICS = [
+        { key:'points',      label:'Points' },
+        { key:'wins',        label:'Wins' },
+        { key:'podiums',     label:'Podiums' },
+        { key:'poles',       label:'Poles' },
+        { key:'fastest_laps',label:'Fastest Laps' },
+        { key:'dnfs',        label:'DNFs' },
+        { key:'p10_finishes',label:'Points Finishes' },
+      ];
 
-    // Build per-driver stats
-    const stats = {};
-    standings.forEach(s => {
-      const id = s.Driver.driverId;
-      stats[id] = {
-        name:     `${s.Driver.givenName[0]}. ${s.Driver.familyName}`,
-        points:   parseInt(s.points),
-        wins:     parseInt(s.wins),
-        podiums:  0, fastlaps: 0, dnfs: 0, p10plus: 0,
-      };
-    });
+      grid.innerHTML = teams.map(team => {
+        const d1 = team.d1, d2 = team.d2;
 
-    // Scan race results
-    allRaces.forEach(race => {
-      (race.Results || []).forEach(r => {
-        const id  = r.Driver.driverId;
-        if (!stats[id]) return;
-        const pos = parseInt(r.position);
-        if (pos <= 3) stats[id].podiums++;
-        if (pos <= 10) stats[id].p10plus++;
-        if (r.FastestLap?.rank === '1') stats[id].fastlaps++;
-        if (r.status && r.status !== 'Finished' && !r.status.startsWith('+'))
-          stats[id].dnfs++;
-      });
-    });
-
-    // Count poles from qualifying
-    allQuali.forEach(race => {
-      const q = (race.QualifyingResults || [])[0];
-      if (q && stats[q.Driver.driverId]) stats[q.Driver.driverId].poles = (stats[q.Driver.driverId].poles || 0) + 1;
-    });
-    // Ensure poles key exists for all
-    Object.keys(stats).forEach(id => { if (!stats[id].poles) stats[id].poles = 0; });
-
-    // Render cards
-    grid.innerHTML = TEAM_PAIRINGS_2026.map(team => {
-      const [d1id, d2id] = team.drivers;
-      const d1 = standings.find(s => s.Driver.driverId.includes(d1id.split('_')[0]));
-      const d2 = standings.find(s => s.Driver.driverId.includes(d2id.split('_')[0]));
-      if (!d1 || !d2) return '';
-
-      const s1 = stats[d1.Driver.driverId] || {};
-      const s2 = stats[d2.Driver.driverId] || {};
-      const n1 = s1.name || d1.Driver.familyName;
-      const n2 = s2.name || d2.Driver.familyName;
-
-      const metricRows = METRICS.map(m => {
-        const v1  = s1[m.key] || 0;
-        const v2  = s2[m.key] || 0;
-        const tot = v1 + v2;
-        if (tot === 0) {
+        const metricRows = METRICS.map(m => {
+          const v1 = d1[m.key] || 0;
+          const v2 = d2[m.key] || 0;
+          const tot = v1 + v2;
+          if (tot === 0) {
+            return `<div class="tm-metric">
+              <div class="tm-metric-label">${m.label}</div>
+              <div class="tm-tie">Both 0</div>
+            </div>`;
+          }
+          const p1 = Math.round((v1 / tot) * 100);
+          const p2 = 100 - p1;
           return `<div class="tm-metric">
             <div class="tm-metric-label">${m.label}</div>
-            <div class="tm-tie">Both 0</div>
+            <div class="tm-metric-bar">
+              <div class="tm-bar-d1" style="width:${p1}%;background:${team.color}">${v1}</div>
+              <div class="tm-bar-d2" style="width:${p2}%">${v2}</div>
+            </div>
           </div>`;
-        }
-        const p1 = Math.round((v1/tot)*100);
-        const p2 = 100 - p1;
-        return `<div class="tm-metric">
-          <div class="tm-metric-label">${m.label}</div>
-          <div class="tm-metric-bar">
-            <div class="tm-bar-d1" style="width:${p1}%;background:${team.color}">${v1}</div>
-            <div class="tm-bar-d2" style="width:${p2}%">${v2}</div>
+        }).join('');
+
+        const avgRow = `<div class="tm-metric">
+          <div class="tm-metric-label">Avg Finish</div>
+          <div class="tm-metric-bar" style="justify-content:space-between;background:none;gap:8px">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:${team.color};font-weight:700">P${d1.avg_finish}</span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,0.3)">AVG</span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,0.6);font-weight:700">P${d2.avg_finish}</span>
           </div>
         </div>`;
+
+        return `<div class="tm-card" style="--team-color:${team.color}">
+          <div class="tm-card-header">
+            <div class="tm-team-name">${team.team}</div>
+          </div>
+          <div class="tm-drivers">
+            <span class="tm-d1">${d1.name}</span>
+            <span>vs</span>
+            <span>${d2.name}</span>
+          </div>
+          <div class="tm-metrics">${metricRows}${avgRow}</div>
+        </div>`;
       }).join('');
-
-      return `<div class="tm-card" style="--team-color:${team.color}">
-        <div class="tm-card-header">
-          <div class="tm-team-name">${team.team}</div>
-        </div>
-        <div class="tm-drivers">
-          <span class="tm-d1">${n1}</span>
-          <span>vs</span>
-          <span>${n2}</span>
-        </div>
-        <div class="tm-metrics">${metricRows}</div>
-      </div>`;
-    }).join('');
-
-  } catch(e) {
-    grid.innerHTML = `<div class="strat-loading">Error loading data: ${e.message}</div>`;
-  }
+    })
+    .catch(e => {
+      grid.innerHTML = `<div class="strat-loading">Error: ${e.message}</div>`;
+    });
 }
 </script>
 
+
 <!-- ================================================================
-     AI INSIGHTS PAGE JS
+     AI INSIGHTS PAGE JS — reads from data.json
      ================================================================ -->
 <script>
 window._aiLoaded = false;
 
-async function initAIInsights() {
+function initAIInsights() {
   window._aiLoaded = true;
   const grid = document.getElementById('ai-grid');
-  grid.innerHTML = '<div class="strat-loading">⏳ Running calculations…</div>';
+  grid.innerHTML = '<div class="strat-loading">⏳ Loading AI insights…</div>';
 
-  try {
-    const [driversRes, resultsRes, qualiRes] = await Promise.all([
-      fetch(`${JOLPICA_BASE}/current/driverStandings.json`),
-      fetch(`${JOLPICA_BASE}/current/results.json?limit=1000`),
-      fetch(`${JOLPICA_BASE}/current/qualifying.json?limit=1000`),
-    ]);
-    const driversData = await driversRes.json();
-    const resultsData = await resultsRes.json();
-    const qualiData   = await qualiRes.json();
-
-    const standings = driversData.MRData.StandingsTable.StandingsLists[0]?.DriverStandings || [];
-    const allRaces  = resultsData.MRData.RaceTable.Races || [];
-    const allQuali  = qualiData.MRData.RaceTable.Races   || [];
-    const totalRaces = allRaces.length;
-    const totalRem   = 23 - totalRaces;
-
-    // ── Per-driver stat aggregation ──────────────────────────────
-    const dStats = {};
-    standings.forEach(s => {
-      dStats[s.Driver.driverId] = {
-        name:      `${s.Driver.givenName[0]}. ${s.Driver.familyName}`,
-        points:    parseFloat(s.points),
-        wins:      parseInt(s.wins),
-        gridPos:   [], finishPos: [], dnfMech: 0, dnfDriver: 0,
-        qualiPos:  [], fastlaps:  0, podiums: 0,
-      };
-    });
-
-    allRaces.forEach(race => {
-      (race.Results || []).forEach(r => {
-        const id  = r.Driver.driverId;
-        if (!dStats[id]) return;
-        const pos  = parseInt(r.position);
-        const grid = parseInt(r.grid);
-        dStats[id].finishPos.push(pos);
-        if (grid > 0) dStats[id].gridPos.push(grid);
-        if (pos <= 3) dStats[id].podiums++;
-        if (r.FastestLap?.rank === '1') dStats[id].fastlaps++;
-        const st = r.status || '';
-        if (st !== 'Finished' && !st.startsWith('+')) {
-          const mechKeywords = ['Engine','Gearbox','Hydraulics','Brakes','Electrical','Power','Oil','Water','Mechanical','Turbo','Exhaust'];
-          if (mechKeywords.some(k => st.includes(k))) dStats[id].dnfMech++;
-          else dStats[id].dnfDriver++;
-        }
-      });
-    });
-
-    allQuali.forEach(race => {
-      (race.QualifyingResults || []).forEach(r => {
-        const id = r.Driver.driverId;
-        if (dStats[id]) dStats[id].qualiPos.push(parseInt(r.position));
-      });
-    });
-
-    const avg = arr => arr.length ? arr.reduce((a,b)=>a+b,0)/arr.length : 0;
-    const std = arr => {
-      if (arr.length < 2) return 0;
-      const m = avg(arr);
-      return Math.sqrt(arr.reduce((a,b)=>a+(b-m)**2,0)/arr.length);
-    };
-
-    // ── 1. Championship Probability (Monte Carlo) ────────────────
-    function champProb() {
-      const drivers = standings.slice(0, 8).map(s => ({
-        id:  s.Driver.driverId,
-        name: `${s.Driver.givenName[0]}. ${s.Driver.familyName}`,
-        pts: parseFloat(s.points),
-      }));
-      const POINTS = [25,18,15,12,10,8,6,4,2,1];
-      const SIM = 5000;
-      const wins = {};
-      drivers.forEach(d => wins[d.id] = 0);
-
-      for (let i = 0; i < SIM; i++) {
-        const simPts = {};
-        drivers.forEach(d => simPts[d.id] = d.pts);
-        for (let r = 0; r < totalRem; r++) {
-          const shuffled = [...drivers].sort(() => Math.random() - 0.5);
-          shuffled.forEach((d, pos) => {
-            simPts[d.id] += POINTS[pos] || 0;
-          });
-        }
-        const winner = drivers.reduce((a,b) => simPts[a.id] > simPts[b.id] ? a : b);
-        wins[winner.id]++;
+  fetch('data.json?_=' + Date.now())
+    .then(r => r.json())
+    .then(data => {
+      const ai = data.ai_insights;
+      if (!ai || !Object.keys(ai).length) {
+        grid.innerHTML = '<div class="strat-loading">No AI insight data yet — run the GitHub Action to generate it</div>';
+        return;
       }
 
-      return drivers.map(d => ({
-        name: d.name,
-        prob: Math.round((wins[d.id]/SIM)*100),
-      })).sort((a,b) => b.prob - a.prob).slice(0,6);
-    }
-
-    // ── 2. Luck Index ────────────────────────────────────────────
-    function luckIndex() {
-      // Robbed points = mechDNF × avg points at that position
-      // Gifted points = driver errors of competitors
-      const MECH_PTS_ESTIMATE = 12; // assume avg P4-ish when retiring
-      return Object.entries(dStats).map(([id, d]) => ({
-        name:    d.name,
-        robbed:  d.dnfMech * MECH_PTS_ESTIMATE,
-        errors:  d.dnfDriver,
-        luck:    (d.dnfDriver * 6) - (d.dnfMech * MECH_PTS_ESTIMATE),
-      })).sort((a,b) => b.luck - a.luck).slice(0, 6);
-    }
-
-    // ── 3. Pace Consistency Score ────────────────────────────────
-    function paceConsistency() {
-      return Object.entries(dStats)
-        .filter(([,d]) => d.finishPos.length >= 2)
-        .map(([id, d]) => {
-          const deviation  = std(d.finishPos);
-          const score      = Math.max(0, 100 - (deviation * 8));
-          return { name: d.name, score: Math.round(score * 10) / 10, deviation };
-        })
-        .sort((a,b) => b.score - a.score)
-        .slice(0, 8);
-    }
-
-    // ── 4. Qualifying vs Race Delta ──────────────────────────────
-    function qualiRaceDelta() {
-      return Object.entries(dStats)
-        .filter(([,d]) => d.qualiPos.length >= 2 && d.finishPos.length >= 2)
-        .map(([id, d]) => {
-          const delta = avg(d.qualiPos) - avg(d.finishPos);
-          return { name: d.name, delta: Math.round(delta * 10) / 10 };
-        })
-        .sort((a,b) => b.delta - a.delta)
-        .slice(0, 8);
-    }
-
-    // ── 5. Robbed Points Counter ─────────────────────────────────
-    function robbedPoints() {
-      return Object.entries(dStats)
-        .map(([id, d]) => ({
-          name:   d.name,
-          robbed: d.dnfMech * 12,
-          dnfs:   d.dnfMech,
-        }))
-        .filter(d => d.robbed > 0)
-        .sort((a,b) => b.robbed - a.robbed)
-        .slice(0, 8);
-    }
-
-    // ── 6. Pressure Performer (Avg finish vs quali for top-half grid) ──
-    function pressurePerformer() {
-      return Object.entries(dStats)
-        .filter(([,d]) => d.qualiPos.length >= 2)
-        .map(([id, d]) => {
-          const avgFinish = avg(d.finishPos);
-          const podiumRate = totalRaces > 0 ? Math.round((d.podiums / totalRaces) * 100) : 0;
-          return { name: d.name, podiumRate, avgFinish: Math.round(avgFinish*10)/10 };
-        })
-        .sort((a,b) => b.podiumRate - a.podiumRate)
-        .slice(0, 8);
-    }
-
-    // ── Render all 6 cards ───────────────────────────────────────
-    function aiCard(eyebrow, title, desc, rows, maxVal, note) {
-      const rowsHTML = rows.map((r, i) => {
-        const pct = maxVal > 0 ? Math.min(100, (r.val / maxVal) * 100) : 0;
-        const valStr = r.valStr || r.val;
-        return `<div class="ai-row">
-          <div class="ai-rank">${String(i+1).padStart(2,'0')}</div>
-          <div class="ai-bar-wrap">
-            <div class="ai-bar-fill" style="width:${pct}%"></div>
-            <div class="ai-bar-label">${r.name}</div>
-          </div>
-          <div class="ai-val">${valStr}</div>
+      function aiCard(eyebrow, title, desc, rows, maxVal, note) {
+        const rowsHTML = rows.map((r, i) => {
+          const pct    = maxVal > 0 ? Math.min(100, (r.val / maxVal) * 100) : 0;
+          return `<div class="ai-row">
+            <div class="ai-rank">${String(i + 1).padStart(2,'0')}</div>
+            <div class="ai-bar-wrap">
+              <div class="ai-bar-fill" style="width:${pct}%"></div>
+              <div class="ai-bar-label">${r.name}</div>
+            </div>
+            <div class="ai-val">${r.valStr}</div>
+          </div>`;
+        }).join('');
+        return `<div class="ai-card">
+          <div class="ai-card-eyebrow">◆ ${eyebrow}</div>
+          <div class="ai-card-title">${title}</div>
+          <div class="ai-card-desc">${desc}</div>
+          <div class="ai-rows">${rowsHTML}</div>
+          ${note ? `<div class="ai-note">⚡ ${note}</div>` : ''}
         </div>`;
-      }).join('');
-      return `<div class="ai-card">
-        <div class="ai-card-eyebrow">◆ ${eyebrow}</div>
-        <div class="ai-card-title">${title}</div>
-        <div class="ai-card-desc">${desc}</div>
-        <div class="ai-rows">${rowsHTML}</div>
-        ${note ? `<div class="ai-note">⚡ ${note}</div>` : ''}
-      </div>`;
-    }
+      }
 
-    const cp   = champProb();
-    const li   = luckIndex();
-    const pc   = paceConsistency();
-    const qrd  = qualiRaceDelta();
-    const rp   = robbedPoints();
-    const pp   = pressurePerformer();
+      const cp  = (ai.champ_probability || []).slice(0,6);
+      const li  = (ai.luck_index        || []).slice(0,6);
+      const pc  = (ai.pace_consistency  || []).slice(0,8);
+      const qrd = (ai.quali_race_delta  || []).slice(0,8);
+      const rp  = (ai.robbed_points     || []).slice(0,8);
+      const pp  = (ai.podium_performer  || []).slice(0,8);
+      const rem = ai.total_remaining || '?';
+      const sim = ai.sim_runs || 5000;
 
-    grid.innerHTML = [
-      aiCard(
-        'Monte Carlo Simulation · ' + SIM_COUNT + ' runs',
-        'Championship Probability',
-        'Simulated across ' + totalRem + ' remaining races based on current pace distribution.',
-        cp.map(d => ({ name: d.name, val: d.prob, valStr: d.prob + '%' })),
-        100,
-        'Recalculated on every page load using current standings'
-      ),
-      aiCard(
-        'Mechanical DNF Analysis',
-        'Luck Index',
-        'Estimated points lost to mechanical failures vs driver errors this season.',
-        li.map(d => ({ name: d.name, val: Math.abs(d.luck),
-          valStr: d.luck > 0 ? `+${d.luck}pts` : `${d.luck}pts` })),
-        Math.max(...li.map(d => Math.abs(d.luck)), 1),
-        'Positive = net lucky (driver errors helped). Negative = robbed by reliability'
-      ),
-      aiCard(
-        'Finish Position Std Deviation',
-        'Pace Consistency',
-        'Lower deviation from mean finish = higher score. Measures race-to-race reliability.',
-        pc.map(d => ({ name: d.name, val: d.score, valStr: d.score.toFixed(1) })),
-        100,
-        'Calculated from finishing positions across all completed rounds'
-      ),
-      aiCard(
-        'Grid Position vs Finish Position',
-        'Quali → Race Delta',
-        'Positive delta = consistently finishes better than grid slot. The true racers.',
-        qrd.map(d => ({ name: d.name, val: Math.max(0, d.delta),
-          valStr: d.delta > 0 ? `+${d.delta}` : String(d.delta) })),
-        Math.max(...qrd.map(d => Math.abs(d.delta)), 1),
-        'Average across all races. Filters out safety car and first lap chaos'
-      ),
-      aiCard(
-        'Mechanical DNF · Estimated Loss',
-        'Robbed Points Counter',
-        'Points each driver would likely have scored if not for mechanical failures.',
-        rp.length > 0
-          ? rp.map(d => ({ name: d.name, val: d.robbed, valStr: `~${d.robbed}pts · ${d.dnfs} DNF${d.dnfs>1?'s':''}` }))
-          : [{ name: 'No mechanical DNFs yet', val: 0, valStr: '🎉' }],
-        Math.max(...rp.map(d => d.robbed), 1),
-        'Assumes P4-P5 average finish value (12pts) per mechanical retirement'
-      ),
-      aiCard(
-        'Podium Rate · All Completed Races',
-        'Podium Performer',
-        'Who is converting race starts into podium finishes most consistently.',
-        pp.map(d => ({ name: d.name, val: d.podiumRate,
-          valStr: `${d.podiumRate}% · P${d.avgFinish} avg` })),
-        Math.max(...pp.map(d => d.podiumRate), 1),
-        'Podiums ÷ races started × 100. Updates after every Grand Prix'
-      ),
-    ].join('');
-
-  } catch(e) {
-    grid.innerHTML = `<div class="strat-loading">Error: ${e.message}</div>`;
-  }
+      grid.innerHTML = [
+        aiCard(
+          `Monte Carlo · ${sim.toLocaleString()} simulations`,
+          'Championship Probability',
+          `Simulated across ${rem} remaining races based on current points distribution.`,
+          cp.map(d => ({ name: d.name, val: d.prob, valStr: d.prob + '%' })),
+          100,
+          'Recalculated every time the GitHub Action runs after a race'
+        ),
+        aiCard(
+          'Mechanical DNF Analysis',
+          'Luck Index',
+          'Estimated net points impact from reliability failures vs driver errors.',
+          li.map(d => ({ name: d.name, val: Math.abs(d.luck_score),
+            valStr: d.luck_score >= 0 ? `+${d.luck_score}` : `${d.luck_score}` })),
+          Math.max(...li.map(d => Math.abs(d.luck_score)), 1),
+          'Positive = net lucky. Negative = robbed by the car'
+        ),
+        aiCard(
+          'Finish Position Std Deviation',
+          'Pace Consistency',
+          'Lower standard deviation = more consistent finisher = higher score.',
+          pc.map(d => ({ name: d.name, val: d.score, valStr: d.score.toFixed(1) })),
+          100,
+          'Calculated from all finishing positions this season'
+        ),
+        aiCard(
+          'Average Grid vs Average Finish',
+          'Qualifying → Race Delta',
+          'Positive = consistently finishes better than grid slot. The true racers.',
+          qrd.map(d => ({ name: d.name, val: Math.max(0, d.delta),
+            valStr: d.delta > 0 ? `+${d.delta}` : `${d.delta}` })),
+          Math.max(...qrd.map(d => Math.abs(d.delta)), 1),
+          'Averaged across all completed rounds this season'
+        ),
+        aiCard(
+          'Mechanical DNF · Estimated Loss',
+          'Robbed Points Counter',
+          'Points each driver would likely have scored without mechanical failures.',
+          rp.length > 0
+            ? rp.map(d => ({ name: d.name, val: d.robbed_pts,
+                valStr: `~${d.robbed_pts}pts · ${d.dnf_mech} DNF${d.dnf_mech > 1 ? 's' : ''}` }))
+            : [{ name: 'No mechanical DNFs yet 🎉', val: 0, valStr: '—' }],
+          Math.max(...(rp.length > 0 ? rp.map(d => d.robbed_pts) : [1])),
+          'Assumes average P4–P5 finish value (~12pts) per retirement'
+        ),
+        aiCard(
+          'Podiums ÷ Races Started × 100',
+          'Podium Performer',
+          'Who converts race starts into podium finishes most consistently.',
+          pp.map(d => ({ name: d.name, val: d.podium_rate,
+            valStr: `${d.podium_rate}% · P${d.avg_finish} avg` })),
+          Math.max(...pp.map(d => d.podium_rate), 1),
+          'Updates after every Grand Prix'
+        ),
+      ].join('');
+    })
+    .catch(e => {
+      grid.innerHTML = `<div class="strat-loading">Error loading AI data: ${e.message}</div>`;
+    });
 }
-
-const SIM_COUNT = 5000;
 </script>
+
+
 
 <!-- ================================================================
      PAPAYA AGENT · McLaren AI Chat Widget
