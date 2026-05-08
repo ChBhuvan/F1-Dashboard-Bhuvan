@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-08T06:24:58.833465+00:00",
+  "updated_at": "2026-05-08T17:22:44.529765+00:00",
   "season": 2026,
   "drivers": [
     {
@@ -85,7 +85,7 @@
       "name": "O. Bearman",
       "full_name": "Oliver Bearman",
       "driver_id": "bearman",
-      "team": "Haas F1 Team",
+      "team": "Haas",
       "pts": 17,
       "wins": 0,
       "nat": "British"
@@ -96,7 +96,7 @@
       "name": "P. Gasly",
       "full_name": "Pierre Gasly",
       "driver_id": "gasly",
-      "team": "Alpine F1 Team",
+      "team": "Alpine",
       "pts": 16,
       "wins": 0,
       "nat": "French"
@@ -107,7 +107,7 @@
       "name": "L. Lawson",
       "full_name": "Liam Lawson",
       "driver_id": "lawson",
-      "team": "RB F1 Team",
+      "team": "Racing Bulls",
       "pts": 10,
       "wins": 0,
       "nat": "New Zealander"
@@ -118,7 +118,7 @@
       "name": "F. Colapinto",
       "full_name": "Franco Colapinto",
       "driver_id": "colapinto",
-      "team": "Alpine F1 Team",
+      "team": "Alpine",
       "pts": 7,
       "wins": 0,
       "nat": "Argentine"
@@ -129,7 +129,7 @@
       "name": "A. Lindblad",
       "full_name": "Arvid Lindblad",
       "driver_id": "arvid_lindblad",
-      "team": "RB F1 Team",
+      "team": "Racing Bulls",
       "pts": 4,
       "wins": 0,
       "nat": "British"
@@ -173,7 +173,7 @@
       "name": "E. Ocon",
       "full_name": "Esteban Ocon",
       "driver_id": "ocon",
-      "team": "Haas F1 Team",
+      "team": "Haas",
       "pts": 1,
       "wins": 0,
       "nat": "French"
@@ -206,7 +206,7 @@
       "name": "V. Bottas",
       "full_name": "Valtteri Bottas",
       "driver_id": "bottas",
-      "team": "Cadillac F1 Team",
+      "team": "Cadillac",
       "pts": 0,
       "wins": 0,
       "nat": "Finnish"
@@ -217,10 +217,32 @@
       "name": "S. P\u00e9rez",
       "full_name": "Sergio P\u00e9rez",
       "driver_id": "perez",
-      "team": "Cadillac F1 Team",
+      "team": "Cadillac",
       "pts": 0,
       "wins": 0,
       "nat": "Mexican"
+    },
+    {
+      "pos": 21,
+      "code": "ALO",
+      "name": "F. Alonso",
+      "full_name": "Fernando Alonso",
+      "driver_id": "alonso",
+      "team": "Aston Martin",
+      "pts": 0,
+      "wins": 0,
+      "nat": "Spanish"
+    },
+    {
+      "pos": 22,
+      "code": "STR",
+      "name": "L. Stroll",
+      "full_name": "Lance Stroll",
+      "driver_id": "stroll",
+      "team": "Aston Martin",
+      "pts": 0,
+      "wins": 0,
+      "nat": "Canadian"
     }
   ],
   "constructors": [
@@ -262,30 +284,30 @@
     },
     {
       "pos": 5,
-      "name": "Alpine F1 Team",
+      "name": "Alpine",
       "pts": 23,
       "wins": 0,
       "bar_pct": 12.8,
       "nat": "French",
-      "pu": "\u2014"
+      "pu": "Renault PU"
     },
     {
       "pos": 6,
-      "name": "Haas F1 Team",
+      "name": "Haas",
       "pts": 18,
       "wins": 0,
       "bar_pct": 10.0,
       "nat": "American",
-      "pu": "\u2014"
+      "pu": "Ferrari PU"
     },
     {
       "pos": 7,
-      "name": "RB F1 Team",
+      "name": "Racing Bulls",
       "pts": 14,
       "wins": 0,
       "bar_pct": 7.8,
       "nat": "Italian",
-      "pu": "\u2014"
+      "pu": "Honda PU"
     },
     {
       "pos": 8,
@@ -307,12 +329,12 @@
     },
     {
       "pos": 10,
-      "name": "Cadillac F1 Team",
+      "name": "Cadillac",
       "pts": 0,
       "wins": 0,
       "bar_pct": 0.0,
       "nat": "American",
-      "pu": "\u2014"
+      "pu": "Ferrari PU"
     },
     {
       "pos": 11,
@@ -566,20 +588,20 @@
   ],
   "news": [
     {
-      "headline": "Why Red Bull and McLaren sat down after surprising comments about Lambiase's role",
-      "url": "https://www.autosport.com/f1/news/why-red-bull-and-mclaren-sat-down-after-surprising-comments-about-lambiases-role/10818742/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=uk"
+      "headline": "F1 agrees plan to ditch '50/50' engine power split for 2027 - The Race",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOdms0Q1AzQTViNEdtWWV4T3lnVkMxcDNlaVhKT01rdVdPNl93NHdVSldXNXRsRGxrbFVPVUE4UnFTYmh2a3YteXAwQlFHQzQwZFVTeDB6cnFJZWgzUnVtYW1XSUxTU2tGNHNMTzcyQmpUeUtTY0o5MzRlYVNKcTNBWmVERTVhNGF3cVowYzdwX29Qdw?oc=5"
     },
     {
-      "headline": "Red Bull targets Piastri as Verstappen replacement option",
-      "url": "https://www.autosport.com/f1/news/red-bull-targets-oscar-piastri-as-max-verstappen-replacement/10818721/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=uk"
+      "headline": "F1 and Sky agree new long-term partnership across UK, Ireland, and Italy - Formula 1",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQSDJxQlZSR1NiQUtLLVI1aXI4YkNyVERxVlBCbFRjcFhPcWczNU9CLUNaWDR2clp2QXcteGQxTGhZZmQwdWMzOVY0MEFVVDZQcjBjalRSck5pUDNPaGdrVTBRLWhGZVZqOHZjN2FESzZYWC1WUmV6WlYwd2E2MkNWd0gzcEw2a2RKS010dWpybGJQZEhiZFpsSGo3NUpPRjVxWWhpMkk5ZHgteF9wZGdLanZOdGdMQ3c4cElHMkMwYTVBTUNMRlZQcTJMNHczYThn?oc=5"
     },
     {
-      "headline": "From the archive: When Niki Lauda led an F1 driver strike in 1982",
-      "url": "https://www.autosport.com/f1/news/from-the-archive-when-niki-lauda-led-an-f1-driver-strike-in-1982/10818642/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=uk"
+      "headline": "Aston Martin's plans for F1 2026 after upgrade-free Miami - Motorsport.com",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOTW9uTmN1YmZpWEF3Nmc4ZGhlSS1WY1ZUc1dqOGJaWF9heVd6OGpIRlRhMzBlS3NfYnRCeFNvbW00VjRFcngxR0U3QTJZaEhiTFhvTHJubll6YUpWNTE4ZjlVR2NjT2ZfWVRhMS0wZlh4aWRQOVFLcFUyRVEwYjUwOTE3R1U1V3l1MFJWWHZ3N2o3RmdwQU5oVTRMYzVpclJGMzZ3?oc=5"
     },
     {
-      "headline": "Sky Sports extends F1 live broadcast contract",
-      "url": "https://www.autosport.com/f1/news/sky-sports-extends-f1-live-broadcast-contract/10818609/?utm_source=RSS&utm_medium=referral&utm_campaign=RSS-F1&utm_term=News&utm_content=uk"
+      "headline": "Why time is running out to make bigger F1 power unit changes for 2027 - Autosport",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNZXNfTmpJY1dCcmc0NXZKblpMVld5d2tpZ191YVYySGs0X1c5dndWSkZXR2RaUWN5Ry00WG11cjRSUE9PR2JNSlVxQjZ0endkVlV2Q1FEOGZta3AzdEtCVlRndjZ5WUYwb1hhbThpMHhNT2s3MWtReERzZ25TME1aWDdUVzJCZWZYVjhOdkc0OVFQRjVmUmhVMmlvd3B5U0hZbW5kSV9kZ3VCZHlLNUVXT1F6bw?oc=5"
     }
   ],
   "stats": {
@@ -3237,19 +3259,19 @@
         "consistency": 78.4
       },
       "d2": {
-        "id": "lawson",
-        "name": "Liam Lawson",
-        "code": "LAW",
-        "points": 10,
+        "id": "hadjar",
+        "name": "Isack Hadjar",
+        "code": "HAD",
+        "points": 4,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
         "fastest_laps": 0,
         "dnfs": 2,
         "dnf_mech": 0,
-        "p10_finishes": 2,
-        "avg_finish": 12.25,
-        "consistency": 75.2
+        "p10_finishes": 1,
+        "avg_finish": 15.5,
+        "consistency": 71.4
       }
     },
     {
@@ -3284,6 +3306,40 @@
         "p10_finishes": 0,
         "avg_finish": 18.25,
         "consistency": 91.8
+      }
+    },
+    {
+      "team": "Alpine",
+      "color": "#0093CC",
+      "d1": {
+        "id": "gasly",
+        "name": "Pierre Gasly",
+        "code": "GAS",
+        "points": 16,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "fastest_laps": 0,
+        "dnfs": 2,
+        "dnf_mech": 0,
+        "p10_finishes": 3,
+        "avg_finish": 11.0,
+        "consistency": 70.2
+      },
+      "d2": {
+        "id": "colapinto",
+        "name": "Franco Colapinto",
+        "code": "COL",
+        "points": 7,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "fastest_laps": 0,
+        "dnfs": 2,
+        "dnf_mech": 0,
+        "p10_finishes": 2,
+        "avg_finish": 11.75,
+        "consistency": 82.5
       }
     },
     {
@@ -3324,34 +3380,34 @@
       "team": "Racing Bulls",
       "color": "#6692FF",
       "d1": {
-        "id": "hadjar",
-        "name": "Isack Hadjar",
-        "code": "HAD",
-        "points": 4,
+        "id": "lawson",
+        "name": "Liam Lawson",
+        "code": "LAW",
+        "points": 10,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
         "fastest_laps": 0,
         "dnfs": 2,
         "dnf_mech": 0,
-        "p10_finishes": 1,
-        "avg_finish": 15.5,
-        "consistency": 71.4
+        "p10_finishes": 2,
+        "avg_finish": 12.25,
+        "consistency": 75.2
       },
       "d2": {
-        "id": "bearman",
-        "name": "Oliver Bearman",
-        "code": "BEA",
-        "points": 17,
+        "id": "arvid_lindblad",
+        "name": "Arvid Lindblad",
+        "code": "LIN",
+        "points": 4,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
         "fastest_laps": 0,
         "dnfs": 3,
         "dnf_mech": 0,
-        "p10_finishes": 2,
-        "avg_finish": 11.25,
-        "consistency": 67.2
+        "p10_finishes": 1,
+        "avg_finish": 12.0,
+        "consistency": 87.8
       }
     },
     {
@@ -3371,6 +3427,40 @@
         "p10_finishes": 1,
         "avg_finish": 12.0,
         "consistency": 92.1
+      },
+      "d2": {
+        "id": "bearman",
+        "name": "Oliver Bearman",
+        "code": "BEA",
+        "points": 17,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "fastest_laps": 0,
+        "dnfs": 3,
+        "dnf_mech": 0,
+        "p10_finishes": 2,
+        "avg_finish": 11.25,
+        "consistency": 67.2
+      }
+    },
+    {
+      "team": "Audi",
+      "color": "#00877C",
+      "d1": {
+        "id": "hulkenberg",
+        "name": "Nico H\u00fclkenberg",
+        "code": "HUL",
+        "points": 0,
+        "wins": 0,
+        "podiums": 0,
+        "poles": 0,
+        "fastest_laps": 0,
+        "dnfs": 3,
+        "dnf_mech": 0,
+        "p10_finishes": 0,
+        "avg_finish": 15.75,
+        "consistency": 75.7
       },
       "d2": {
         "id": "bortoleto",
@@ -3430,12 +3520,12 @@
       {
         "driver_id": "antonelli",
         "name": "A. Antonelli",
-        "prob": 54.7
+        "prob": 54.2
       },
       {
         "driver_id": "russell",
         "name": "G. Russell",
-        "prob": 23.1
+        "prob": 22.9
       },
       {
         "driver_id": "leclerc",
@@ -3445,27 +3535,27 @@
       {
         "driver_id": "norris",
         "name": "L. Norris",
-        "prob": 5.1
+        "prob": 4.9
       },
       {
         "driver_id": "hamilton",
         "name": "L. Hamilton",
-        "prob": 4.6
+        "prob": 4.9
       },
       {
         "driver_id": "piastri",
         "name": "O. Piastri",
-        "prob": 3.2
+        "prob": 3.6
       },
       {
         "driver_id": "max_verstappen",
         "name": "M. Verstappen",
-        "prob": 0.9
+        "prob": 1.0
       },
       {
         "driver_id": "bearman",
         "name": "O. Bearman",
-        "prob": 0.5
+        "prob": 0.6
       }
     ],
     "luck_index": [
@@ -3475,7 +3565,7 @@
         "dnf_mech": 0,
         "dnf_driver": 4,
         "robbed_pts": 0,
-        "luck_score": -16
+        "luck_score": -12
       },
       {
         "driver_id": "alonso",
@@ -3483,7 +3573,7 @@
         "dnf_mech": 0,
         "dnf_driver": 4,
         "robbed_pts": 0,
-        "luck_score": -16
+        "luck_score": -12
       },
       {
         "driver_id": "bottas",
@@ -3491,7 +3581,7 @@
         "dnf_mech": 0,
         "dnf_driver": 4,
         "robbed_pts": 0,
-        "luck_score": -16
+        "luck_score": -12
       },
       {
         "driver_id": "bearman",
@@ -3499,7 +3589,15 @@
         "dnf_mech": 0,
         "dnf_driver": 3,
         "robbed_pts": 0,
-        "luck_score": -12
+        "luck_score": -9
+      },
+      {
+        "driver_id": "arvid_lindblad",
+        "name": "A. Lindblad",
+        "dnf_mech": 0,
+        "dnf_driver": 3,
+        "robbed_pts": 0,
+        "luck_score": -9
       },
       {
         "driver_id": "bortoleto",
@@ -3507,7 +3605,7 @@
         "dnf_mech": 0,
         "dnf_driver": 3,
         "robbed_pts": 0,
-        "luck_score": -12
+        "luck_score": -9
       },
       {
         "driver_id": "ocon",
@@ -3515,7 +3613,7 @@
         "dnf_mech": 0,
         "dnf_driver": 3,
         "robbed_pts": 0,
-        "luck_score": -12
+        "luck_score": -9
       },
       {
         "driver_id": "albon",
@@ -3523,7 +3621,7 @@
         "dnf_mech": 0,
         "dnf_driver": 3,
         "robbed_pts": 0,
-        "luck_score": -12
+        "luck_score": -9
       },
       {
         "driver_id": "perez",
@@ -3531,7 +3629,7 @@
         "dnf_mech": 0,
         "dnf_driver": 3,
         "robbed_pts": 0,
-        "luck_score": -12
+        "luck_score": -9
       },
       {
         "driver_id": "hulkenberg",
@@ -3539,17 +3637,10 @@
         "dnf_mech": 0,
         "dnf_driver": 3,
         "robbed_pts": 0,
-        "luck_score": -12
-      },
-      {
-        "driver_id": "gasly",
-        "name": "P. Gasly",
-        "dnf_mech": 0,
-        "dnf_driver": 2,
-        "robbed_pts": 0,
-        "luck_score": -8
+        "luck_score": -9
       }
     ],
+    "luck_index_meaningful": false,
     "pace_consistency": [
       {
         "driver_id": "antonelli",
@@ -3608,18 +3699,18 @@
         "avg_finish": 4.5
       },
       {
+        "driver_id": "arvid_lindblad",
+        "name": "A. Lindblad",
+        "score": 87.8,
+        "std_dev": 2.45,
+        "avg_finish": 12.0
+      },
+      {
         "driver_id": "bottas",
         "name": "V. Bottas",
         "score": 87.5,
         "std_dev": 2.49,
         "avg_finish": 17.25
-      },
-      {
-        "driver_id": "sainz",
-        "name": "C. Sainz",
-        "score": 85.0,
-        "std_dev": 3.0,
-        "avg_finish": 12.0
       }
     ],
     "quali_race_delta": [
@@ -3687,11 +3778,11 @@
         "avg_finish": 12.0
       },
       {
-        "driver_id": "hamilton",
-        "name": "L. Hamilton",
-        "delta": 0.75,
-        "avg_quali": 5.5,
-        "avg_finish": 4.75
+        "driver_id": "colapinto",
+        "name": "F. Colapinto",
+        "delta": 1.0,
+        "avg_quali": 12.75,
+        "avg_finish": 11.75
       }
     ],
     "robbed_points": [],
@@ -3753,18 +3844,18 @@
         "avg_finish": 11.25
       },
       {
+        "driver_id": "arvid_lindblad",
+        "name": "A. Lindblad",
+        "podium_rate": 0.0,
+        "podiums": 0,
+        "avg_finish": 12.0
+      },
+      {
         "driver_id": "bortoleto",
         "name": "G. Bortoleto",
         "podium_rate": 0.0,
         "podiums": 0,
         "avg_finish": 13.75
-      },
-      {
-        "driver_id": "gasly",
-        "name": "P. Gasly",
-        "podium_rate": 0.0,
-        "podiums": 0,
-        "avg_finish": 11.0
       }
     ]
   }
