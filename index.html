@@ -1534,6 +1534,15 @@ body {
 .page-panel { display: none; }
 .page-panel.active { display: block; }
 
+/* Dashboard sections supply their own dark surfaces (.race-block, etc.).
+   Strategies/Teammates/AI Insights don't, so they'd render white text on
+   the cream `--paper` body background. Force a dark surface here. */
+#page-strategies, #page-teammates, #page-ai-insights {
+  background: var(--carbon);
+  color: #fff;
+  min-height: 100vh;
+}
+
 /* Mobile nav */
 #nav-hamburger {
   display: none;
@@ -2592,12 +2601,55 @@ body {
   // ── Next race block ──────────────────────────────────────────────
   if (data.next_race && data.next_race.name) {
     const nr = data.next_race;
+
+    // Country → flag emoji map, keyed off Jolpica's country names
+    const FLAG_MAP = {
+      "USA": "🇺🇸", "United States": "🇺🇸",
+      "UK": "🇬🇧", "United Kingdom": "🇬🇧",
+      "Canada": "🇨🇦", "Monaco": "🇲🇨", "Spain": "🇪🇸",
+      "Austria": "🇦🇹", "Belgium": "🇧🇪", "Hungary": "🇭🇺",
+      "Netherlands": "🇳🇱", "Italy": "🇮🇹", "Azerbaijan": "🇦🇿",
+      "Singapore": "🇸🇬", "Mexico": "🇲🇽", "Brazil": "🇧🇷",
+      "Qatar": "🇶🇦", "UAE": "🇦🇪", "United Arab Emirates": "🇦🇪",
+      "Australia": "🇦🇺", "China": "🇨🇳", "Japan": "🇯🇵",
+      "Saudi Arabia": "🇸🇦", "Bahrain": "🇧🇭", "France": "🇫🇷",
+      "Germany": "🇩🇪",
+    };
+
     const raceNameEl = document.querySelector('.race-name');
     if (raceNameEl) {
-      const parts = nr.name.replace(' Grand Prix', '').split(' ');
-      const gp    = parts.slice(0, -0).join(' ');
-      raceNameEl.innerHTML = `${gp} <em>Grand Prix</em>`;
+      const stripped = nr.name.replace(' Grand Prix', '');
+      raceNameEl.innerHTML = `${stripped} <em>Grand Prix</em>`;
     }
+    const roundEl = document.querySelector('.race-round');
+    if (roundEl) {
+      roundEl.textContent =
+        `◆ Round ${String(nr.round).padStart(2,'0')} · Up Next`;
+    }
+    const flagEl = document.querySelector('.race-flag-big');
+    if (flagEl) flagEl.textContent = FLAG_MAP[nr.country] || '🏁';
+
+    // Two .race-circuit lines: line 1 is "Circuit · Locality",
+    // line 2 is "Round X of N · ..."
+    const circuitEls = document.querySelectorAll('.race-circuit');
+    if (circuitEls[0] && nr.circuit) {
+      circuitEls[0].innerHTML =
+        `<strong>${nr.circuit}</strong>${nr.location ? ' · ' + nr.location : ''}`;
+    }
+    if (circuitEls[1] && data.calendar) {
+      circuitEls[1].textContent = `Round ${nr.round} of ${data.calendar.length}`;
+    }
+
+    // Stats row: only the "Dates" tile is data-driven (lap record / pole
+    // aren't in data.json). Index 2 is the Dates tile.
+    const statVals = document.querySelectorAll('.race-stat-val');
+    if (statVals[2] && nr.date) {
+      const d = new Date(nr.date);
+      statVals[2].textContent = d.toLocaleDateString('en-US', {
+        month: 'short', day: 'numeric'
+      });
+    }
+
     // Update countdown target
     if (nr.datetime) {
       window._nextRaceDatetime = nr.datetime;
@@ -2605,9 +2657,12 @@ body {
   }
 
   // ── Breaking news ────────────────────────────────────────────────
-  if (data.news && data.news.length) {
-    const newsBlock = document.querySelector('.news-block');
-    if (newsBlock) {
+  // Always overwrite — never leave the static "Fetching…" placeholder up.
+  // If the data pipeline returned no items (Reddit + RSS both failed),
+  // show a polite empty state instead.
+  const newsBlock = document.querySelector('.news-block');
+  if (newsBlock) {
+    if (data.news && data.news.length) {
       newsBlock.innerHTML = data.news.map((item, i) => `
         <article class="news-item${i === 0 ? ' lead' : ' neutral'}">
           <div class="news-meta">
@@ -2621,10 +2676,21 @@ body {
             </a>
           </h3>
           <p class="news-body" style="font-size:10px;opacity:0.55;margin-top:4px;">
-            r/formula1 · <a href="${item.url}" target="_blank" rel="noopener noreferrer"
-            style="color:var(--mclaren);text-decoration:none;">Read on Reddit →</a>
+            <a href="${item.url}" target="_blank" rel="noopener noreferrer"
+            style="color:var(--mclaren);text-decoration:none;">Read full story →</a>
           </p>
         </article>`).join('');
+    } else {
+      newsBlock.innerHTML = `
+        <article class="news-item neutral">
+          <div class="news-meta">
+            <span class="news-kicker">Standby</span>
+            <span class="news-num">—</span>
+          </div>
+          <h3 class="news-headline" style="opacity:0.5">
+            News feed unavailable. Will retry on next data refresh.
+          </h3>
+        </article>`;
     }
   }
 
@@ -3119,9 +3185,9 @@ function initTeammates() {
         const avgRow = `<div class="tm-metric">
           <div class="tm-metric-label">Avg Finish</div>
           <div class="tm-metric-bar" style="justify-content:space-between;background:none;gap:8px">
-            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:${team.color};font-weight:700">P${d1.avg_finish}</span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:${team.color};font-weight:700">P${Math.round(d1.avg_finish)}</span>
             <span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,0.3)">AVG</span>
-            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,0.6);font-weight:700">P${d2.avg_finish}</span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,0.6);font-weight:700">P${Math.round(d2.avg_finish)}</span>
           </div>
         </div>`;
 
@@ -3207,11 +3273,11 @@ function initAIInsights() {
         aiCard(
           'Mechanical DNF Analysis',
           'Luck Index',
-          'Estimated net points impact from reliability failures vs driver errors.',
+          'Mechanical DNFs hurt you. Driver-error DNFs are partly your own fault. Higher score = more robbed by the car.',
           li.map(d => ({ name: d.name, val: Math.abs(d.luck_score),
             valStr: d.luck_score >= 0 ? `+${d.luck_score}` : `${d.luck_score}` })),
           Math.max(...li.map(d => Math.abs(d.luck_score)), 1),
-          'Positive = net lucky. Negative = robbed by the car'
+          'Positive = robbed by the car · Negative = caught a lucky break'
         ),
         aiCard(
           'Finish Position Std Deviation',
@@ -3246,7 +3312,7 @@ function initAIInsights() {
           'Podium Performer',
           'Who converts race starts into podium finishes most consistently.',
           pp.map(d => ({ name: d.name, val: d.podium_rate,
-            valStr: `${d.podium_rate}% · P${d.avg_finish} avg` })),
+            valStr: `${d.podium_rate}% · P${Math.round(d.avg_finish)} avg` })),
           Math.max(...pp.map(d => d.podium_rate), 1),
           'Updates after every Grand Prix'
         ),
