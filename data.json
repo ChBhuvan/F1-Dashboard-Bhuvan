@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-04T18:04:20.871130+00:00",
+  "updated_at": "2026-05-08T05:57:26.789875+00:00",
   "season": 2026,
   "drivers": [
     {
@@ -621,11 +621,11 @@
           "pits": [
             {
               "lap": 12,
-              "duration": 18.1
+              "duration": 18.118
             },
             {
               "lap": 33,
-              "duration": 18.4
+              "duration": 18.404
             }
           ]
         },
@@ -660,7 +660,7 @@
           "pits": [
             {
               "lap": 11,
-              "duration": 25.8
+              "duration": 25.895
             },
             {
               "lap": 13,
@@ -692,7 +692,7 @@
           "pits": [
             {
               "lap": 12,
-              "duration": 20.9
+              "duration": 20.985
             }
           ]
         },
@@ -720,7 +720,7 @@
           "pits": [
             {
               "lap": 18,
-              "duration": 18.7
+              "duration": 18.774
             }
           ]
         },
@@ -755,7 +755,7 @@
           "pits": [
             {
               "lap": 18,
-              "duration": 18.9
+              "duration": 22.619
             },
             {
               "lap": 33,
@@ -787,7 +787,7 @@
           "pits": [
             {
               "lap": 12,
-              "duration": 30.3
+              "duration": 30.387
             }
           ]
         },
@@ -826,7 +826,7 @@
             },
             {
               "lap": 46,
-              "duration": 18.5
+              "duration": 18.561
             }
           ]
         },
@@ -899,6 +899,10 @@
             {
               "lap": 28,
               "duration": 17.7
+            },
+            {
+              "lap": 18,
+              "duration": 17.741
             }
           ]
         },
@@ -953,7 +957,7 @@
             },
             {
               "lap": 33,
-              "duration": 18.1
+              "duration": 18.19
             }
           ]
         },
@@ -982,6 +986,10 @@
             {
               "lap": 25,
               "duration": 17.6
+            },
+            {
+              "lap": 18,
+              "duration": 17.664
             }
           ]
         },
@@ -1009,7 +1017,7 @@
           "pits": [
             {
               "lap": 18,
-              "duration": 18.5
+              "duration": 18.506
             }
           ]
         },
@@ -1111,11 +1119,11 @@
           "pits": [
             {
               "lap": 18,
-              "duration": 21.3
+              "duration": 21.371
             },
             {
               "lap": 43,
-              "duration": 18.9
+              "duration": 18.951
             }
           ]
         },
@@ -1143,7 +1151,7 @@
           "pits": [
             {
               "lap": 12,
-              "duration": 17.7
+              "duration": 17.794
             }
           ]
         },
@@ -1189,11 +1197,11 @@
             },
             {
               "lap": 33,
-              "duration": 25.9
+              "duration": 25.939
             },
             {
               "lap": 45,
-              "duration": 34.6
+              "duration": 34.615
             }
           ]
         },
@@ -1242,11 +1250,15 @@
           "pits": [
             {
               "lap": 11,
-              "duration": 36.6
+              "duration": 36.686
             },
             {
               "lap": 26,
               "duration": 33.1
+            },
+            {
+              "lap": 18,
+              "duration": 33.182
             },
             {
               "lap": 34,
@@ -1255,6 +1267,10 @@
             {
               "lap": 39,
               "duration": 22.4
+            },
+            {
+              "lap": 46,
+              "duration": 22.469
             }
           ]
         },
@@ -1289,7 +1305,7 @@
           "pits": [
             {
               "lap": 18,
-              "duration": 19.0
+              "duration": 19.07
             },
             {
               "lap": 41,
@@ -1901,7 +1917,7 @@
       "fastest_stop": {
         "driver": 44,
         "lap": 22,
-        "duration": 22.8,
+        "duration": 22.891,
         "code": "HAM"
       },
       "drivers": [
@@ -1968,7 +1984,7 @@
             },
             {
               "lap": 45,
-              "duration": 23.0
+              "duration": 23.072
             },
             {
               "lap": 46,
@@ -2019,11 +2035,11 @@
           "pits": [
             {
               "lap": 21,
-              "duration": 26.4
+              "duration": 26.458
             },
             {
               "lap": 23,
-              "duration": 24.0
+              "duration": 24.014
             }
           ]
         },
@@ -2051,7 +2067,7 @@
           "pits": [
             {
               "lap": 22,
-              "duration": 23.2
+              "duration": 23.288
             }
           ]
         },
@@ -2107,7 +2123,7 @@
           "pits": [
             {
               "lap": 22,
-              "duration": 24.6
+              "duration": 24.63
             }
           ]
         },
@@ -2135,7 +2151,7 @@
           "pits": [
             {
               "lap": 19,
-              "duration": 25.1
+              "duration": 25.129
             }
           ]
         },
@@ -2163,7 +2179,7 @@
           "pits": [
             {
               "lap": 17,
-              "duration": 23.6
+              "duration": 23.649
             }
           ]
         },
@@ -2191,7 +2207,7 @@
           "pits": [
             {
               "lap": 22,
-              "duration": 24.3
+              "duration": 24.304
             }
           ]
         },
@@ -2219,7 +2235,7 @@
           "pits": [
             {
               "lap": 19,
-              "duration": 23.6
+              "duration": 23.698
             }
           ]
         },
@@ -2247,7 +2263,7 @@
           "pits": [
             {
               "lap": 22,
-              "duration": 22.8
+              "duration": 22.891
             }
           ]
         },
@@ -2331,7 +2347,7 @@
           "pits": [
             {
               "lap": 17,
-              "duration": 22.9
+              "duration": 22.992
             }
           ]
         },
@@ -2387,7 +2403,7 @@
           "pits": [
             {
               "lap": 16,
-              "duration": 23.3
+              "duration": 23.316
             }
           ]
         },
@@ -2415,7 +2431,7 @@
           "pits": [
             {
               "lap": 19,
-              "duration": 24.6
+              "duration": 24.629
             }
           ]
         },
@@ -2443,7 +2459,7 @@
           "pits": [
             {
               "lap": 21,
-              "duration": 27.3
+              "duration": 27.307
             }
           ]
         },
@@ -2471,7 +2487,7 @@
           "pits": [
             {
               "lap": 18,
-              "duration": 23.4
+              "duration": 23.444
             }
           ]
         },
@@ -2499,7 +2515,7 @@
           "pits": [
             {
               "lap": 21,
-              "duration": 22.9
+              "duration": 22.937
             }
           ]
         },
@@ -2527,7 +2543,7 @@
           "pits": [
             {
               "lap": 22,
-              "duration": 24.3
+              "duration": 24.396
             }
           ]
         },
@@ -2562,11 +2578,11 @@
           "pits": [
             {
               "lap": 21,
-              "duration": 25.0
+              "duration": 25.083
             },
             {
               "lap": 24,
-              "duration": 23.5
+              "duration": 23.501
             }
           ]
         },
@@ -2594,7 +2610,7 @@
           "pits": [
             {
               "lap": 22,
-              "duration": 24.4
+              "duration": 24.49
             }
           ]
         }
@@ -2637,7 +2653,7 @@
           "pits": [
             {
               "lap": 27,
-              "duration": 23.0
+              "duration": 23.016
             }
           ]
         },
@@ -2647,13 +2663,6 @@
           "name": "Alonso",
           "team": "Aston Martin",
           "stints": [
-            {
-              "stint": 1,
-              "compound": "MEDIUM",
-              "lap_start": 1,
-              "lap_end": 41,
-              "fresh": true
-            },
             {
               "stint": 2,
               "compound": "SOFT",
@@ -2665,7 +2674,7 @@
           "pits": [
             {
               "lap": 41,
-              "duration": 23.1
+              "duration": 23.16
             }
           ]
         },
@@ -2675,13 +2684,6 @@
           "name": "Antonelli",
           "team": "Mercedes",
           "stints": [
-            {
-              "stint": 1,
-              "compound": "MEDIUM",
-              "lap_start": 1,
-              "lap_end": 26,
-              "fresh": true
-            },
             {
               "stint": 2,
               "compound": "HARD",
@@ -2693,7 +2695,7 @@
           "pits": [
             {
               "lap": 26,
-              "duration": 22.1
+              "duration": 22.128
             }
           ]
         },
@@ -2703,13 +2705,6 @@
           "name": "Bearman",
           "team": "Haas F1 Team",
           "stints": [
-            {
-              "stint": 1,
-              "compound": "MEDIUM",
-              "lap_start": 1,
-              "lap_end": 26,
-              "fresh": true
-            },
             {
               "stint": 2,
               "compound": "HARD",
@@ -2721,7 +2716,7 @@
           "pits": [
             {
               "lap": 26,
-              "duration": 23.4
+              "duration": 23.474
             }
           ]
         },
@@ -2731,13 +2726,6 @@
           "name": "Bortoleto",
           "team": "Audi",
           "stints": [
-            {
-              "stint": 1,
-              "compound": "MEDIUM",
-              "lap_start": 1,
-              "lap_end": 32,
-              "fresh": true
-            },
             {
               "stint": 2,
               "compound": "HARD",
@@ -2749,7 +2737,7 @@
           "pits": [
             {
               "lap": 32,
-              "duration": 23.9
+              "duration": 23.986
             }
           ]
         },
@@ -2759,27 +2747,6 @@
           "name": "Bottas",
           "team": "Cadillac",
           "stints": [
-            {
-              "stint": 1,
-              "compound": "MEDIUM",
-              "lap_start": 1,
-              "lap_end": 6,
-              "fresh": true
-            },
-            {
-              "stint": 2,
-              "compound": "SOFT",
-              "lap_start": 7,
-              "lap_end": 21,
-              "fresh": true
-            },
-            {
-              "stint": 3,
-              "compound": "MEDIUM",
-              "lap_start": 22,
-              "lap_end": 30,
-              "fresh": true
-            },
             {
               "stint": 4,
               "compound": "MEDIUM",
@@ -2791,11 +2758,11 @@
           "pits": [
             {
               "lap": 6,
-              "duration": 23.5
+              "duration": 23.529
             },
             {
               "lap": 21,
-              "duration": 23.8
+              "duration": 23.827
             },
             {
               "lap": 30,
@@ -2810,13 +2777,6 @@
           "team": "Alpine",
           "stints": [
             {
-              "stint": 1,
-              "compound": "MEDIUM",
-              "lap_start": 1,
-              "lap_end": 31,
-              "fresh": true
-            },
-            {
               "stint": 2,
               "compound": "HARD",
               "lap_start": 32,
@@ -2827,7 +2787,7 @@
           "pits": [
             {
               "lap": 31,
-              "duration": 23.0
+              "duration": 23.093
             }
           ]
         },
@@ -2870,13 +2830,6 @@
           "team": "Ferrari",
           "stints": [
             {
-              "stint": 1,
-              "compound": "MEDIUM",
-              "lap_start": 1,
-              "lap_end": 27,
-              "fresh": true
-            },
-            {
               "stint": 2,
               "compound": "HARD",
               "lap_start": 28,
@@ -2887,7 +2840,7 @@
           "pits": [
             {
               "lap": 27,
-              "duration": 23.7
+              "duration": 23.779
             }
           ]
         },
@@ -2897,13 +2850,6 @@
           "name": "Hulkenberg",
           "team": "Audi",
           "stints": [
-            {
-              "stint": 1,
-              "compound": "MEDIUM",
-              "lap_start": 1,
-              "lap_end": 1,
-              "fresh": true
-            },
             {
               "stint": 2,
               "compound": "MEDIUM",
@@ -2915,7 +2861,7 @@
           "pits": [
             {
               "lap": 1,
-              "duration": 33.7
+              "duration": 33.71
             }
           ]
         },
@@ -2942,13 +2888,6 @@
           "team": "Ferrari",
           "stints": [
             {
-              "stint": 1,
-              "compound": "MEDIUM",
-              "lap_start": 1,
-              "lap_end": 21,
-              "fresh": true
-            },
-            {
               "stint": 2,
               "compound": "HARD",
               "lap_start": 22,
@@ -2959,7 +2898,7 @@
           "pits": [
             {
               "lap": 21,
-              "duration": 23.3
+              "duration": 23.386
             }
           ]
         },
@@ -2969,13 +2908,6 @@
           "name": "Lindblad",
           "team": "Racing Bulls",
           "stints": [
-            {
-              "stint": 1,
-              "compound": "MEDIUM",
-              "lap_start": 1,
-              "lap_end": 28,
-              "fresh": true
-            },
             {
               "stint": 2,
               "compound": "HARD",
@@ -2987,7 +2919,7 @@
           "pits": [
             {
               "lap": 28,
-              "duration": 22.7
+              "duration": 22.731
             }
           ]
         },
@@ -2997,13 +2929,6 @@
           "name": "Norris",
           "team": "McLaren",
           "stints": [
-            {
-              "stint": 1,
-              "compound": "MEDIUM",
-              "lap_start": 1,
-              "lap_end": 27,
-              "fresh": true
-            },
             {
               "stint": 2,
               "compound": "HARD",
@@ -3015,7 +2940,7 @@
           "pits": [
             {
               "lap": 27,
-              "duration": 22.5
+              "duration": 22.565
             }
           ]
         },
@@ -3025,13 +2950,6 @@
           "name": "Ocon",
           "team": "Haas F1 Team",
           "stints": [
-            {
-              "stint": 1,
-              "compound": "MEDIUM",
-              "lap_start": 1,
-              "lap_end": 31,
-              "fresh": true
-            },
             {
               "stint": 2,
               "compound": "HARD",
@@ -3043,7 +2961,7 @@
           "pits": [
             {
               "lap": 31,
-              "duration": 24.0
+              "duration": 24.027
             }
           ]
         },
@@ -3053,13 +2971,6 @@
           "name": "Perez",
           "team": "Cadillac",
           "stints": [
-            {
-              "stint": 1,
-              "compound": "MEDIUM",
-              "lap_start": 1,
-              "lap_end": 29,
-              "fresh": true
-            },
             {
               "stint": 2,
               "compound": "HARD",
@@ -3082,13 +2993,6 @@
           "team": "McLaren",
           "stints": [
             {
-              "stint": 1,
-              "compound": "MEDIUM",
-              "lap_start": 1,
-              "lap_end": 28,
-              "fresh": true
-            },
-            {
               "stint": 2,
               "compound": "HARD",
               "lap_start": 29,
@@ -3099,7 +3003,7 @@
           "pits": [
             {
               "lap": 28,
-              "duration": 23.0
+              "duration": 23.024
             }
           ]
         },
@@ -3109,13 +3013,6 @@
           "name": "Russell",
           "team": "Mercedes",
           "stints": [
-            {
-              "stint": 1,
-              "compound": "MEDIUM",
-              "lap_start": 1,
-              "lap_end": 20,
-              "fresh": true
-            },
             {
               "stint": 2,
               "compound": "HARD",
@@ -3138,13 +3035,6 @@
           "team": "Williams",
           "stints": [
             {
-              "stint": 1,
-              "compound": "MEDIUM",
-              "lap_start": 1,
-              "lap_end": 28,
-              "fresh": true
-            },
-            {
               "stint": 2,
               "compound": "HARD",
               "lap_start": 29,
@@ -3155,7 +3045,7 @@
           "pits": [
             {
               "lap": 28,
-              "duration": 23.5
+              "duration": 23.595
             }
           ]
         },
@@ -3165,20 +3055,6 @@
           "name": "Stroll",
           "team": "Aston Martin",
           "stints": [
-            {
-              "stint": 1,
-              "compound": "MEDIUM",
-              "lap_start": 1,
-              "lap_end": 21,
-              "fresh": true
-            },
-            {
-              "stint": 2,
-              "compound": "SOFT",
-              "lap_start": 22,
-              "lap_end": 37,
-              "fresh": false
-            },
             {
               "stint": 3,
               "compound": "SOFT",
@@ -3190,11 +3066,11 @@
           "pits": [
             {
               "lap": 21,
-              "duration": 22.6
+              "duration": 22.63
             },
             {
               "lap": 37,
-              "duration": 22.0
+              "duration": 22.09
             }
           ]
         },
@@ -3204,13 +3080,6 @@
           "name": "Verstappen",
           "team": "Red Bull Racing",
           "stints": [
-            {
-              "stint": 1,
-              "compound": "MEDIUM",
-              "lap_start": 1,
-              "lap_end": 6,
-              "fresh": true
-            },
             {
               "stint": 2,
               "compound": "HARD",
@@ -3222,7 +3091,7 @@
           "pits": [
             {
               "lap": 6,
-              "duration": 22.5
+              "duration": 22.547
             }
           ]
         }
@@ -3510,32 +3379,32 @@
       {
         "driver_id": "antonelli",
         "name": "A. Antonelli",
-        "prob": 54.2
+        "prob": 53.7
       },
       {
         "driver_id": "russell",
         "name": "G. Russell",
-        "prob": 23.4
+        "prob": 23.7
       },
       {
         "driver_id": "leclerc",
         "name": "C. Leclerc",
-        "prob": 8.2
-      },
-      {
-        "driver_id": "norris",
-        "name": "L. Norris",
-        "prob": 5.0
+        "prob": 7.7
       },
       {
         "driver_id": "hamilton",
         "name": "L. Hamilton",
+        "prob": 5.5
+      },
+      {
+        "driver_id": "norris",
+        "name": "L. Norris",
         "prob": 4.9
       },
       {
         "driver_id": "piastri",
         "name": "O. Piastri",
-        "prob": 2.8
+        "prob": 2.9
       },
       {
         "driver_id": "max_verstappen",
