@@ -921,12 +921,15 @@ body {
   padding: 16px 24px;
   border-bottom: 1px solid var(--rule-light);
   position: relative;
-  transition: background 0.2s, padding-left 0.2s;
+  transition: background 0.2s;
 }
 .news-item:last-child { border-bottom: none; }
 .news-item::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: var(--racing); transition: width 0.25s; }
-.news-item:hover { background: var(--paper-2); padding-left: 28px; }
-.news-item:hover::before { width: 4px; }
+/* Wrapper anchor — makes the whole card clickable. */
+.news-item-link { cursor: pointer; }
+.news-item-link:hover .news-item { background: var(--paper-2); }
+.news-item-link:hover .news-item::before { width: 4px; }
+.news-item-link:hover .news-headline { color: var(--racing); }
 
 .news-meta { display: flex; align-items: center; justify-content: space-between; margin-bottom: 9px; }
 .news-kicker {
@@ -2086,6 +2089,7 @@ body {
         <div class="col-sub" id="drivers-col-sub">Top 10 · After 3 Rounds</div>
       </div>
 
+      <div id="drivers-list">
       <div class="driver-row leader" style="--team-color: var(--mercedes); animation-delay:4.5s;">
         <div class="driver-pos">01</div>
         <div class="driver-info"><div class="driver-line"><span class="driver-name">K. Antonelli</span><span class="driver-code" style="background:var(--mercedes); color:#000;">ANT</span></div><div class="driver-team">Mercedes · ITA</div></div>
@@ -2135,6 +2139,7 @@ body {
         <div class="driver-pos">10</div>
         <div class="driver-info"><div class="driver-line"><span class="driver-name">L. Lawson</span><span class="driver-code" style="background:var(--racingbulls);">LAW</span></div><div class="driver-team">Racing Bulls · NZL · <span class="gap">−62</span></div></div>
         <div class="driver-pts-wrap"><div class="driver-pts">10</div><div class="driver-pts-sub">pts</div></div>
+      </div>
       </div>
     </div>
 
@@ -2537,27 +2542,51 @@ body {
   } catch { return; }  // silently keep static fallback if fetch fails
 
   // ── Driver standings ─────────────────────────────────────────────
+  // Render every driver who has scored at least one point. Falls back
+  // to the top 10 if no one has scored yet (pre-season / round-1
+  // edge case).
   if (data.drivers && data.drivers.length) {
-    const rows = document.querySelectorAll('.driver-row');
-    rows.forEach((row, i) => {
-      const d = data.drivers[i];
-      if (!d) return;
-      const colour = teamColour(d.team);
-      row.style.setProperty('--team-color', colour);
-      const nameEl  = row.querySelector('.driver-name');
-      const codeEl  = row.querySelector('.driver-code');
-      const teamEl  = row.querySelector('.driver-team');
-      const ptsEl   = row.querySelector('.driver-pts');
-      const posEl   = row.querySelector('.driver-pos');
-      if (posEl)  posEl.textContent  = String(d.pos).padStart(2, '0');
-      if (nameEl) nameEl.textContent = d.name;
-      if (codeEl) { codeEl.textContent = d.code; codeEl.style.background = colour; }
-      if (teamEl) {
-        const gap = i === 0 ? '' : `<span class="gap">−${data.drivers[0].pts - d.pts}</span>`;
-        teamEl.innerHTML = `${d.team} · ${d.nat}${i > 0 ? ' · ' + gap : ''}`;
+    const list = document.getElementById('drivers-list');
+    if (list) {
+      const scorers = data.drivers.filter(d => d.pts > 0);
+      const toShow  = scorers.length > 0 ? scorers : data.drivers.slice(0, 10);
+      const leaderPts = toShow[0].pts;
+      // Light team colours that need black text on the code badge for contrast
+      const LIGHT_TEAMS = ['mercedes', 'williams', 'haas', 'cadillac'];
+
+      list.innerHTML = toShow.map((d, i) => {
+        const colour     = teamColour(d.team);
+        const teamLower  = (d.team || '').toLowerCase();
+        const codeColour = LIGHT_TEAMS.some(k => teamLower.includes(k)) ? '#000' : '#fff';
+        const gap        = i === 0 ? '' : `· <span class="gap">−${leaderPts - d.pts}</span>`;
+        const delay      = (4.5 + i * 0.08).toFixed(2);
+        return `<div class="driver-row${i === 0 ? ' leader' : ''}"
+                     style="--team-color:${colour};animation-delay:${delay}s;">
+          <div class="driver-pos">${String(d.pos).padStart(2, '0')}</div>
+          <div class="driver-info">
+            <div class="driver-line">
+              <span class="driver-name">${d.name}</span>
+              <span class="driver-code" style="background:${colour};color:${codeColour};">${d.code}</span>
+            </div>
+            <div class="driver-team">${d.team} · ${d.nat} ${gap}</div>
+          </div>
+          <div class="driver-pts-wrap">
+            <div class="driver-pts">${d.pts}</div>
+            <div class="driver-pts-sub">pts</div>
+          </div>
+        </div>`;
+      }).join('');
+
+      // Update the column subtitle to match what we're actually showing
+      const sub = document.getElementById('drivers-col-sub');
+      if (sub) {
+        const completedRounds = (data.calendar || []).filter(r => r.status === 'done').length;
+        const roundLabel = completedRounds > 0 ? `After ${completedRounds} Round${completedRounds === 1 ? '' : 's'}` : 'Pre-season';
+        sub.textContent = scorers.length > 0
+          ? `${toShow.length} Point Scorers · ${roundLabel}`
+          : `Top 10 · ${roundLabel}`;
       }
-      if (ptsEl)  ptsEl.textContent  = d.pts;
-    });
+    }
   }
 
   // ── Constructor standings ────────────────────────────────────────
@@ -2658,28 +2687,26 @@ body {
 
   // ── Breaking news ────────────────────────────────────────────────
   // Always overwrite — never leave the static "Fetching…" placeholder up.
-  // If the data pipeline returned no items (Reddit + RSS both failed),
-  // show a polite empty state instead.
+  // The whole card is wrapped in a single <a> so any click anywhere on
+  // the card opens the article (not just the headline text).
   const newsBlock = document.querySelector('.news-block');
   if (newsBlock) {
     if (data.news && data.news.length) {
       newsBlock.innerHTML = data.news.map((item, i) => `
-        <article class="news-item${i === 0 ? ' lead' : ' neutral'}">
-          <div class="news-meta">
-            <span class="news-kicker">${i === 0 ? 'Breaking' : 'F1 News'}</span>
-            <span class="news-num">${String(i + 1).padStart(2, '0')}</span>
-          </div>
-          <h3 class="news-headline">
-            <a href="${item.url}" target="_blank" rel="noopener noreferrer"
-               style="color:inherit;text-decoration:none;border-bottom:1px dashed currentColor;">
-              ${item.headline}
-            </a>
-          </h3>
-          <p class="news-body" style="font-size:10px;opacity:0.55;margin-top:4px;">
-            <a href="${item.url}" target="_blank" rel="noopener noreferrer"
-            style="color:var(--mclaren);text-decoration:none;">Read full story →</a>
-          </p>
-        </article>`).join('');
+        <a href="${item.url}" target="_blank" rel="noopener noreferrer"
+           class="news-item-link"
+           style="display:block;color:inherit;text-decoration:none;">
+          <article class="news-item${i === 0 ? ' lead' : ' neutral'}">
+            <div class="news-meta">
+              <span class="news-kicker">${i === 0 ? 'Breaking' : 'F1 News'}</span>
+              <span class="news-num">${String(i + 1).padStart(2, '0')}</span>
+            </div>
+            <h3 class="news-headline">${item.headline}</h3>
+            <p class="news-body" style="font-size:10px;opacity:0.55;margin-top:4px;">
+              <span style="color:var(--mclaren);">Read full story →</span>
+            </p>
+          </article>
+        </a>`).join('');
     } else {
       newsBlock.innerHTML = `
         <article class="news-item neutral">
@@ -3270,15 +3297,25 @@ function initAIInsights() {
           100,
           'Recalculated every time the GitHub Action runs after a race'
         ),
-        aiCard(
-          'Mechanical DNF Analysis',
-          'Luck Index',
-          'Mechanical DNFs hurt you. Driver-error DNFs are partly your own fault. Higher score = more robbed by the car.',
-          li.map(d => ({ name: d.name, val: Math.abs(d.luck_score),
-            valStr: d.luck_score >= 0 ? `+${d.luck_score}` : `${d.luck_score}` })),
-          Math.max(...li.map(d => Math.abs(d.luck_score)), 1),
-          'Positive = robbed by the car · Negative = caught a lucky break'
-        ),
+        // Luck Index — handle gracefully when no mechanical DNFs have happened
+        // yet (the index is meaningless if it's purely measuring driver errors).
+        ai.luck_index_meaningful !== false && li.length > 0
+          ? aiCard(
+              'Mechanical DNF Analysis',
+              'Luck Index',
+              'Mechanical DNFs and estimated points lost vs driver-error retirements. Higher = more robbed by the car.',
+              li.map(d => ({ name: d.name, val: Math.abs(d.luck_score),
+                valStr: d.luck_score >= 0 ? `+${d.luck_score}` : `${d.luck_score}` })),
+              Math.max(...li.map(d => Math.abs(d.luck_score)), 1),
+              'Positive = robbed by the car · Negative = caught a lucky break'
+            )
+          : `<div class="ai-card">
+              <div class="ai-card-eyebrow">◆ Mechanical DNF Analysis</div>
+              <div class="ai-card-title">Luck Index</div>
+              <div class="ai-card-desc">No mechanical DNFs across the grid this season. The luck signal sharpens once reliability gremlins appear — check back as the season progresses.</div>
+              <div class="ai-rows" style="opacity:0.5;text-align:center;padding:24px 0;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.1em;">RELIABILITY: 100%</div>
+              <div class="ai-note">⚡ Updates automatically as new race data arrives</div>
+            </div>`,
         aiCard(
           'Finish Position Std Deviation',
           'Pace Consistency',
@@ -3641,7 +3678,7 @@ function initAIInsights() {
 <script>
 (function() {
   /* ── CONFIG ── replace with your deployed Worker URL after setup ── */
-  const WORKER_URL = 'https://papaya-agent.bhuvan2026.workers.dev/chat';
+  const WORKER_URL = 'https://papaya-agent.YOUR_SUBDOMAIN.workers.dev/chat';
 
   /* ── State ── */
   const history = [];
