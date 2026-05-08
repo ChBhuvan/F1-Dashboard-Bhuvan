@@ -51,19 +51,19 @@ TEAM_PAIRINGS = [
     {"team": "Ferrari",      "color": "#E8002D",
      "d1": "leclerc",   "d2": "hamilton"},
     {"team": "Red Bull",     "color": "#3671C6",
-     "d1": "verstappen","d2": "lawson"},
+     "d1": "verstappen","d2": "hadjar"},
     {"team": "Aston Martin", "color": "#229971",
      "d1": "alonso",    "d2": "stroll"},
     {"team": "Alpine",       "color": "#0093CC",
-     "d1": "gasly",     "d2": "doohan"},
+     "d1": "gasly",     "d2": "colapinto"},
     {"team": "Williams",     "color": "#64C4FF",
      "d1": "sainz",     "d2": "albon"},
     {"team": "Racing Bulls", "color": "#6692FF",
-     "d1": "hadjar",    "d2": "bearman"},
+     "d1": "lawson",    "d2": "lindblad"},
     {"team": "Haas",         "color": "#B6BABD",
-     "d1": "ocon",      "d2": "bortoleto"},
+     "d1": "ocon",      "d2": "bearman"},
     {"team": "Audi",         "color": "#00877C",
-     "d1": "hulkenberg","d2": "schumacher"},
+     "d1": "hulkenberg","d2": "bortoleto"},
     {"team": "Cadillac",     "color": "#8A9099",
      "d1": "perez",     "d2": "bottas"},
 ]
@@ -76,6 +76,25 @@ CURRENT_DRIVER_KEYS = (
 
 def is_current_driver(driver_id):
     return any(k in (driver_id or "").lower() for k in CURRENT_DRIVER_KEYS)
+
+
+# Jolpica returns the full registered constructor names ("Alpine F1 Team",
+# "RB F1 Team", "Haas F1 Team", "Cadillac F1 Team"). The dashboard reads
+# better with the short, recognised names — and our PU lookup table is
+# keyed off these short names too.
+TEAM_NAME_MAP = {
+    "Alpine F1 Team":   "Alpine",
+    "Haas F1 Team":     "Haas",
+    "RB F1 Team":       "Racing Bulls",
+    "AlphaTauri":       "Racing Bulls",  # legacy fallback
+    "Cadillac F1 Team": "Cadillac",
+    "Sauber":           "Audi",          # in case the API hasn't updated
+    "Kick Sauber":      "Audi",
+}
+
+def normalize_team(name):
+    """Convert Jolpica's registered team names to clean display names."""
+    return TEAM_NAME_MAP.get(name, name)
 
 # ── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -137,12 +156,12 @@ def fetch_driver_standings():
             "name": f"{s['Driver']['givenName'][0]}. {s['Driver']['familyName']}",
             "full_name": f"{s['Driver']['givenName']} {s['Driver']['familyName']}",
             "driver_id": s["Driver"]["driverId"],
-            "team": s["Constructors"][0]["name"],
+            "team": normalize_team(s["Constructors"][0]["name"]),
             "pts":  int(float(s["points"])),
             "wins": int(s["wins"]),
             "nat":  s["Driver"].get("nationality", ""),
         }
-        for s in rows[:20]  # all drivers not just top 10
+        for s in rows[:25]  # all drivers (2026 grid has 22)
     ]
 
 
@@ -171,12 +190,12 @@ def fetch_constructor_standings():
     return [
         {
             "pos":      int(s["position"]),
-            "name":     s["Constructor"]["name"],
+            "name":     normalize_team(s["Constructor"]["name"]),
             "pts":      int(float(s["points"])),
             "wins":     int(s["wins"]),
             "bar_pct":  round(float(s["points"]) / leader_pts * 100, 1),
             "nat":      s["Constructor"].get("nationality", ""),
-            "pu":       PU_MAP.get(s["Constructor"]["name"], "—"),
+            "pu":       PU_MAP.get(normalize_team(s["Constructor"]["name"]), "—"),
         }
         for s in rows
     ]
@@ -193,7 +212,7 @@ def fetch_last_event():
             podium.append({
                 "pos":  int(r["position"]),
                 "name": f"{r['Driver']['givenName']} {r['Driver']['familyName']}",
-                "team": r["Constructor"]["name"],
+                "team": normalize_team(r["Constructor"]["name"]),
                 "time": r.get("Time", {}).get("time", r.get("status", "—")),
             })
         fl_driver, fl_time = "—", "—"
@@ -639,9 +658,22 @@ def build_teammates(driver_stats, standings):
         d1id = find_driver(pairing["d1"])
         d2id = find_driver(pairing["d2"])
 
-        if not d1id or not d2id:
-            print(f"    ⚠️  Could not match drivers for {pairing['team']}")
+        # If both drivers are missing, the team can't render meaningfully —
+        # skip it (this should only happen for genuinely wrong pairings).
+        if not d1id and not d2id:
+            print(f"    ⚠️  Could not match either driver for {pairing['team']} — skipping")
             continue
+
+        # If just one driver is missing (e.g. a rookie who hasn't raced yet,
+        # or a mid-season replacement still settling in), render the card
+        # anyway with a placeholder for the missing driver. Better to show
+        # a partial card than silently drop the team.
+        if not d1id:
+            print(f"    ⚠️  {pairing['team']}: d1 '{pairing['d1']}' not in stats — using placeholder")
+            d1id = pairing["d1"]
+        if not d2id:
+            print(f"    ⚠️  {pairing['team']}: d2 '{pairing['d2']}' not in stats — using placeholder")
+            d2id = pairing["d2"]
 
         s1 = stats_map.get(d1id, {})
         s2 = stats_map.get(d2id, {})
@@ -721,10 +753,11 @@ def build_ai_insights(driver_stats, standings, total_races, total_rounds):
     ], key=lambda x: -x["prob"])
 
     # ── 2. Luck Index ─────────────────────────────────────────────────────
-    # Positive luck_score = robbed by the car (mechanical DNFs hurt you).
-    # Negative luck_score = lucky despite your own mistakes (driver-error DNFs).
-    # Sorted by absolute magnitude so the chart surfaces both extremes,
-    # not just one side.
+    # Positive luck_score = robbed by the car (mechanical DNFs hurt you,
+    # the points-lost estimate amplifies this for high-running drivers).
+    # Negative luck_score = lucky despite your own mistakes
+    # (driver-error DNFs counted lightly so they don't dominate).
+    # Sorted by absolute magnitude so both extremes surface.
     luck_raw = [
         {
             "driver_id":    d["driver_id"],
@@ -732,12 +765,19 @@ def build_ai_insights(driver_stats, standings, total_races, total_rounds):
             "dnf_mech":     d["dnf_mech"],
             "dnf_driver":   d["dnf_driver"],
             "robbed_pts":   d["robbed_points"],
-            "luck_score":   d["dnf_mech"] * 12 - d["dnf_driver"] * 4,
+            "luck_score":   (d["dnf_mech"] * 8) + d["robbed_points"]
+                            - (d["dnf_driver"] * 3),
         }
         for d in driver_stats
         if d["races_started"] > 0 and is_current_driver(d["driver_id"])
     ]
     luck_index = sorted(luck_raw, key=lambda x: -abs(x["luck_score"]))[:10]
+
+    # If no driver has had a mechanical DNF this season, the index is
+    # entirely driven by self-inflicted DNFs — which isn't really "luck".
+    # Flag this so the frontend can show an explanatory empty-state.
+    total_mech_dnfs = sum(d["dnf_mech"] for d in driver_stats)
+    luck_index_meaningful = total_mech_dnfs > 0
 
     # ── 3. Pace Consistency ───────────────────────────────────────────────
     pace_consistency = sorted([
@@ -792,14 +832,15 @@ def build_ai_insights(driver_stats, standings, total_races, total_rounds):
     ], key=lambda x: -x["podium_rate"])[:10]
 
     return {
-        "sim_runs":          SIM_RUNS,
-        "total_remaining":   total_remaining,
-        "champ_probability": champ_prob,
-        "luck_index":        luck_index,
-        "pace_consistency":  pace_consistency,
-        "quali_race_delta":  quali_race_delta,
-        "robbed_points":     robbed_points,
-        "podium_performer":  podium_performer,
+        "sim_runs":              SIM_RUNS,
+        "total_remaining":       total_remaining,
+        "champ_probability":     champ_prob,
+        "luck_index":            luck_index,
+        "luck_index_meaningful": luck_index_meaningful,
+        "pace_consistency":      pace_consistency,
+        "quali_race_delta":      quali_race_delta,
+        "robbed_points":         robbed_points,
+        "podium_performer":      podium_performer,
     }
 
 
@@ -896,41 +937,57 @@ def fetch_reddit_news(target=4):
 
 # ── RSS news fallback ───────────────────────────────────────────────────────
 # Reddit's JSON endpoint frequently blocks GitHub Actions runners with 403s,
-# leaving the news widget empty. These RSS feeds give us a resilient backup.
+# leaving the news widget empty. These RSS feeds are chosen specifically
+# to be permissive to bot traffic — Google News, BBC, and PlanetF1 do not
+# sit behind aggressive Cloudflare/Akamai bot protection (unlike Autosport,
+# RaceFans, formula1.com which block GH Actions runner IPs).
+#
+# Google News RSS aggregates across all major F1 publications and is the
+# most resilient single source.
 
 RSS_FEEDS = [
-    "https://www.autosport.com/rss/f1/news/",
-    "https://www.racefans.net/feed/",
-    "https://www.formula1.com/en/latest/all.xml",
+    "https://news.google.com/rss/search?q=Formula+1+F1&hl=en-US&gl=US&ceid=US:en",
+    "https://feeds.bbci.co.uk/sport/formula1/rss.xml",
+    "https://www.planetf1.com/feed/",
 ]
 
+# Use a normal browser User-Agent — bot-flavoured UAs get filtered by
+# many CDNs even on RSS endpoints.
+RSS_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/120.0.0.0 Safari/537.36"
+    ),
+    "Accept": "application/rss+xml, application/xml, text/xml, */*",
+}
+
 def fetch_rss_news(target=4):
-    """Pulls F1 headlines from a list of RSS feeds. First feed to yield
-    enough usable items wins. Same SKIP_ALWAYS filter as Reddit."""
+    """Pulls F1 headlines from a list of RSS feeds. Aggregates across
+    all feeds (rather than first-wins) to maximise the chance of getting
+    enough usable items even if one feed is empty/down. Same SKIP_ALWAYS
+    filter as Reddit."""
     print("  Fetching RSS news…")
     items = []
     for url in RSS_FEEDS:
         try:
-            r = requests.get(
-                url,
-                headers={"User-Agent": "Mozilla/5.0 (compatible; F1DashboardBot/1.0)"},
-                timeout=15,
-            )
+            r = requests.get(url, headers=RSS_HEADERS, timeout=15)
             r.raise_for_status()
             root = ET.fromstring(r.content)
             for item in root.iter("item"):
                 title = (item.findtext("title") or "").strip()
                 link  = (item.findtext("link")  or "").strip()
+                # Google News wraps real URLs in their own redirect, but
+                # they're still clickable — leave as-is.
                 if title and link and not any(kw in title.lower() for kw in SKIP_ALWAYS):
                     items.append({"headline": title, "url": link})
-                if len(items) >= target * 3:
-                    break
-            if len(items) >= target:
-                break
+            print(f"    ✓ {url.split('/')[2]} → {len(items)} cumulative items")
         except Exception as e:
             print(f"    ⚠️  RSS {url} failed: {e}")
             continue
+        # Don't break early — keep aggregating across all feeds for variety
 
+    # Dedupe by first 60 chars of headline (case-insensitive)
     seen, result = set(), []
     for it in items:
         key = it["headline"].lower()[:60]
