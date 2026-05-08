@@ -27,6 +27,7 @@ Output: data.json
 import json
 import time
 import requests
+import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 
 # ── Constants ────────────────────────────────────────────────────────────────
@@ -63,7 +64,18 @@ TEAM_PAIRINGS = [
      "d1": "ocon",      "d2": "bortoleto"},
     {"team": "Audi",         "color": "#00877C",
      "d1": "hulkenberg","d2": "schumacher"},
+    {"team": "Cadillac",     "color": "#8A9099",
+     "d1": "perez",     "d2": "bottas"},
 ]
+
+# Set of current driver name fragments — used to filter season stats
+# down to only the 22 drivers actually on the 2026 grid.
+CURRENT_DRIVER_KEYS = (
+    {p["d1"] for p in TEAM_PAIRINGS} | {p["d2"] for p in TEAM_PAIRINGS}
+)
+
+def is_current_driver(driver_id):
+    return any(k in (driver_id or "").lower() for k in CURRENT_DRIVER_KEYS)
 
 # ── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -334,17 +346,33 @@ def fetch_all_race_sessions():
     ]
 
 
-def fetch_strategies(sessions):
+def fetch_strategies(sessions, calendar=None):
     """
     For each completed race session, fetch tyre stints and pit stops.
     Also fetches driver info once per session for name/code mapping.
+    Uses the Jolpica calendar (if provided) to resolve human-readable
+    race names by date — this avoids ugly fallbacks like "Round 1284"
+    when OpenF1's meeting_name is null.
     """
     print(f"  Fetching strategy data for {len(sessions)} sessions…")
+
+    # Map race date → "Miami GP"-style name from Jolpica calendar
+    date_to_name = {}
+    if calendar:
+        for r in calendar:
+            date_to_name[r["date"]] = r["name"].replace(" Grand Prix", " GP")
+
     strategies = []
 
     for session in sessions:
-        key          = session["session_key"]
-        meeting_name = session.get("meeting_name", f"Round {session.get('meeting_key','?')}")
+        key       = session["session_key"]
+        date_iso  = session.get("date_start", "")[:10]
+        # Prefer Jolpica's name (always populated) over OpenF1's meeting_name
+        meeting_name = (
+            date_to_name.get(date_iso)
+            or session.get("meeting_name")
+            or f"Round {session.get('meeting_key','?')}"
+        )
         print(f"    → {meeting_name} (session {key})")
 
         try:
@@ -430,7 +458,7 @@ def fetch_strategies(sessions):
             strategies.append({
                 "session_key":  key,
                 "meeting_key":  session.get("meeting_key"),
-                "name":         meeting_name,
+                "name":         f"{meeting_name} · {YEAR}",
                 "date":         session.get("date_start", "")[:10],
                 "total_laps":   max_lap,
                 "fastest_stop": fastest_stop,
@@ -562,7 +590,7 @@ def fetch_detailed_driver_stats():
         d["avg_grid"]         = avg(gp)
         d["avg_quali"]        = avg(qp)
         d["finish_std_dev"]   = std_dev(fp)
-        d["consistency_score"]= round(max(0, 100 - d["finish_std_dev"] * 8), 1)
+        d["consistency_score"]= round(max(0, 100 - d["finish_std_dev"] * 5), 1)
 
         # Quali vs race delta — positive means finishes better than qualifies
         if gp and fp:
@@ -693,18 +721,23 @@ def build_ai_insights(driver_stats, standings, total_races, total_rounds):
     ], key=lambda x: -x["prob"])
 
     # ── 2. Luck Index ─────────────────────────────────────────────────────
-    luck_index = sorted([
+    # Positive luck_score = robbed by the car (mechanical DNFs hurt you).
+    # Negative luck_score = lucky despite your own mistakes (driver-error DNFs).
+    # Sorted by absolute magnitude so the chart surfaces both extremes,
+    # not just one side.
+    luck_raw = [
         {
             "driver_id":    d["driver_id"],
             "name":         d["name"],
             "dnf_mech":     d["dnf_mech"],
             "dnf_driver":   d["dnf_driver"],
             "robbed_pts":   d["robbed_points"],
-            "luck_score":   d["dnf_driver"] * 6 - d["robbed_points"],
+            "luck_score":   d["dnf_mech"] * 12 - d["dnf_driver"] * 4,
         }
         for d in driver_stats
-        if d["races_started"] > 0
-    ], key=lambda x: -x["luck_score"])[:10]
+        if d["races_started"] > 0 and is_current_driver(d["driver_id"])
+    ]
+    luck_index = sorted(luck_raw, key=lambda x: -abs(x["luck_score"]))[:10]
 
     # ── 3. Pace Consistency ───────────────────────────────────────────────
     pace_consistency = sorted([
@@ -716,7 +749,7 @@ def build_ai_insights(driver_stats, standings, total_races, total_rounds):
             "avg_finish": d["avg_finish"],
         }
         for d in driver_stats
-        if d["races_started"] >= 2
+        if d["races_started"] >= 2 and is_current_driver(d["driver_id"])
     ], key=lambda x: -x["score"])[:10]
 
     # ── 4. Quali vs Race Delta ────────────────────────────────────────────
@@ -730,6 +763,7 @@ def build_ai_insights(driver_stats, standings, total_races, total_rounds):
         }
         for d in driver_stats
         if d["races_started"] >= 2 and d["avg_quali"] > 0
+           and is_current_driver(d["driver_id"])
     ], key=lambda x: -x["delta"])[:10]
 
     # ── 5. Robbed Points ─────────────────────────────────────────────────
@@ -741,7 +775,7 @@ def build_ai_insights(driver_stats, standings, total_races, total_rounds):
             "robbed_pts": d["robbed_points"],
         }
         for d in driver_stats
-        if d["robbed_points"] > 0
+        if d["robbed_points"] > 0 and is_current_driver(d["driver_id"])
     ], key=lambda x: -x["robbed_pts"])
 
     # ── 6. Podium Performer ───────────────────────────────────────────────
@@ -754,7 +788,7 @@ def build_ai_insights(driver_stats, standings, total_races, total_rounds):
             "avg_finish":  d["avg_finish"],
         }
         for d in driver_stats
-        if d["races_started"] >= 2
+        if d["races_started"] >= 2 and is_current_driver(d["driver_id"])
     ], key=lambda x: -x["podium_rate"])[:10]
 
     return {
@@ -860,6 +894,55 @@ def fetch_reddit_news(target=4):
     return result or [{"headline": t, "url": l} for _, t, l in scored[:target]]
 
 
+# ── RSS news fallback ───────────────────────────────────────────────────────
+# Reddit's JSON endpoint frequently blocks GitHub Actions runners with 403s,
+# leaving the news widget empty. These RSS feeds give us a resilient backup.
+
+RSS_FEEDS = [
+    "https://www.autosport.com/rss/f1/news/",
+    "https://www.racefans.net/feed/",
+    "https://www.formula1.com/en/latest/all.xml",
+]
+
+def fetch_rss_news(target=4):
+    """Pulls F1 headlines from a list of RSS feeds. First feed to yield
+    enough usable items wins. Same SKIP_ALWAYS filter as Reddit."""
+    print("  Fetching RSS news…")
+    items = []
+    for url in RSS_FEEDS:
+        try:
+            r = requests.get(
+                url,
+                headers={"User-Agent": "Mozilla/5.0 (compatible; F1DashboardBot/1.0)"},
+                timeout=15,
+            )
+            r.raise_for_status()
+            root = ET.fromstring(r.content)
+            for item in root.iter("item"):
+                title = (item.findtext("title") or "").strip()
+                link  = (item.findtext("link")  or "").strip()
+                if title and link and not any(kw in title.lower() for kw in SKIP_ALWAYS):
+                    items.append({"headline": title, "url": link})
+                if len(items) >= target * 3:
+                    break
+            if len(items) >= target:
+                break
+        except Exception as e:
+            print(f"    ⚠️  RSS {url} failed: {e}")
+            continue
+
+    seen, result = set(), []
+    for it in items:
+        key = it["headline"].lower()[:60]
+        if key in seen:
+            continue
+        seen.add(key)
+        result.append(it)
+        if len(result) == target:
+            break
+    return result
+
+
 # ════════════════════════════════════════════════════════════════════════════
 # MAIN
 # ════════════════════════════════════════════════════════════════════════════
@@ -894,10 +977,13 @@ def main():
 
     print("\n[5/7] Strategy data from OpenF1…")
     sessions   = safe(fetch_all_race_sessions, [])
-    strategies = safe(lambda: fetch_strategies(sessions), [])
+    strategies = safe(lambda: fetch_strategies(sessions, calendar), [])
 
     print("\n[6/7] Reddit news…")
     news = safe(fetch_reddit_news, [])
+    if not news:
+        print("    Reddit returned nothing — falling back to RSS feeds…")
+        news = safe(fetch_rss_news, [])
 
     print("\n[7/7] Assembling data.json…")
     payload = {
