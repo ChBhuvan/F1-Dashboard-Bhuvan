@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-09T18:58:56.934306+00:00",
+  "updated_at": "2026-05-10T05:36:37.163710+00:00",
   "season": 2026,
   "drivers": [
     {
@@ -592,16 +592,16 @@
       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOdms0Q1AzQTViNEdtWWV4T3lnVkMxcDNlaVhKT01rdVdPNl93NHdVSldXNXRsRGxrbFVPVUE4UnFTYmh2a3YteXAwQlFHQzQwZFVTeDB6cnFJZWgzUnVtYW1XSUxTU2tGNHNMTzcyQmpUeUtTY0o5MzRlYVNKcTNBWmVERTVhNGF3cVowYzdwX29Qdw?oc=5"
     },
     {
-      "headline": "F1 and Sky agree new long-term partnership across UK, Ireland, and Italy - Formula 1",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQSDJxQlZSR1NiQUtLLVI1aXI4YkNyVERxVlBCbFRjcFhPcWczNU9CLUNaWDR2clp2QXcteGQxTGhZZmQwdWMzOVY0MEFVVDZQcjBjalRSck5pUDNPaGdrVTBRLWhGZVZqOHZjN2FESzZYWC1WUmV6WlYwd2E2MkNWd0gzcEw2a2RKS010dWpybGJQZEhiZFpsSGo3NUpPRjVxWWhpMkk5ZHgteF9wZGdLanZOdGdMQ3c4cElHMkMwYTVBTUNMRlZQcTJMNHczYThn?oc=5"
-    },
-    {
-      "headline": "Honda gets extra F1 power unit help after FIA tweaks cost cap rules - Motorsport.com",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQTWlTUzYtOXh3M3dteTdxZkpEYzJDOHRBUEdSb1dzUlRwT1dMZzJzRzBmcG5HWXhidTlvMEpmUW5VdU01ZzFPTEZtRXdoQzBoV040V3dxdlFvVUNXLWctQW5CZ0FwVUNiZ3p6cXA5TEJCbEs4WXotRi1TcGVma1BaaXFxYTkyVUdFamZHWUdqemxsNDA2UGc?oc=5"
+      "headline": "Proposals agreed for further evolutionary regulation changes - Formula 1",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPOGZhT25MVGx5NUVSSG9NMk5wWUlvaGdxdzdpVmEwMHZsMkM3TDNwSkVISEVqeVFtamJCN0ZKcDY3TlNLTUNBVnpmVFRxODlsRWR0UHpiREFXTHFPSE94OEhsSXM3bnJUMlpTNzZDLWdsTF9HdGhYbVFJaUtXY2lZNXdnbVE4YnMzYWdfeW9YUFlVQ0h5RDRzRmZwNUZUU3ZzUHkyUzYyOEVuSldkUWxJaWdIb1hvVUFnVjRCdEY4RU9hYXpSZnFoVjBlQ1VKRnM0alp1S3NFOHFBSFcwMnE3VjhR?oc=5"
     },
     {
       "headline": "F1 - 2026 Miami Grand Prix Post-Qualifying Press Conference Transcript - Federation Internationale de l'Automobile",
       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNYVYtLW9QMXk4WU1nZXkydVM0bXpGT3RZMkN0c1dkVTUyWWxUenM5WVNjSzlZdEdZYkRRMjI2MFB3eEZRbXNUVGdjTnRlZmV2QkZXdG1WT05pWDR0Z240UHFGOTI5WE9PN2wwVlhMT3Qyek4xN2VMWTVVNTF1a1pNNnVHRDhNT3hnaUVWR2Z6b2h1U1lOU2lZMg?oc=5"
+    },
+    {
+      "headline": "What we learned about the pecking order after Miami - Formula 1",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOd1N4S3FRVkRpMTg5MlB6SjRKOTBSZDRtY2VzaHJSRVNJQUw5eUhYX0dSX3d2YlBtQ1BKTEpLQmFvRVB2VDZkLTNNLTc2Sm5WS1J3dEZiVXdGRkxveVBYZGMyOUZvR3h3ZWNGck8xYnNGbUFrZVUta0s0Z21tQVllUTBxTEQ0dzQzTlhnXzdQQjJjTklJVUJlNTNDTzA4MGN3b2pITmxvbmQwUlg2bndMa0VONko2ajBZ?oc=5"
     }
   ],
   "stats": {
@@ -3520,12 +3520,12 @@
       {
         "driver_id": "antonelli",
         "name": "A. Antonelli",
-        "prob": 53.4
+        "prob": 54.0
       },
       {
         "driver_id": "russell",
         "name": "G. Russell",
-        "prob": 23.8
+        "prob": 22.8
       },
       {
         "driver_id": "leclerc",
@@ -3533,24 +3533,24 @@
         "prob": 8.3
       },
       {
-        "driver_id": "hamilton",
-        "name": "L. Hamilton",
-        "prob": 5.2
-      },
-      {
         "driver_id": "norris",
         "name": "L. Norris",
-        "prob": 5.1
+        "prob": 5.4
+      },
+      {
+        "driver_id": "hamilton",
+        "name": "L. Hamilton",
+        "prob": 5.0
       },
       {
         "driver_id": "piastri",
         "name": "O. Piastri",
-        "prob": 2.8
+        "prob": 3.0
       },
       {
         "driver_id": "max_verstappen",
         "name": "M. Verstappen",
-        "prob": 1.0
+        "prob": 1.1
       },
       {
         "driver_id": "bearman",
