@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-11T06:02:47.452648+00:00",
+  "updated_at": "2026-05-11T14:35:30.161187+00:00",
   "season": 2026,
   "drivers": [
     {
@@ -3151,7 +3151,7 @@
         "poles": 0,
         "fastest_laps": 1,
         "dnfs": 1,
-        "dnf_mech": 0,
+        "dnf_mech": 1,
         "p10_finishes": 3,
         "avg_finish": 8.0,
         "consistency": 64.8
@@ -3166,7 +3166,7 @@
         "poles": 0,
         "fastest_laps": 0,
         "dnfs": 2,
-        "dnf_mech": 0,
+        "dnf_mech": 2,
         "p10_finishes": 2,
         "avg_finish": 11.25,
         "consistency": 56.1
@@ -3253,7 +3253,7 @@
         "poles": 0,
         "fastest_laps": 1,
         "dnfs": 1,
-        "dnf_mech": 0,
+        "dnf_mech": 1,
         "p10_finishes": 3,
         "avg_finish": 8.75,
         "consistency": 78.4
@@ -3268,7 +3268,7 @@
         "poles": 0,
         "fastest_laps": 0,
         "dnfs": 2,
-        "dnf_mech": 0,
+        "dnf_mech": 2,
         "p10_finishes": 1,
         "avg_finish": 15.5,
         "consistency": 71.4
@@ -3287,7 +3287,7 @@
         "poles": 0,
         "fastest_laps": 0,
         "dnfs": 4,
-        "dnf_mech": 0,
+        "dnf_mech": 4,
         "p10_finishes": 0,
         "avg_finish": 17.0,
         "consistency": 93.9
@@ -3302,7 +3302,7 @@
         "poles": 0,
         "fastest_laps": 0,
         "dnfs": 4,
-        "dnf_mech": 0,
+        "dnf_mech": 4,
         "p10_finishes": 0,
         "avg_finish": 18.25,
         "consistency": 91.8
@@ -3321,7 +3321,7 @@
         "poles": 0,
         "fastest_laps": 0,
         "dnfs": 2,
-        "dnf_mech": 0,
+        "dnf_mech": 2,
         "p10_finishes": 3,
         "avg_finish": 11.0,
         "consistency": 70.2
@@ -3336,7 +3336,7 @@
         "poles": 0,
         "fastest_laps": 0,
         "dnfs": 2,
-        "dnf_mech": 0,
+        "dnf_mech": 2,
         "p10_finishes": 2,
         "avg_finish": 11.75,
         "consistency": 82.5
@@ -3355,7 +3355,7 @@
         "poles": 0,
         "fastest_laps": 0,
         "dnfs": 2,
-        "dnf_mech": 0,
+        "dnf_mech": 2,
         "p10_finishes": 2,
         "avg_finish": 12.0,
         "consistency": 85.0
@@ -3370,7 +3370,7 @@
         "poles": 0,
         "fastest_laps": 0,
         "dnfs": 3,
-        "dnf_mech": 0,
+        "dnf_mech": 3,
         "p10_finishes": 1,
         "avg_finish": 16.0,
         "consistency": 74.5
@@ -3389,7 +3389,7 @@
         "poles": 0,
         "fastest_laps": 0,
         "dnfs": 2,
-        "dnf_mech": 0,
+        "dnf_mech": 2,
         "p10_finishes": 2,
         "avg_finish": 12.25,
         "consistency": 75.2
@@ -3404,7 +3404,7 @@
         "poles": 0,
         "fastest_laps": 0,
         "dnfs": 3,
-        "dnf_mech": 0,
+        "dnf_mech": 3,
         "p10_finishes": 1,
         "avg_finish": 12.0,
         "consistency": 87.8
@@ -3423,7 +3423,7 @@
         "poles": 0,
         "fastest_laps": 0,
         "dnfs": 3,
-        "dnf_mech": 0,
+        "dnf_mech": 3,
         "p10_finishes": 1,
         "avg_finish": 12.0,
         "consistency": 92.1
@@ -3438,7 +3438,7 @@
         "poles": 0,
         "fastest_laps": 0,
         "dnfs": 3,
-        "dnf_mech": 0,
+        "dnf_mech": 3,
         "p10_finishes": 2,
         "avg_finish": 11.25,
         "consistency": 67.2
@@ -3457,7 +3457,7 @@
         "poles": 0,
         "fastest_laps": 0,
         "dnfs": 3,
-        "dnf_mech": 0,
+        "dnf_mech": 3,
         "p10_finishes": 0,
         "avg_finish": 15.75,
         "consistency": 75.7
@@ -3472,7 +3472,7 @@
         "poles": 0,
         "fastest_laps": 0,
         "dnfs": 3,
-        "dnf_mech": 0,
+        "dnf_mech": 3,
         "p10_finishes": 1,
         "avg_finish": 13.75,
         "consistency": 77.8
@@ -3491,7 +3491,7 @@
         "poles": 0,
         "fastest_laps": 0,
         "dnfs": 3,
-        "dnf_mech": 0,
+        "dnf_mech": 3,
         "p10_finishes": 0,
         "avg_finish": 16.0,
         "consistency": 96.5
@@ -3506,7 +3506,7 @@
         "poles": 0,
         "fastest_laps": 0,
         "dnfs": 4,
-        "dnf_mech": 0,
+        "dnf_mech": 4,
         "p10_finishes": 0,
         "avg_finish": 17.25,
         "consistency": 87.5
@@ -3520,12 +3520,12 @@
       {
         "driver_id": "antonelli",
         "name": "A. Antonelli",
-        "prob": 55.6
+        "prob": 52.9
       },
       {
         "driver_id": "russell",
         "name": "G. Russell",
-        "prob": 22.6
+        "prob": 23.3
       },
       {
         "driver_id": "leclerc",
@@ -3533,24 +3533,24 @@
         "prob": 8.2
       },
       {
-        "driver_id": "norris",
-        "name": "L. Norris",
-        "prob": 4.7
-      },
-      {
         "driver_id": "hamilton",
         "name": "L. Hamilton",
-        "prob": 4.5
+        "prob": 5.4
+      },
+      {
+        "driver_id": "norris",
+        "name": "L. Norris",
+        "prob": 5.3
       },
       {
         "driver_id": "piastri",
         "name": "O. Piastri",
-        "prob": 3.0
+        "prob": 3.6
       },
       {
         "driver_id": "max_verstappen",
         "name": "M. Verstappen",
-        "prob": 1.1
+        "prob": 0.9
       },
       {
         "driver_id": "bearman",
@@ -3562,85 +3562,85 @@
       {
         "driver_id": "stroll",
         "name": "L. Stroll",
-        "dnf_mech": 0,
-        "dnf_driver": 4,
+        "dnf_mech": 4,
+        "dnf_driver": 0,
         "robbed_pts": 0,
-        "luck_score": -12
+        "luck_score": 32
       },
       {
         "driver_id": "alonso",
         "name": "F. Alonso",
-        "dnf_mech": 0,
-        "dnf_driver": 4,
+        "dnf_mech": 4,
+        "dnf_driver": 0,
         "robbed_pts": 0,
-        "luck_score": -12
+        "luck_score": 32
       },
       {
         "driver_id": "bottas",
         "name": "V. Bottas",
-        "dnf_mech": 0,
-        "dnf_driver": 4,
+        "dnf_mech": 4,
+        "dnf_driver": 0,
         "robbed_pts": 0,
-        "luck_score": -12
+        "luck_score": 32
       },
       {
         "driver_id": "bearman",
         "name": "O. Bearman",
-        "dnf_mech": 0,
-        "dnf_driver": 3,
+        "dnf_mech": 3,
+        "dnf_driver": 0,
         "robbed_pts": 0,
-        "luck_score": -9
+        "luck_score": 24
       },
       {
         "driver_id": "arvid_lindblad",
         "name": "A. Lindblad",
-        "dnf_mech": 0,
-        "dnf_driver": 3,
+        "dnf_mech": 3,
+        "dnf_driver": 0,
         "robbed_pts": 0,
-        "luck_score": -9
+        "luck_score": 24
       },
       {
         "driver_id": "bortoleto",
         "name": "G. Bortoleto",
-        "dnf_mech": 0,
-        "dnf_driver": 3,
+        "dnf_mech": 3,
+        "dnf_driver": 0,
         "robbed_pts": 0,
-        "luck_score": -9
+        "luck_score": 24
       },
       {
         "driver_id": "ocon",
         "name": "E. Ocon",
-        "dnf_mech": 0,
-        "dnf_driver": 3,
+        "dnf_mech": 3,
+        "dnf_driver": 0,
         "robbed_pts": 0,
-        "luck_score": -9
+        "luck_score": 24
       },
       {
         "driver_id": "albon",
         "name": "A. Albon",
-        "dnf_mech": 0,
-        "dnf_driver": 3,
+        "dnf_mech": 3,
+        "dnf_driver": 0,
         "robbed_pts": 0,
-        "luck_score": -9
+        "luck_score": 24
       },
       {
         "driver_id": "perez",
         "name": "S. P\u00e9rez",
-        "dnf_mech": 0,
-        "dnf_driver": 3,
+        "dnf_mech": 3,
+        "dnf_driver": 0,
         "robbed_pts": 0,
-        "luck_score": -9
+        "luck_score": 24
       },
       {
         "driver_id": "hulkenberg",
         "name": "N. H\u00fclkenberg",
-        "dnf_mech": 0,
-        "dnf_driver": 3,
+        "dnf_mech": 3,
+        "dnf_driver": 0,
         "robbed_pts": 0,
-        "luck_score": -9
+        "luck_score": 24
       }
     ],
-    "luck_index_meaningful": false,
+    "luck_index_meaningful": true,
     "pace_consistency": [
       {
         "driver_id": "antonelli",
@@ -3785,7 +3785,20 @@
         "avg_finish": 11.75
       }
     ],
-    "robbed_points": [],
+    "robbed_points": [
+      {
+        "driver_id": "norris",
+        "name": "L. Norris",
+        "dnf_mech": 1,
+        "robbed_pts": 4
+      },
+      {
+        "driver_id": "max_verstappen",
+        "name": "M. Verstappen",
+        "dnf_mech": 1,
+        "robbed_pts": 2
+      }
+    ],
     "podium_performer": [
       {
         "driver_id": "antonelli",
