@@ -498,11 +498,55 @@ def fetch_strategies(sessions, calendar=None):
 # TEAMMATES + AI INSIGHTS — detailed per-driver stats from Jolpica
 # ════════════════════════════════════════════════════════════════════════════
 
+# DNF status keyword heuristic.
+#
+# Why this is heuristic: Jolpica returns specific mechanical causes
+# ("Engine", "Gearbox", "Battery", etc.) only sporadically. For the 2026
+# season in particular, it returns the generic "Retired" for most DNFs
+# until the detailed status data is backfilled — which can take weeks
+# after the race.
+#
+# Real-world reality: when a driver retires from an F1 race without it
+# being an accident or collision, it's almost always a car problem.
+# Drivers don't pull a healthy car off the track. So we INVERT the
+# classification: anything resembling driver error (accident, collision,
+# spin, debris, disqualification, withdrawn) gets counted as
+# driver-fault. Everything else that didn't finish is treated as
+# mechanical, including the generic "Retired" bucket.
+#
+# We also keep the explicit mechanical-cause keywords for cases where
+# Jolpica does provide them, so the matching stays precise when the
+# data is rich.
+
+DRIVER_ERROR_KEYWORDS = [
+    "accident", "collision", "spun off", "spin", "damage",
+    "disqualified", "excluded", "withdrew", "withdrawn",
+    "did not qualify", "107%", "out of fuel",
+]
+
 MECH_DNF_KEYWORDS = [
     "engine", "gearbox", "hydraulics", "brakes", "electrical",
     "power unit", "oil", "water", "mechanical", "turbo", "exhaust",
-    "suspension", "driveshaft", "clutch", "fuel",
+    "suspension", "driveshaft", "halfshaft", "clutch", "fuel system",
+    "battery", "ers", "cooling", "coolant", "overheating",
+    "transmission", "wheel", "vibrations", "steering", "electronics",
+    "energy store", "throttle", "differential", "radiator", "puncture",
+    "tyre", "spark", "ignition", "alternator", "fire", "retired",
 ]
+
+def classify_dnf(status):
+    """Returns 'driver' or 'mech' for a non-finished result.
+    Driver-error keywords take precedence over mechanical ones, so a
+    crash that also damaged the engine gets called a driver DNF."""
+    s = (status or "").lower()
+    if any(kw in s for kw in DRIVER_ERROR_KEYWORDS):
+        return "driver"
+    if any(kw in s for kw in MECH_DNF_KEYWORDS):
+        return "mech"
+    # Unknown non-finish (generic "Retired", or any unrecognised
+    # status). Default to mechanical — drivers rarely retire a
+    # healthy car of their own accord.
+    return "mech"
 
 def fetch_detailed_driver_stats():
     """
@@ -569,9 +613,9 @@ def fetch_detailed_driver_stats():
             if r.get("FastestLap", {}).get("rank") == "1":
                 driver["fastest_laps"] += 1
 
-            # DNF classification
+            # DNF classification — see classify_dnf() doc for rationale
             if status != "Finished" and not status.startswith("+"):
-                if any(kw in status.lower() for kw in MECH_DNF_KEYWORDS):
+                if classify_dnf(status) == "mech":
                     driver["dnf_mech"] += 1
                 else:
                     driver["dnf_driver"] += 1
@@ -617,8 +661,15 @@ def fetch_detailed_driver_stats():
         else:
             d["quali_race_delta"] = 0
 
-        # Estimated robbed points (mechanical DNFs × 12pt average loss)
-        d["robbed_points"] = d["dnf_mech"] * 12
+        # Estimated robbed points: project the driver's typical finishing
+        # position onto F1's points table, then multiply by mech DNF count.
+        # A P3 average earns 15 pts per race; a P15 average earns 0.
+        # This makes the metric meaningfully reflect which drivers actually
+        # lost points to reliability, instead of treating all DNFs equally.
+        F1_POINTS_TABLE = {1:25, 2:18, 3:15, 4:12, 5:10, 6:8, 7:6, 8:4, 9:2, 10:1}
+        proj_pos = round(d["avg_finish"]) if d["avg_finish"] > 0 else 20
+        per_race_loss = F1_POINTS_TABLE.get(proj_pos, 0)
+        d["robbed_points"] = d["dnf_mech"] * per_race_loss
 
         # Podium rate %
         d["podium_rate"] = round(
