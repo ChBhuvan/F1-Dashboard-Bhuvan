@@ -3342,7 +3342,7 @@ function initAIInsights() {
                 valStr: `~${d.robbed_pts}pts · ${d.dnf_mech} DNF${d.dnf_mech > 1 ? 's' : ''}` }))
             : [{ name: 'No mechanical DNFs yet 🎉', val: 0, valStr: '—' }],
           Math.max(...(rp.length > 0 ? rp.map(d => d.robbed_pts) : [1])),
-          'Assumes average P4–P5 finish value (~12pts) per retirement'
+          'Estimated by projecting average finishing position onto F1 points table'
         ),
         aiCard(
           'Podiums ÷ Races Started × 100',
@@ -3678,7 +3678,7 @@ function initAIInsights() {
 <script>
 (function() {
   /* ── CONFIG ── replace with your deployed Worker URL after setup ── */
-  const WORKER_URL = 'https://papaya-agent.bhuvan2026.workers.dev/chat';
+  const WORKER_URL = 'https://papaya-agent.YOUR_SUBDOMAIN.workers.dev/chat';
 
   /* ── State ── */
   const history = [];
