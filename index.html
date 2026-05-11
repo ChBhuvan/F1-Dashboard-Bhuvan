@@ -2591,20 +2591,37 @@ body {
 
   // ── Constructor standings ────────────────────────────────────────
   if (data.constructors && data.constructors.length) {
+    // Nationality strings come back from Jolpica as adjectives
+    // ("German", "Italian") but the static design uses ISO 3-letter codes.
+    const NAT_TO_ISO3 = {
+      'german':     'DEU', 'british':   'GBR', 'italian':  'ITA',
+      'austrian':   'AUT', 'american':  'USA', 'french':   'FRA',
+      'swiss':      'CHE', 'dutch':     'NLD', 'spanish':  'ESP',
+      'monegasque': 'MCO', 'australian':'AUS', 'mexican':  'MEX',
+      'finnish':    'FIN', 'brazilian': 'BRA', 'thai':     'THA',
+      'japanese':   'JPN', 'canadian':  'CAN', 'chinese':  'CHN',
+      'saudi':      'SAU', 'belgian':   'BEL', 'argentine':'ARG',
+      'new zealander':'NZL',
+    };
+    const natToIso = s => NAT_TO_ISO3[(s || '').toLowerCase()]
+                          || (s || '').slice(0, 3).toUpperCase();
+
     const rows = document.querySelectorAll('.con-row');
     rows.forEach((row, i) => {
       const c = data.constructors[i];
       if (!c) return;
       const colour = teamColour(c.name);
       row.style.setProperty('--team-color', colour);
-      const posEl  = row.querySelector('.con-pos');
-      const nameEl = row.querySelector('.con-name');
-      const ptsEl  = row.querySelector('.con-pts');
-      const barEl  = row.querySelector('.con-bar-fill');
-      if (posEl)  posEl.textContent  = String(c.pos).padStart(2, '0');
-      if (nameEl) nameEl.textContent = c.name;
-      if (ptsEl)  ptsEl.textContent  = c.pts;
-      if (barEl)  barEl.style.width  = c.bar_pct + '%';
+      const posEl    = row.querySelector('.con-pos');
+      const nameEl   = row.querySelector('.con-name');
+      const engineEl = row.querySelector('.con-engine');
+      const ptsEl    = row.querySelector('.con-pts');
+      const barEl    = row.querySelector('.con-bar-fill');
+      if (posEl)    posEl.textContent    = String(c.pos).padStart(2, '0');
+      if (nameEl)   nameEl.textContent   = c.name;
+      if (engineEl) engineEl.textContent = `${c.pu || '—'} · ${natToIso(c.nat)}`;
+      if (ptsEl)    ptsEl.textContent    = c.pts;
+      if (barEl)    barEl.style.width    = c.bar_pct + '%';
     });
   }
 
@@ -3678,7 +3695,7 @@ function initAIInsights() {
 <script>
 (function() {
   /* ── CONFIG ── replace with your deployed Worker URL after setup ── */
-  const WORKER_URL = 'https://papaya-agent.bhuvan2026.workers.dev/chat';
+  const WORKER_URL = 'https://papaya-agent.YOUR_SUBDOMAIN.workers.dev/chat';
 
   /* ── State ── */
   const history = [];
