@@ -1013,6 +1013,62 @@ RSS_HEADERS = {
     "Accept": "application/rss+xml, application/xml, text/xml, */*",
 }
 
+def fetch_last_season_summary(year=YEAR - 1):
+    """
+    Pulls a compact recap of the previous season for the Papaya chatbot
+    to reference. Without this, the LLM would rely on its training data,
+    which is often stale or wrong about recent F1 seasons.
+    Returns a dict with the champion, runner-up, constructors' champion,
+    and a top-5 snapshot.
+    """
+    print(f"  Fetching {year} season summary…")
+    try:
+        d_data = get_jolpica(f"/{year}/driverStandings.json")
+        d_rows = d_data["MRData"]["StandingsTable"]["StandingsLists"]
+        if not d_rows:
+            return {}
+        d_standings = d_rows[0]["DriverStandings"]
+
+        c_data = get_jolpica(f"/{year}/constructorStandings.json")
+        c_rows = c_data["MRData"]["StandingsTable"]["StandingsLists"]
+        c_standings = c_rows[0]["ConstructorStandings"] if c_rows else []
+
+        def driver_label(s):
+            d = s["Driver"]
+            team = normalize_team(s["Constructors"][0]["name"]) if s["Constructors"] else "—"
+            return {
+                "pos":  int(s["position"]),
+                "name": f"{d['givenName']} {d['familyName']}",
+                "team": team,
+                "pts":  int(float(s["points"])),
+                "wins": int(s["wins"]),
+            }
+
+        top5 = [driver_label(s) for s in d_standings[:5]]
+        champ = top5[0] if top5 else None
+        runner_up = top5[1] if len(top5) > 1 else None
+
+        constructors_champ = None
+        if c_standings:
+            cc = c_standings[0]
+            constructors_champ = {
+                "name": normalize_team(cc["Constructor"]["name"]),
+                "pts":  int(float(cc["points"])),
+                "wins": int(cc["wins"]),
+            }
+
+        return {
+            "year":               year,
+            "champion":           champ,
+            "runner_up":          runner_up,
+            "constructors_champ": constructors_champ,
+            "top5":               top5,
+        }
+    except Exception as e:
+        print(f"    ⚠️  Could not fetch {year} summary: {e}")
+        return {}
+
+
 def fetch_rss_news(target=4):
     """Pulls F1 headlines from a list of RSS feeds. Aggregates across
     all feeds (rather than first-wins) to maximise the chance of getting
@@ -1093,6 +1149,9 @@ def main():
         print("    Reddit returned nothing — falling back to RSS feeds…")
         news = safe(fetch_rss_news, [])
 
+    print("\n[6.5/7] Last season summary (for Papaya context)…")
+    last_season = safe(fetch_last_season_summary, {})
+
     print("\n[7/7] Assembling data.json…")
     payload = {
         "updated_at":    datetime.now(timezone.utc).isoformat(),
@@ -1121,6 +1180,8 @@ def main():
         "teammates":     teammates,
         # ── AI Insights tab ────────────────────────────────────────
         "ai_insights":   ai_insights,
+        # ── Papaya chatbot context ─────────────────────────────────
+        "last_season":   last_season,
     }
 
     with open("data.json", "w") as f:
