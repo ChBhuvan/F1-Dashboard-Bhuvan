@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-11T14:35:30.161187+00:00",
+  "updated_at": "2026-05-11T17:03:49.935338+00:00",
   "season": 2026,
   "drivers": [
     {
@@ -592,8 +592,8 @@
       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOdms0Q1AzQTViNEdtWWV4T3lnVkMxcDNlaVhKT01rdVdPNl93NHdVSldXNXRsRGxrbFVPVUE4UnFTYmh2a3YteXAwQlFHQzQwZFVTeDB6cnFJZWgzUnVtYW1XSUxTU2tGNHNMTzcyQmpUeUtTY0o5MzRlYVNKcTNBWmVERTVhNGF3cVowYzdwX29Qdw?oc=5"
     },
     {
-      "headline": "The statistic that suggests Antonelli is set for an F1 title - Formula 1",
-      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNUWFFRW5FcGdCNnFpcE1ObnBpZXB0M1QtOWk5Y2dzVUxfZElvb3Q4UXJQV3NRaWdlWkxyYWpLUlN6SVhaMjFhc0ZreWQ2dUlGN0Z3MXBrUHZUOWVsSE1odWJHck1QcmQ3UmRjME1EVzJIZy0ycWlCaFFlZ212Wk9MM0wwdW5oZ3o0QWVrc2JuRjRQcEE1a2lrTk15a2NUaExlWmk2ci1PVXg2cXZZWXkwdGVUTzFNQ1k1OVNtTXlEak00b1RqaHViSVNoZTZXclY0Zmd0QnpwM3dmX0d1MDJ3?oc=5"
+      "headline": "Proposals agreed for further evolutionary regulation changes - Formula 1",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPOGZhT25MVGx5NUVSSG9NMk5wWUlvaGdxdzdpVmEwMHZsMkM3TDNwSkVISEVqeVFtamJCN0ZKcDY3TlNLTUNBVnpmVFRxODlsRWR0UHpiREFXTHFPSE94OEhsSXM3bnJUMlpTNzZDLWdsTF9HdGhYbVFJaUtXY2lZNXdnbVE4YnMzYWdfeW9YUFlVQ0h5RDRzRmZwNUZUU3ZzUHkyUzYyOEVuSldkUWxJaWdIb1hvVUFnVjRCdEY4RU9hYXpSZnFoVjBlQ1VKRnM0alp1S3NFOHFBSFcwMnE3VjhR?oc=5"
     },
     {
       "headline": "Are we at a turning point for Verstappen \u2013 and F1? - Motorsport.com",
@@ -3520,42 +3520,42 @@
       {
         "driver_id": "antonelli",
         "name": "A. Antonelli",
-        "prob": 52.9
+        "prob": 55.0
       },
       {
         "driver_id": "russell",
         "name": "G. Russell",
-        "prob": 23.3
+        "prob": 22.7
       },
       {
         "driver_id": "leclerc",
         "name": "C. Leclerc",
-        "prob": 8.2
-      },
-      {
-        "driver_id": "hamilton",
-        "name": "L. Hamilton",
-        "prob": 5.4
+        "prob": 7.6
       },
       {
         "driver_id": "norris",
         "name": "L. Norris",
-        "prob": 5.3
+        "prob": 5.4
+      },
+      {
+        "driver_id": "hamilton",
+        "name": "L. Hamilton",
+        "prob": 5.1
       },
       {
         "driver_id": "piastri",
         "name": "O. Piastri",
-        "prob": 3.6
+        "prob": 2.8
       },
       {
         "driver_id": "max_verstappen",
         "name": "M. Verstappen",
-        "prob": 0.9
+        "prob": 0.8
       },
       {
         "driver_id": "bearman",
         "name": "O. Bearman",
-        "prob": 0.4
+        "prob": 0.5
       }
     ],
     "luck_index": [
@@ -3869,6 +3869,65 @@
         "podium_rate": 0.0,
         "podiums": 0,
         "avg_finish": 13.75
+      }
+    ]
+  },
+  "last_season": {
+    "year": 2025,
+    "champion": {
+      "pos": 1,
+      "name": "Lando Norris",
+      "team": "McLaren",
+      "pts": 423,
+      "wins": 7
+    },
+    "runner_up": {
+      "pos": 2,
+      "name": "Max Verstappen",
+      "team": "Red Bull",
+      "pts": 421,
+      "wins": 8
+    },
+    "constructors_champ": {
+      "name": "McLaren",
+      "pts": 833,
+      "wins": 14
+    },
+    "top5": [
+      {
+        "pos": 1,
+        "name": "Lando Norris",
+        "team": "McLaren",
+        "pts": 423,
+        "wins": 7
+      },
+      {
+        "pos": 2,
+        "name": "Max Verstappen",
+        "team": "Red Bull",
+        "pts": 421,
+        "wins": 8
+      },
+      {
+        "pos": 3,
+        "name": "Oscar Piastri",
+        "team": "McLaren",
+        "pts": 410,
+        "wins": 7
+      },
+      {
+        "pos": 4,
+        "name": "George Russell",
+        "team": "Mercedes",
+        "pts": 319,
+        "wins": 2
+      },
+      {
+        "pos": 5,
+        "name": "Charles Leclerc",
+        "team": "Ferrari",
+        "pts": 242,
+        "wins": 0
       }
     ]
   }
