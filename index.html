@@ -3678,11 +3678,61 @@ function initAIInsights() {
 <script>
 (function() {
   /* ── CONFIG ── replace with your deployed Worker URL after setup ── */
-  const WORKER_URL = 'https://papaya-agent.bhuvan2026.workers.dev/chat';
+  const WORKER_URL = 'https://papaya-agent.YOUR_SUBDOMAIN.workers.dev/chat';
 
   /* ── State ── */
   const history = [];
   let isStreaming = false;
+  let seasonContext = null;  // populated from data.json on init
+
+  /* ── Load season context once, ready to pass into every request ── */
+  // Without this, the LLM is stuck with whatever it knew at training
+  // time — usually wrong/stale for current F1.
+  (async function loadSeasonContext() {
+    try {
+      const res = await fetch('data.json?_=' + Date.now());
+      if (!res.ok) return;
+      const data = await res.json();
+
+      const mcl = (data.constructors || []).find(c =>
+        (c.name || '').toLowerCase().includes('mclaren')
+      );
+      const mclPos  = mcl ? data.constructors.indexOf(mcl) + 1 : null;
+      const top5    = (data.drivers || []).slice(0, 5);
+      const ls      = data.last_season || {};
+
+      const lines = [
+        `=== Current F1 ${data.season} season (data refreshed ${(data.updated_at || '').slice(0,10)}) ===`,
+        data.stats?.champ_leader
+          ? `Championship leader: ${data.stats.champ_leader} (${top5[0]?.pts ?? '—'} pts) · runner-up: ${data.stats.champ_runner_up}`
+          : '',
+        top5.length
+          ? `Top 5: ${top5.map((d,i) => `${i+1}. ${d.name} (${d.team}, ${d.pts}pts)`).join(' · ')}`
+          : '',
+        mcl ? `McLaren standing: P${mclPos} with ${mcl.pts} pts (${mcl.wins} wins)` : '',
+        data.last_race?.name
+          ? `Last race: ${data.last_race.name} won by ${data.last_race.podium?.[0]?.name ?? '—'} · fastest lap ${data.last_race.fastest_lap?.driver ?? '—'}`
+          : '',
+        data.next_race?.name
+          ? `Next race: ${data.next_race.name} at ${data.next_race.circuit} on ${data.next_race.date}`
+          : '',
+        '',
+        ls.year ? `=== ${ls.year} season recap ===` : '',
+        ls.champion
+          ? `${ls.year} Drivers' Champion: ${ls.champion.name} (${ls.champion.team}, ${ls.champion.pts} pts, ${ls.champion.wins} wins) · Runner-up: ${ls.runner_up?.name ?? '—'}`
+          : '',
+        ls.constructors_champ
+          ? `${ls.year} Constructors' Champion: ${ls.constructors_champ.name} (${ls.constructors_champ.pts} pts, ${ls.constructors_champ.wins} wins)`
+          : '',
+        ls.top5?.length
+          ? `${ls.year} Top 5: ${ls.top5.map((d,i) => `${i+1}. ${d.name} (${d.team}, ${d.pts}pts)`).join(' · ')}`
+          : '',
+      ];
+      seasonContext = lines.filter(Boolean).join('\n');
+    } catch (e) {
+      // Silent fail — Papaya will still work, just without live context.
+    }
+  })();
 
   /* ── Elements ── */
   const bubble   = document.getElementById('papaya-bubble');
@@ -3793,7 +3843,10 @@ function initAIInsights() {
       const res = await fetch(WORKER_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ messages: history })
+        body: JSON.stringify({
+          messages: history,
+          season_context: seasonContext || ''
+        })
       });
 
       if (!res.ok) {
