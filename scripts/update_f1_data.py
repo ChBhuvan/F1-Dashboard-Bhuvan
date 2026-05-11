@@ -171,16 +171,22 @@ def fetch_constructor_standings():
     rows = data["MRData"]["StandingsTable"]["StandingsLists"][0]["ConstructorStandings"]
     leader_pts = float(rows[0]["points"]) if rows else 1
 
-    # Power unit map — Jolpica doesn't provide this
+    # Power unit map — Jolpica doesn't provide this.
+    # Verified against 2026 regulation year. Notable changes from 2025:
+    # - Alpine switched from Renault to Mercedes (Renault exited F1)
+    # - Aston Martin moved from Mercedes to Honda (works deal)
+    # - Racing Bulls now on Red Bull Ford (same as parent team)
+    # - Cadillac enters with Ferrari PU
+    # - Sauber rebrands as Audi with new in-house Audi PU
     PU_MAP = {
         "McLaren":      "Mercedes PU",
         "Mercedes":     "Mercedes PU",
         "Ferrari":      "Ferrari PU",
-        "Red Bull":     "Ford PU",
-        "Aston Martin": "Mercedes PU",
-        "Alpine":       "Renault PU",
+        "Red Bull":     "Red Bull Ford",
+        "Aston Martin": "Honda PU",
+        "Alpine":       "Mercedes PU",
         "Williams":     "Mercedes PU",
-        "Racing Bulls": "Honda PU",
+        "Racing Bulls": "Red Bull Ford",
         "Haas":         "Ferrari PU",
         "Cadillac":     "Ferrari PU",
         "Audi":         "Audi PU",
