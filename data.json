@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-17T05:47:50.366476+00:00",
+  "updated_at": "2026-05-17T18:55:47.580178+00:00",
   "season": 2026,
   "drivers": [
     {
@@ -3667,22 +3667,17 @@
       {
         "driver_id": "antonelli",
         "name": "A. Antonelli",
-        "prob": 54.0
+        "prob": 54.3
       },
       {
         "driver_id": "russell",
         "name": "G. Russell",
-        "prob": 24.2
+        "prob": 23.6
       },
       {
         "driver_id": "leclerc",
         "name": "C. Leclerc",
-        "prob": 7.8
-      },
-      {
-        "driver_id": "norris",
-        "name": "L. Norris",
-        "prob": 4.9
+        "prob": 8.1
       },
       {
         "driver_id": "hamilton",
@@ -3690,19 +3685,24 @@
         "prob": 4.9
       },
       {
+        "driver_id": "norris",
+        "name": "L. Norris",
+        "prob": 4.5
+      },
+      {
         "driver_id": "piastri",
         "name": "O. Piastri",
-        "prob": 2.8
+        "prob": 3.1
       },
       {
         "driver_id": "max_verstappen",
         "name": "M. Verstappen",
-        "prob": 0.8
+        "prob": 1.0
       },
       {
         "driver_id": "bearman",
         "name": "O. Bearman",
-        "prob": 0.7
+        "prob": 0.4
       }
     ],
     "luck_index": [
