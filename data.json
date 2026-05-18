@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-17T18:55:47.580178+00:00",
+  "updated_at": "2026-05-18T06:18:53.091340+00:00",
   "season": 2026,
   "drivers": [
     {
@@ -588,20 +588,20 @@
   ],
   "news": [
     {
-      "headline": "Five times F1 drivers starred at the Nurburgring - Motorsport.com",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQRlNIV1EzQ1J5SmFjYWlZaVlibklCZTItZ3RVS1hxaXJjNzcxNWVFdTl1SUhVTXVrekNTcFJqQ2NaUjJVTmRoWnNyN2ZER1k4TXdNNkFreUZVOUJhVWMtSGJJZmtrSm9jeWdJUW0yb3VEbkFJY3ZONngxSmJjazVlVS05SEZnRmVPRlRTVVFiWFBqQjBrWVBGcQ?oc=5"
-    },
-    {
       "headline": "Remembering Verstappen\u2019s remarkable debut win 10 years on - Formula 1",
       "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOWnctY2dLQmlLb3E0aUVUdG5ET2Y3SjZUMHVLSGViSlF6R1R2QU5pRXBDTXBvZnprNWJUUC14Z1NFQkIxNW51QVhVVlVCSGI2U2x4b3VxVEY2WU05TENpbkp2X2lPWWVKYXdOdGl4bzNUQ0VGcno3aGRpQ2stX3NjWHA5TDNCSm5aalFmdnVIaG55bnVFT0NyZUxBVmF4VVRtNzNoLUtiUVREalY5cTN1RWRUZHhfaUFiOHNVeHlCb1NZRXBzaFAwdWp0cDNYQmdFRzAybFByOXVOc2t1R0U1WkdHYU43ZGxPSG1VOC1B?oc=5"
     },
     {
-      "headline": "The unusual Red Bull F1 design that's legal - for now - The Race",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNTkxDSTJxSDE0ZHVLdUIyT1pXYjFLVzE4aVZPUWh0TkY2YTJ0T2FuMndSbG5IQWRpTURZdTlpUlNxbjFqdHAtdWZXWGd3OGl5Z2JTaDVJWEpqTHhaTERnS184RFVybzcwSXBPMzQ5QW1SWFJEMHIxSkdRTGtiN1pySTNZT3ZkYU53U2ZVVUVtbVJTZ21tQ3lBcGd0NlE?oc=5"
+      "headline": "EXCLUSIVE: Doni Nahmias on the new NAHMIAS x Formula 1 collection - Formula 1",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNYVRhYjZOdkxaQ09ld2ZNdlVKU3ZIa0MxN29fYzN5V192c2hGZ0tPSENQX1dLS0pGNHJvN3lMQU0yRjI2R3Q1UlJnYXRudGdaUWhKU3FJZVV2ODlNOEVYOFpjVkUtMEo4bmRHWVo4S3JRQm12RHNwQmx0NVFUbFBWSWRobk1jR2loM0RPc2hQdXoxMmdsT2tlN180aWZ1Ti1jY3NmWjljZG5DOGdxdFZLV0VhZFZjOE5ReFp5NU1qaURrMTJPTFlBSFhB?oc=5"
     },
     {
       "headline": "10 iconic races from Max Verstappen's 10 years at Red Bull - Formula 1",
       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPMWN5bHJuekhSd09vVDZWMjROcFRITnFheDJBOTN6WDhmRGo1a3k5RDl1dlJsTlRRSHBYRDMtVVU0QmJHYlEyN1FBNWRoQmluRXBKYXJndmp5Qlk2QjVQcFBTM2hBWW1hMmU1WnBMYUktb055R29oQ2Z5bDQwc09MelVFQkRJZ2V5eXBTaUJnd1p0RjZFLUNTczRTVnRPaXE5czFXTjNYVUxFeUMwY0pGVg?oc=5"
+    },
+    {
+      "headline": "Antonelli wins Miami thriller from Norris and Piastri - Formula 1",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPNHk1WWFLYXNiMk93T0xhQTV3dmxTdzhLdHFXOFZxN2drSzA0UTl4RjdIWE1rbnRxSjB2NG5ZaG5sWXA1SXEtS29pSEM5Yi1LRmNlOXZqRC02dFdlaWR2eUNSRGFkemg3NmdIeUJNeFY0Znoza2MwaG9nV3Z5VzUtcl9tVGNGVDlIMkFzdTdBdElURjNobEpPeTRTaXVIWmk3OVhuQ1FaSGxFcG04S0RYdGg1aVFfNHltR2tTdkQ1aVFuRFdQclNhQmVJcw?oc=5"
     }
   ],
   "stats": {
@@ -3667,42 +3667,42 @@
       {
         "driver_id": "antonelli",
         "name": "A. Antonelli",
-        "prob": 54.3
+        "prob": 55.0
       },
       {
         "driver_id": "russell",
         "name": "G. Russell",
-        "prob": 23.6
+        "prob": 22.8
       },
       {
         "driver_id": "leclerc",
         "name": "C. Leclerc",
-        "prob": 8.1
-      },
-      {
-        "driver_id": "hamilton",
-        "name": "L. Hamilton",
-        "prob": 4.9
+        "prob": 7.9
       },
       {
         "driver_id": "norris",
         "name": "L. Norris",
-        "prob": 4.5
+        "prob": 5.1
+      },
+      {
+        "driver_id": "hamilton",
+        "name": "L. Hamilton",
+        "prob": 5.0
       },
       {
         "driver_id": "piastri",
         "name": "O. Piastri",
-        "prob": 3.1
+        "prob": 2.8
       },
       {
         "driver_id": "max_verstappen",
         "name": "M. Verstappen",
-        "prob": 1.0
+        "prob": 0.9
       },
       {
         "driver_id": "bearman",
         "name": "O. Bearman",
-        "prob": 0.4
+        "prob": 0.6
       }
     ],
     "luck_index": [
