@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-31T06:17:24.547078+00:00",
+  "updated_at": "2026-05-31T19:04:48.592102+00:00",
   "season": 2026,
   "drivers": [
     {
@@ -588,8 +588,8 @@
   ],
   "news": [
     {
-      "headline": "Which football team does each Formula 1 driver support? - Formula 1",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPYXNwSUVMRDR3M3k2Zklackh2Uy1aNDhJNGtBSVVYeFdhUHZES0tnR3RkQ1o3SXJfaXlWWlRaX0lyQVJaYXVCejA0dGdMeFFSMmFxRktaejVQZ2lwaWhObzhIaWFHNjE1cDhTQ0U2NmJQRV9PT1J2aTRYYjVfMnlrek5WeGZQRVRULTVjUU5QdW9nV2pMZ2JOcEVZbHJ1RzhtUzFrZ3VjdF9TSFJ5N0pCUkZ1cjYxMGsyVUNOcQ?oc=5"
+      "headline": "Mercedes reveal exact cause of Russell\u2019s Canada DNF - Formula 1",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQaHdGZjdXOXRXSC1SSmtTT3FwUFFFanJvRVlRbHRROEo1OHVjUFdSWFc3Wmg2SXBDWDUzNUQxd0lyUlpTOHFydWtjdlZ0UzJXcnpuVDNuTEZOMDd5VzViUUdHZGVLdDIwNEZQVXB5UmJXVGc5czY2ajQ4bkxxTEtSM09SSkFGWkt4bkRNTXlHVy1uUUkwYkNaWHFBZDZvNHF6X2d1RzVlMjBvYTFfZ2NQNEZ1Z0RZaXBrbkZqVVNEZ1NhVkRlYlFRVURBYWd6UDhQ?oc=5"
     },
     {
       "headline": "F1 to limit cars' top speed potential on Monaco straights - The Race",
@@ -600,8 +600,8 @@
       "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNcXFmUWZoT04ta3pDWlVjOVFQcGE0dkxsX2hqSnY3SmMyMHF1NXV2M1BWZk95d0c2R1dqYm1GeVpmZ0Y0eDV5WHVqRXRXeGRTS19tNGFjRkxSTXVoSWdXRTBIUXhLODlvX19HclEzQVJvSHF2T3RQRUxnRE9qaHhhSGF2TWxta2wxUUltdU5mNGIwZDF1WUtCUW9fZEZEamhDUE5ZR0JVMTQzVG5telgyN0ZhVUtMVEttOVRIS3Rmbjg?oc=5"
     },
     {
-      "headline": "Mercedes reveal exact cause of Russell\u2019s Canada DNF - Formula 1",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQaHdGZjdXOXRXSC1SSmtTT3FwUFFFanJvRVlRbHRROEo1OHVjUFdSWFc3Wmg2SXBDWDUzNUQxd0lyUlpTOHFydWtjdlZ0UzJXcnpuVDNuTEZOMDd5VzViUUdHZGVLdDIwNEZQVXB5UmJXVGc5czY2ajQ4bkxxTEtSM09SSkFGWkt4bkRNTXlHVy1uUUkwYkNaWHFBZDZvNHF6X2d1RzVlMjBvYTFfZ2NQNEZ1Z0RZaXBrbkZqVVNEZ1NhVkRlYlFRVURBYWd6UDhQ?oc=5"
+      "headline": "Which football team does each Formula 1 driver support? - Formula 1",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPYXNwSUVMRDR3M3k2Zklackh2Uy1aNDhJNGtBSVVYeFdhUHZES0tnR3RkQ1o3SXJfaXlWWlRaX0lyQVJaYXVCejA0dGdMeFFSMmFxRktaejVQZ2lwaWhObzhIaWFHNjE1cDhTQ0U2NmJQRV9PT1J2aTRYYjVfMnlrek5WeGZQRVRULTVjUU5QdW9nV2pMZ2JOcEVZbHJ1RzhtUzFrZ3VjdF9TSFJ5N0pCUkZ1cjYxMGsyVUNOcQ?oc=5"
     }
   ],
   "stats": {
@@ -4427,42 +4427,42 @@
       {
         "driver_id": "antonelli",
         "name": "A. Antonelli",
-        "prob": 75.4
+        "prob": 75.5
       },
       {
         "driver_id": "russell",
         "name": "G. Russell",
-        "prob": 11.1
+        "prob": 11.9
       },
       {
         "driver_id": "leclerc",
         "name": "C. Leclerc",
-        "prob": 5.6
+        "prob": 4.6
       },
       {
         "driver_id": "hamilton",
         "name": "L. Hamilton",
-        "prob": 4.2
+        "prob": 4.4
       },
       {
         "driver_id": "norris",
         "name": "L. Norris",
-        "prob": 2.0
+        "prob": 1.8
       },
       {
         "driver_id": "piastri",
         "name": "O. Piastri",
-        "prob": 0.9
+        "prob": 0.8
       },
       {
         "driver_id": "max_verstappen",
         "name": "M. Verstappen",
-        "prob": 0.6
+        "prob": 0.7
       },
       {
         "driver_id": "gasly",
         "name": "P. Gasly",
-        "prob": 0.1
+        "prob": 0.2
       }
     ],
     "luck_index": [
