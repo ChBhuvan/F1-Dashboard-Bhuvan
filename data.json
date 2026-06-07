@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-06T19:19:56.657443+00:00",
+  "updated_at": "2026-06-07T06:23:03.791407+00:00",
   "season": 2026,
   "drivers": [
     {
@@ -592,16 +592,16 @@
       "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQc0wwb3J4YTlmaVE0dldKbzhRa1VUUDRHMHN5TTZxWXVvdHUtSjdQZkl0Y2xaMjVMbzA0M3FrWEJIVVlucWxTQVREeDFxQTR3NkdOWDNQYTRSNnl3ZERIMkNBWGR4LUsxemZ1SGFlWDR2Rlo4RE8zOTNTWUlYeXJFWWJseE1QVUJaVDhleVRpRkE5My11M21SYWh3UmN2bE9HRG55YVhRbWNXZUg4TlBfNVBfVGc5OHVzQkQtdEtRLWlwck5MTFB3ekowdmk1aGNYWERLQjg5NUlnR3UwY2ZJNXFLNXZGVGZIa0x1R1VmUGhMdzA?oc=5"
     },
     {
-      "headline": "F1 Monaco GP 2026 practice results - The Race",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE12cl9lUXE4MlN6OXB5aXRKRjVxWkYwSHoyNl94TjBzUmFkMmdKd182Tmg4azJISF8yMENjLUwtVHNGSmsxTFFPTHpXS2xWMWthN0ozV0xKd2ZHRy1kY3RneHVKOHp4Z28weUU1d05GZVgtRWZqSEJWQlFn?oc=5"
+      "headline": "F1 Monaco GP: Lewis Hamilton tops FP2 in another Ferrari 1-2 while Lando Norris retires - Motorsport.com",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE92WnQzQUNhWlZ4UUpJejNOQ29keWswSjJHRy1EZV82SDlhQTUtYTcyUzU0SEFZV1hITW9MbDhPcnFYLU9ydnhhTTBYa2Q0RHZZUjJGcnVGenBkcG5BeU1kNFNKeFJUTTltZ0ZoYWxpSQ?oc=5"
     },
     {
       "headline": "F1 qualifying LIVE: Monaco Grand Prix 2026 times, results, radio & updates - BBC",
       "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9ra1lGektjNHozdWNUUjZUZmlZdGJ6TUlfWmhTbTQwRHVHbWgtSzRIOXFhQ1l4WENRa2h6a01NUUVCV2pxWXV2YmZGS1Z3UzNJbVY5RGJGTklMd1VaNkVxOFNR?oc=5"
     },
     {
-      "headline": "F1 Monaco GP: Lewis Hamilton tops FP2 in another Ferrari 1-2 while Lando Norris retires - Motorsport.com",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE92WnQzQUNhWlZ4UUpJejNOQ29keWswSjJHRy1EZV82SDlhQTUtYTcyUzU0SEFZV1hITW9MbDhPcnFYLU9ydnhhTTBYa2Q0RHZZUjJGcnVGenBkcG5BeU1kNFNKeFJUTTltZ0ZoYWxpSQ?oc=5"
+      "headline": "Everything we learned on day one of F1's 2026 Monaco GP - The Race",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPREtrS2NwRklueDdwbm1WTXZqR243WW1qbVZubTNOVTViWnltc3NYUGNCb082eUVObHhvRFB4RG5BbXVCdTZNRG5tNlUxaXgtUEdENEhaUWdWTDJzWnR5a1RXaFNNVTFUenIwaUNDblVFX0xUb1Fpa3VFU3djWENJRG9WUElqWXhWR2V4OA?oc=5"
     }
   ],
   "stats": {
@@ -4427,27 +4427,27 @@
       {
         "driver_id": "antonelli",
         "name": "A. Antonelli",
-        "prob": 75.7
+        "prob": 75.4
       },
       {
         "driver_id": "russell",
         "name": "G. Russell",
-        "prob": 11.3
+        "prob": 11.4
       },
       {
         "driver_id": "leclerc",
         "name": "C. Leclerc",
-        "prob": 5.8
+        "prob": 5.1
       },
       {
         "driver_id": "hamilton",
         "name": "L. Hamilton",
-        "prob": 3.8
+        "prob": 4.3
       },
       {
         "driver_id": "norris",
         "name": "L. Norris",
-        "prob": 1.8
+        "prob": 1.9
       },
       {
         "driver_id": "piastri",
@@ -4457,7 +4457,7 @@
       {
         "driver_id": "max_verstappen",
         "name": "M. Verstappen",
-        "prob": 0.5
+        "prob": 0.7
       },
       {
         "driver_id": "gasly",
