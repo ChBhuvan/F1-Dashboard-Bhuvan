@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-07T19:08:18.275846+00:00",
+  "updated_at": "2026-06-08T06:49:29.149274+00:00",
   "season": 2026,
   "drivers": [
     {
@@ -191,14 +191,14 @@
     },
     {
       "pos": 18,
-      "code": "PER",
-      "name": "S. P\u00e9rez",
-      "full_name": "Sergio P\u00e9rez",
-      "driver_id": "perez",
-      "team": "Cadillac",
+      "code": "ALO",
+      "name": "F. Alonso",
+      "full_name": "Fernando Alonso",
+      "driver_id": "alonso",
+      "team": "Aston Martin",
       "pts": 1,
       "wins": 0,
-      "nat": "Mexican"
+      "nat": "Spanish"
     },
     {
       "pos": 19,
@@ -213,17 +213,6 @@
     },
     {
       "pos": 20,
-      "code": "ALO",
-      "name": "F. Alonso",
-      "full_name": "Fernando Alonso",
-      "driver_id": "alonso",
-      "team": "Aston Martin",
-      "pts": 0,
-      "wins": 0,
-      "nat": "Spanish"
-    },
-    {
-      "pos": 21,
       "code": "BOT",
       "name": "V. Bottas",
       "full_name": "Valtteri Bottas",
@@ -232,6 +221,17 @@
       "pts": 0,
       "wins": 0,
       "nat": "Finnish"
+    },
+    {
+      "pos": 21,
+      "code": "PER",
+      "name": "S. P\u00e9rez",
+      "full_name": "Sergio P\u00e9rez",
+      "driver_id": "perez",
+      "team": "Cadillac",
+      "pts": 0,
+      "wins": 0,
+      "nat": "Mexican"
     },
     {
       "pos": 22,
@@ -329,21 +329,21 @@
     },
     {
       "pos": 10,
-      "name": "Cadillac",
+      "name": "Aston Martin",
       "pts": 1,
       "wins": 0,
       "bar_pct": 0.4,
-      "nat": "American",
-      "pu": "Ferrari PU"
+      "nat": "British",
+      "pu": "Honda PU"
     },
     {
       "pos": 11,
-      "name": "Aston Martin",
+      "name": "Cadillac",
       "pts": 0,
       "wins": 0,
       "bar_pct": 0.0,
-      "nat": "British",
-      "pu": "Honda PU"
+      "nat": "American",
+      "pu": "Ferrari PU"
     }
   ],
   "last_race": {
@@ -373,8 +373,8 @@
       }
     ],
     "fastest_lap": {
-      "driver": "\u2014",
-      "time": "\u2014"
+      "driver": "Antonelli",
+      "time": "1:13.481"
     }
   },
   "next_race": {
@@ -438,7 +438,7 @@
       "circuit": "Circuit de Monaco",
       "country": "Monaco",
       "date": "2026-06-07",
-      "status": "upcoming",
+      "status": "done",
       "winner": "A. Antonelli"
     },
     {
@@ -588,28 +588,28 @@
   ],
   "news": [
     {
-      "headline": "LIVE COVERAGE: Follow all the action from the Monaco GP - Formula 1",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPSThtd0dsZk5hLVZNNHYwWkl0dm82VUdSNkRPNUdiRUFPOTdOeHFGRWRvd2VRVWU3aF92VFRFbTF5YWNJYWVTT1AtNFhEbVNoN3RaMGNDWVhCMFZkbnVYcHpSWG9EZXJFbGtIMkVkQlVjR053VW5yd0dGa3MxOUkyVk1UUU1jWDdyZEZvbk03S2J3NUM3cEdSNUF0OFllUXRJU29wR3otdHNPUFRoN3JyS1VCdi16LWszUnNGRzZIWWFZd1lm?oc=5"
-    },
-    {
-      "headline": "Speeding penalty frenzy that changed Monaco result explained - The Race",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPTUktYTFxSjlmWVRtN041b1N1MnU1Zi1YS05qYWk0cjhWbVI4dm80MmtOUnJndXU4cjBHd0FBS3lYamk4aXhuRU14LThKZ3Zvc3RaWnFJbk9PUUNmQ2Z6UzNmUlN2OGFFV1hrMzFsRTBmQWVOc2R2QUFEZEFKSXQtaUF1elhfUWtOa0E?oc=5"
-    },
-    {
       "headline": "Antonelli seizes pole in thrilling Monaco Qualifying - Formula 1",
       "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQc0wwb3J4YTlmaVE0dldKbzhRa1VUUDRHMHN5TTZxWXVvdHUtSjdQZkl0Y2xaMjVMbzA0M3FrWEJIVVlucWxTQVREeDFxQTR3NkdOWDNQYTRSNnl3ZERIMkNBWGR4LUsxemZ1SGFlWDR2Rlo4RE8zOTNTWUlYeXJFWWJseE1QVUJaVDhleVRpRkE5My11M21SYWh3UmN2bE9HRG55YVhRbWNXZUg4TlBfNVBfVGc5OHVzQkQtdEtRLWlwck5MTFB3ekowdmk1aGNYWERLQjg5NUlnR3UwY2ZJNXFLNXZGVGZIa0x1R1VmUGhMdzA?oc=5"
     },
     {
-      "headline": "Look back at live updates and watch the best video from the Monaco Grand Prix. - Sky Sports",
-      "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPRzVaeU5kajc1RENGU1NITGduRjNZRWhzem1TZU9TWDM0M2psdmhrUmx3bV9FU0toaC10dFNMczk5cWVxM1pXc3FtY2U3MFR2UTh3MkVnX3o3Qjg3WVk4cmdWdDdhYkZlc3puZ1g4dnVFVzFVYlUtZFI4UDhXTHpOZTlYUlJrYkp1bW5NT01yTUUyNEdIUHdpdHpyVEhtdGJULW5uVl90N2dfVmg5azRZbDZnXzctWDB4SnRZQlJ5M0JveTV6TDhST1FtX1lMcFdhbC1mT3lDdzJzV3ZMTThpMmlJNzVkSnRabFlSLVB2dmdGMDRLYmlkcWNkcw?oc=5"
+      "headline": "The strange reason so many cars broke Monaco pit speed limit - The Race",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPTUktYTFxSjlmWVRtN041b1N1MnU1Zi1YS05qYWk0cjhWbVI4dm80MmtOUnJndXU4cjBHd0FBS3lYamk4aXhuRU14LThKZ3Zvc3RaWnFJbk9PUUNmQ2Z6UzNmUlN2OGFFV1hrMzFsRTBmQWVOc2R2QUFEZEFKSXQtaUF1elhfUWtOa0E?oc=5"
+    },
+    {
+      "headline": "Who won F1 Monaco Grand Prix today? Updated Formula 1 results, standings after 2026 Monte Carlo race - Yahoo Sports",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9rVFBUaUQyc2hNZjlYQzhOUkpVZ0xnU1RFMmNCMGpRYnFtN1h2M0pES0tLZXVuTHlDT1JvZnlvRlROOE1oa0FNdWI1OGpVUmZldkVHbTBTTW5lbmNUX3UzSUNmSnRpUjhzM3YwVmJGREYyT2ppYmtwRVBrR3dfZw?oc=5"
+    },
+    {
+      "headline": "Isack Hadjar keeps Monaco podium after post-race investigation for alleged red flag infringement - Formula 1",
+      "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQa01VbWlaVW1xeERXVzdNeVJFVVpkb3VLRkNHN0o2Tl9Kc1l6UFRNSkJhNVZWaV9YYmpGU20yNFppZ2JZRUlsaEtWeTk0bUdQNXNnUFN2ZUpvS2x3YzF0Ymh4VVBHVzNJYlhJSjlkaGRrNjBuQS1jLUpxNWZEdmVDa1BFSGhST1kwTUZiR19LNWhQczhJa3gzZWYwS3Z0S3hCdHFsRlVWQzdyNldJd1Q3c3lwV1RNY3pha2tYcmx4a3hnMWRzSUtMMmd6dW5WSjhVMXJVYWxRYnhKeHc1M2xRaUdPY3hqM1NXSlNF?oc=5"
     }
   ],
   "stats": {
     "champ_gap": 66,
     "champ_leader": "A. Antonelli",
     "champ_runner_up": "L. Hamilton",
-    "fastest_lap": "\u2014",
-    "fastest_lap_driver": "\u2014",
+    "fastest_lap": "1:13.481",
+    "fastest_lap_driver": "Antonelli",
     "quali_gap": "+0.043s",
     "quali_pole": "A. Antonelli",
     "quali_p2": "M. Verstappen",
@@ -5521,7 +5521,7 @@
         "id": "alonso",
         "name": "Fernando Alonso",
         "code": "ALO",
-        "points": 0,
+        "points": 1,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -5725,7 +5725,7 @@
         "id": "perez",
         "name": "Sergio P\u00e9rez",
         "code": "PER",
-        "points": 1,
+        "points": 0,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -5755,37 +5755,37 @@
   ],
   "ai_insights": {
     "sim_runs": 5000,
-    "total_remaining": 17,
+    "total_remaining": 16,
     "champ_probability": [
       {
         "driver_id": "antonelli",
         "name": "A. Antonelli",
-        "prob": 88.8
+        "prob": 89.8
       },
       {
         "driver_id": "hamilton",
         "name": "L. Hamilton",
-        "prob": 4.5
+        "prob": 3.9
       },
       {
         "driver_id": "russell",
         "name": "G. Russell",
-        "prob": 4.0
+        "prob": 3.6
       },
       {
         "driver_id": "leclerc",
         "name": "C. Leclerc",
-        "prob": 1.7
+        "prob": 1.5
+      },
+      {
+        "driver_id": "norris",
+        "name": "L. Norris",
+        "prob": 0.6
       },
       {
         "driver_id": "piastri",
         "name": "O. Piastri",
         "prob": 0.5
-      },
-      {
-        "driver_id": "norris",
-        "name": "L. Norris",
-        "prob": 0.4
       },
       {
         "driver_id": "max_verstappen",
