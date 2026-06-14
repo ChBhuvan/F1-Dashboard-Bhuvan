@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-13T19:23:06.649019+00:00",
+  "updated_at": "2026-06-14T06:38:48.212640+00:00",
   "season": 2026,
   "drivers": [
     {
@@ -592,16 +592,16 @@
       "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNY205RXN0M3BEQ0JyU2ZJQmZWc1dzWC1pQkd6Tms0bUNXSVBPZWItVzRBMzBMN0VMQzdIYUZ0LUlaSjQ0X3lMeXZYc3hjb3JTRGxVWXpILTY3RmxZM0VIZHlrajk5b2RsaUZEYmFoVzRYWGVqdGphampNZ2dJakNiWW9MMmhoTGdqbTNfRElVN29EaVNhbUdhdUNfc0x6bnNyaGF4Zm5jU0ZhdzhUam5TUVNhRjNwTjFKYjRTNHQ5RWR1cGwyWU5mZ2ZhUFZpUXl3MklUVTQ5STJnVGxiNzMwUHhCdXgxZ0ZNdEpkUW1DQlBJaTNDQ3VpTWVn?oc=5"
     },
     {
-      "headline": "F1 drivers experiencing 'nightmare' on 'huge balloon' tyres - The Race",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNVUFNSDdfZjcwTk5CQnpsbHcxc1lzeDducHlEM0NuX1ItamM1OUlqZE5wc1ByeEZwRTIwYWlWQkF4NnFtYlZkZDhJYWU2QWZJT0puZjFfaV9Gajd6VzFwWU9oWV9vUGo3VFF2ZDF6MGlobm9SSDBmVlFEMlhEVlljSmwycjF5SVp2aElHZHc1WElHNkZxaDdYLQ?oc=5"
+      "headline": "Barcelona Grand Prix F1 2026 starting grid - The Race",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOclNFeC1JZE5wd2h6d28yOUJQVmhubWtxQkd2WnV2Q29jVlE3T19yZjcxZkdnQjZ2R2ZHRFljMkFHRGx3M3BzUGhYNTlZalhSYVJxSWl1cFZGU3Y5S292aXZ3djVFV3FDOEZUckVXcjBNNEN6azEzUWx0YkU1SGNBRV83UGQ?oc=5"
     },
     {
       "headline": "F1 confirms fans' suspicions as behind-the-scenes Kimi Antonelli footage is released - Motorsport.com",
       "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNdHRHTUpXS29LQTFHZXdrVG0yWkZHcW9iYmpVUVBSZ2pRQ3R0clV2Y1lpLWlkbkliWFI0VUhhUWNjQUs1OXpCSXlzazYwNjI3TGhhRUF3YkYxQ3A2QXBWNW95TmYwMmNuaDBpVzZXVWZyYloxOEItZG9JdEltd1lmZnFuWTMxNnhvcFpWM1BhVnhxeUhsZktpdVl4Tnd4YW0zT28xQkFZb2RHRjdtVTIwWFVFNjJVdVNKa2M1S1pidm1DWjUwNzE0?oc=5"
     },
     {
-      "headline": "What To Watch For in the Barcelona-Catalunya Grand Prix - Formula 1",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQaERwXy02UTVKSURtYUViaE1DXzQ1cEhqam43Q3Nsa2JNNnU2Tng1blZpTmlmazJpVFdid19nZTRpZ2kxOVVTeHVBZjJxU2FaZmpIM0N5ckQ3U2lBNW8xZW9sekJ6REI1U250MXh1b0VyNjlyb3htSGtaTjVYdWR0UEpXeHFHQXdvX2hnQWpkOVVSNzJJWDVYMzR4alRfR3k5QUFmTGZlVWFaM3FXSW0tM2NxY1hObFVQaElveXRR?oc=5"
+      "headline": "LIVE: F1 Barcelona GP commentary and updates - Russell takes pole ahead of Hamilton | Live text - Autosport",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPeXlCb2JrcFpGeUpVUVpkVWtBM1JkLUVob2x5U3lGOG80SmZjX1l6blNXVVAzTlI5LUY4R3IwWWJyWHpWZ0ZvRjlOYUdRN0ctNHZlNlh6dFQxbHlGTmRzQk9LRzNPZlJYbmFQVXdrTWJ1enJ6eEVjNmQta1Y2ZEc0THMtVkh0cmsxZE5QZGVrZ3ZfdEVhdW9ibmYxX3RZb183Y1ozNQ?oc=5"
     }
   ],
   "stats": {
@@ -5760,32 +5760,32 @@
       {
         "driver_id": "antonelli",
         "name": "A. Antonelli",
-        "prob": 90.6
+        "prob": 90.4
       },
       {
         "driver_id": "hamilton",
         "name": "L. Hamilton",
-        "prob": 4.0
+        "prob": 3.8
       },
       {
         "driver_id": "russell",
         "name": "G. Russell",
-        "prob": 3.3
+        "prob": 3.4
       },
       {
         "driver_id": "leclerc",
         "name": "C. Leclerc",
-        "prob": 1.3
+        "prob": 1.4
       },
       {
         "driver_id": "piastri",
         "name": "O. Piastri",
-        "prob": 0.3
+        "prob": 0.5
       },
       {
         "driver_id": "norris",
         "name": "L. Norris",
-        "prob": 0.3
+        "prob": 0.4
       },
       {
         "driver_id": "max_verstappen",
@@ -5795,7 +5795,7 @@
       {
         "driver_id": "gasly",
         "name": "P. Gasly",
-        "prob": 0.0
+        "prob": 0.1
       }
     ],
     "luck_index": [
