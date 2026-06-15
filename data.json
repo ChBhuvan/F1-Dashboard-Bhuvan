@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-14T19:11:00.229223+00:00",
+  "updated_at": "2026-06-15T07:26:00.194692+00:00",
   "season": 2026,
   "drivers": [
     {
@@ -108,23 +108,12 @@
       "full_name": "Liam Lawson",
       "driver_id": "lawson",
       "team": "Racing Bulls",
-      "pts": 26,
+      "pts": 28,
       "wins": 0,
       "nat": "New Zealander"
     },
     {
       "pos": 11,
-      "code": "COL",
-      "name": "F. Colapinto",
-      "full_name": "Franco Colapinto",
-      "driver_id": "colapinto",
-      "team": "Alpine",
-      "pts": 19,
-      "wins": 0,
-      "nat": "Argentine"
-    },
-    {
-      "pos": 12,
       "code": "BEA",
       "name": "O. Bearman",
       "full_name": "Oliver Bearman",
@@ -135,13 +124,24 @@
       "nat": "British"
     },
     {
+      "pos": 12,
+      "code": "COL",
+      "name": "F. Colapinto",
+      "full_name": "Franco Colapinto",
+      "driver_id": "colapinto",
+      "team": "Alpine",
+      "pts": 16,
+      "wins": 0,
+      "nat": "Argentine"
+    },
+    {
       "pos": 13,
       "code": "LIN",
       "name": "A. Lindblad",
       "full_name": "Arvid Lindblad",
       "driver_id": "arvid_lindblad",
       "team": "Racing Bulls",
-      "pts": 12,
+      "pts": 13,
       "wins": 0,
       "nat": "British"
     },
@@ -285,18 +285,18 @@
     {
       "pos": 5,
       "name": "Alpine",
-      "pts": 60,
+      "pts": 57,
       "wins": 0,
-      "bar_pct": 22.9,
+      "bar_pct": 21.8,
       "nat": "French",
       "pu": "Mercedes PU"
     },
     {
       "pos": 6,
       "name": "Racing Bulls",
-      "pts": 38,
+      "pts": 41,
       "wins": 0,
-      "bar_pct": 14.5,
+      "bar_pct": 15.6,
       "nat": "Italian",
       "pu": "Red Bull Ford"
     },
@@ -447,7 +447,7 @@
       "circuit": "Circuit de Barcelona-Catalunya",
       "country": "Spain",
       "date": "2026-06-14",
-      "status": "upcoming",
+      "status": "done",
       "winner": "L. Hamilton"
     },
     {
@@ -588,20 +588,20 @@
   ],
   "news": [
     {
-      "headline": "LIVE COVERAGE: Follow the Barcelona-Catalunya GP - Formula 1",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPdlJSemo5SjNwMVh0cGVYbEpNdHBvVWhrMm83X09iWmRlVTE1dTJ5Q3hYU2ZmbUwzcXVoUEdjNF9udV95cldKUnJsc01UZ2k5dDR0NUtMOGlWdVNldkxUS3FJcnJJU2pROVZCb1BDSUkyZUd0bUFtOTZiN0J1Tk8tLXRaSVRhakdmejBfZ2haZ0lyWkltVnNyS0lybXhHaktmU3NiM3B1QXhfMkQ2QkV1eTYtbmlCVGFMZFBEZF95RzdsRmdWMVJNT1RkdmRMMzJyMWZlX1NGdTI?oc=5"
+      "headline": "Hamilton wins first GP for Ferrari as Antonelli retires - Formula 1",
+      "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxPY2pZZUlHYVJKbFY4ZFoyVGUwMUdPOTMyOE5XM1dDOS1vM2c1bE9YNUVhMXM0UG9WMldGVFdXYTY0Z3M3ZlFKdWZ2dUtSblRfVks2Y1YtVDY2ZXlyakh6dWtpYllENmpLNEhUWHRMbG5OQ1NETGZtdE5YbXV1cktNVVNSX1VDeFFXVk1oTno2M2NyRUdPcXFoMjBKRWQ2ZHQ2MF90LUhxMDUxSk9aS0licXcxcGJTajJhLUZWR2JBOURyaXZibTI1WlhoMFUyV0dTLTlNYUNCUHNvbWszMnpENG5LcWdDYktuT3NKN1BkaDVoSmo1RmpNMDZTQW5zLXVXSzBpWVR5Tkhldw?oc=5"
     },
     {
-      "headline": "Can Hamilton now fight for the F1 world title with Ferrari? Our writers have their say - Motorsport.com",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQaXEyMWpiWWxtWUJONXZBdzFfZTFFdWl5UjNtTHZmTDJYZUlYS3FTMzFvaHNCbV9iY3RWZnN3ZTl0eFZkWk52b25QMlFaXzlXc1piTDRJRl9ZQjUwNE02NkNSazkyQXIzWEtTN2JSUFRKVVU5Wk1XSjczUWVjYnQ0X195eG5qQmxqZjBEXzFoZ1pHejZVZmxZbG9HSXhQME8yU1YyNHJnQ0YwSXVxR1R4Z0otcW9OMHFlOGFDYm5BT05kSHo3ODRmZTVB?oc=5"
+      "headline": "Barcelona Grand Prix F1 2026 starting grid with one pitlane start - The Race",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOclNFeC1JZE5wd2h6d28yOUJQVmhubWtxQkd2WnV2Q29jVlE3T19yZjcxZkdnQjZ2R2ZHRFljMkFHRGx3M3BzUGhYNTlZalhSYVJxSWl1cFZGU3Y5S292aXZ3djVFV3FDOEZUckVXcjBNNEN6azEzUWx0YkU1SGNBRV83UGQ?oc=5"
     },
     {
-      "headline": "F1 free live streams: How to watch Formula 1 2026 Barcelona-Catalunya Grand Prix without cable - Yahoo Sports",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOQlR1OGV0WFZnSnJBVnU0NUpEMHJPVTZ2STBlcW9BZF9mLUYydy15M0k4WnZ3elZCUzNOUjBDQk1jWW0yV0tsVEFxdEhSM3dKbzYzTnV6Y1JxaVRmWTd1NzNyMktOR04zdklDdFRiQnByaGZzalRxa2hOZ3BlQXZHcQ?oc=5"
+      "headline": "Lewis Hamilton wins his first Formula 1 Grand Prix for Ferrari - NBC News",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOOXcyRC1OU3VUaTVYWG5PTkstajgyNVRET1pSMTNUcjZMczVhZ0xiTWgyVWh4Z1BwOGR2VDNHVldFeU40RmFaVjZ4eHZ0UWNnWXJxWnoyWUVvTDVxVHhoT0dnNkdiTDV0SjE0S3ZWaWdhaGZnSURjSnNDZVh0ZUV0Q3pBRTN6MlB4a0xWc1dsODhqSlRSWUNieVJOTmF2TndGOW1FUHJ0VG1YZw?oc=5"
     },
     {
-      "headline": "McLaren has lost a core advantage of its title-winning F1 cars - The Race",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQX3cwamVVek9HM2Vjem94YUluTEwxa1p0emJFMk5qTUJDT0x6dkhZNkdlMUowTFFJQmwzdUdNa1ZldjI0c1hKRVhxR2tyeEt0bFRmMlM3Z2U3d29DRlRiaUpOdHRmRVN2WVhma0tKaTU5WmFlRFEyVnhLRTA4RHE3a2ZmcUdsMWdsRTVLcGhScjlqZnp2Y1BOZ1pQc0xLX3M?oc=5"
+      "headline": "Winners and losers from a cathartic Barcelona F1 Grand Prix - Motorsport.com",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNYTAwTFREbkYxUlpQdmdRSXpjdmdBSHdPQ2lPWktfNENmWnZHVDRUdTczTk9qTndyc3VNckp0ZkRqekZySVA3QW5UVTVZelFlcFJTMnNfYmNVNDB3QWtDNEE2WjlZdVEwOExSbTAyX1h2cExxRnRvUDY0UlFCeXY1ZkhBcXhfQ054MFZ0bU9iOEFXdXUtZzcxR0M1cFhuSjZxdV9ncERkYw?oc=5"
     }
   ],
   "stats": {
@@ -6185,7 +6185,7 @@
         "id": "colapinto",
         "name": "Franco Colapinto",
         "code": "COL",
-        "points": 19,
+        "points": 16,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -6238,7 +6238,7 @@
         "id": "lawson",
         "name": "Liam Lawson",
         "code": "LAW",
-        "points": 26,
+        "points": 28,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -6253,7 +6253,7 @@
         "id": "arvid_lindblad",
         "name": "Arvid Lindblad",
         "code": "LIN",
-        "points": 12,
+        "points": 13,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -6370,7 +6370,7 @@
   ],
   "ai_insights": {
     "sim_runs": 5000,
-    "total_remaining": 16,
+    "total_remaining": 15,
     "champ_probability": [
       {
         "driver_id": "antonelli",
@@ -6380,32 +6380,32 @@
       {
         "driver_id": "hamilton",
         "name": "L. Hamilton",
-        "prob": 12.5
+        "prob": 12.4
       },
       {
         "driver_id": "russell",
         "name": "G. Russell",
-        "prob": 7.1
+        "prob": 7.3
       },
       {
         "driver_id": "leclerc",
         "name": "C. Leclerc",
+        "prob": 0.9
+      },
+      {
+        "driver_id": "norris",
+        "name": "L. Norris",
         "prob": 0.7
       },
       {
         "driver_id": "piastri",
         "name": "O. Piastri",
-        "prob": 0.6
-      },
-      {
-        "driver_id": "norris",
-        "name": "L. Norris",
-        "prob": 0.5
+        "prob": 0.3
       },
       {
         "driver_id": "max_verstappen",
         "name": "M. Verstappen",
-        "prob": 0.2
+        "prob": 0.1
       },
       {
         "driver_id": "gasly",
