@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-20T19:23:12.364487+00:00",
+  "updated_at": "2026-06-21T06:50:21.201818+00:00",
   "season": 2026,
   "drivers": [
     {
@@ -592,16 +592,16 @@
       "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQR0tzOHhQTTZqZUJlMG9WazRyalhKQTdxaG9Ma09TZ1MydzlGWFBwOTVRb3BvVUVGSUNfbEpNaU1IcmFZWDV3UTdRSHUyME1tcGtWMEhaWktjOXE4c0hmVUxYUmJUNUhWSGpKLU1vdEhuRDE0ZXZRV0RnMmNBZ0tnN0ZESlFzcEEzSW82bjZFcTJpUXpBRzQ3cDJUMlJlclJTOFlWZkdZUWh6a2dzbmJBZndfUWlTQ0dIemRtTU1pbjRSM0FtUmc?oc=5"
     },
     {
-      "headline": "The 10 strangest and most shocking retirements in Formula 1 history - Motorsport.com",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNQV9wd1BHSjZENHBlUUVrNl9qTFhMbHYzdzdkWk5ZOUY4N3p2NmFZdjR4NHh3OThxSDJ5QU5LN2Y5RnNNVFFRQzd0bHlsTmlONWRnblN0RlJMclhleTZZTV9pbFBFMDdLNmMyUXdzSVlPeEpWa20xdjhWYjgyb2UwNnpVWm0tTTlyR1E0UllSWGZCaVJUZ0RtcXZTeE00QQ?oc=5"
+      "headline": "Crawford to get another FP1 run with Aston Martin in Austria - Formula 1",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQM1R6Ml9wWHVuY0V3RHR5SzhrVUV6dkVmVDA4OF96cXU5Y3NIcXE5QzRIdG5rVnlTZWFKTGI5VVluTmtnOTFoRHV1SEc2OWN4ZzNmb1p6Z3dWb2JCQWdQaUt0ekdPejBnX1ZKMHM2RWVTMDN5M3pxVHNDa0tKbVFVVzRBeFZ3SmJDamNVWENvVTJ0OWEyZTdoYXhqeFFKejQteXJnZjNkc0JaTVV1LW9vMkxWRzJpU3JuS1RBQm03WHNnTlB3SWFuVA?oc=5"
     },
     {
       "headline": "Where Hamilton now ranks among the oldest GP winners - Formula 1",
       "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPbHl4cUJ5RFRVYUd0ZS1BWkUzR1lrRUJKZF9zNW84Z2plbTU4a2xGdmR4U1QzTmZUY1JvUHdMWWFtRUwyMjJpYnZ3LVlEUExYakxLWVhGdU9TQktPX210S2k3c2REOHRqdmhCWU1fWHpwZUFNbVU1djRpODZ0dHJuZFRHMTZ5VFZlRFdzeFhWSHNXTmZaVk82ckViYVdqd3MwbHduX1h5OVdfWWEwbTlWSjUzYU9QckFCcERwSlRyR0h6ckduMEVkSXlTdS1CaEU?oc=5"
     },
     {
-      "headline": "Mercedes reveal unusual issue that impacted Russell in Spain - Formula 1",
-      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQakFUOGduMmRkZkwyMFhWQk9jRDR3aFdfUTBiUU9NVmZxSTBPVzFTR0NjUTFRaXcxRE5MTWtwbjFQYXpXQkJ1bno5ZzBab3o4M19PdXpiVUktNXpTWjBxb0RlclNiRlQ4dWR2U0tYaWpRc1hYaWNyZmg4aDRqaUtPV2JCdVNJbDE5czhESWdranVYVXUwVVhJek0yaG1OMWRJUkdwUDJXdFpidzY4SE1oVWdiM1NpTGlzRHJTMk9NVEdjRXhKOHV1ZXpIME13bFQ4LVhMbmpJTHM0bzA1YkVN?oc=5"
+      "headline": "Mercedes withdraw Right of Review request over Monaco result - Formula 1",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPUnFaTTRfR1B5Q2xteUJfQml5YkhlaU5MME9aSWh3eUhmYmR4czl0TGl1N3pfeWJ0OGFDTEI1ZGtwbXdNejJvMFAzYXhXRThlQjF4WnVKRTVUXzVKdVIwd1J1amlhNTRPZUZzdW5nRjlTV0VqakF6SGp4NV80U3plNk5RcDhyWm9vY1ota1NubmtwQnhKUlVEODVNQTJsRHBWTEt2eWI4aEpRQ0trcS1SMnQyYm41VGhiRnE2ZUEyNm5HVlZhWWZjd3dkY0JiSGJsNndv?oc=5"
     }
   ],
   "stats": {
@@ -6676,27 +6676,27 @@
       {
         "driver_id": "antonelli",
         "name": "A. Antonelli",
-        "prob": 79.2
+        "prob": 80.0
       },
       {
         "driver_id": "hamilton",
         "name": "L. Hamilton",
-        "prob": 11.7
+        "prob": 11.6
       },
       {
         "driver_id": "russell",
         "name": "G. Russell",
-        "prob": 7.2
-      },
-      {
-        "driver_id": "leclerc",
-        "name": "C. Leclerc",
-        "prob": 0.7
+        "prob": 6.2
       },
       {
         "driver_id": "norris",
         "name": "L. Norris",
-        "prob": 0.6
+        "prob": 0.9
+      },
+      {
+        "driver_id": "leclerc",
+        "name": "C. Leclerc",
+        "prob": 0.8
       },
       {
         "driver_id": "piastri",
