@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-21T19:17:25.697109+00:00",
+  "updated_at": "2026-06-22T07:29:47.756180+00:00",
   "season": 2026,
   "drivers": [
     {
@@ -592,16 +592,16 @@
       "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQR0tzOHhQTTZqZUJlMG9WazRyalhKQTdxaG9Ma09TZ1MydzlGWFBwOTVRb3BvVUVGSUNfbEpNaU1IcmFZWDV3UTdRSHUyME1tcGtWMEhaWktjOXE4c0hmVUxYUmJUNUhWSGpKLU1vdEhuRDE0ZXZRV0RnMmNBZ0tnN0ZESlFzcEEzSW82bjZFcTJpUXpBRzQ3cDJUMlJlclJTOFlWZkdZUWh6a2dzbmJBZndfUWlTQ0dIemRtTU1pbjRSM0FtUmc?oc=5"
     },
     {
+      "headline": "EXCLUSIVE: Russell reflects on his Mercedes career in photos \u2013 as he reaches 100 races with the team - Formula 1",
+      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQWnZBSy1DdUt3R1U3VzhpbUxWalM1X3NXdWUyTVlhV1NBR0NaclFJSGY3ajZ1Tk9UbDYtMGZZTG5hZEc2NUdzUVFkQTlDZ3dsSk9nWGw5cjVCamlaRktZRGs5cnpYMEYxNllhZ1pqR1l1ckFrZi1PelBCYlV6Zkx5WnhzaFVWOVFBQVJTZHpaM2c2XzRZYkplUVppTmdkSU9tVWZxVkRHZTFIRDZxMkwzNXhzLVNKVXRucHBaQXZEWXRiRmlaX3RrZUE5MlZrZ3hCR0NkNXpobEw5Y3VqTmRUQWpHc3o4SXg5NFVkMlY2OTNvSW1Zc3c?oc=5"
+    },
+    {
       "headline": "Crawford to get another FP1 run with Aston Martin in Austria - Formula 1",
       "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQM1R6Ml9wWHVuY0V3RHR5SzhrVUV6dkVmVDA4OF96cXU5Y3NIcXE5QzRIdG5rVnlTZWFKTGI5VVluTmtnOTFoRHV1SEc2OWN4ZzNmb1p6Z3dWb2JCQWdQaUt0ekdPejBnX1ZKMHM2RWVTMDN5M3pxVHNDa0tKbVFVVzRBeFZ3SmJDamNVWENvVTJ0OWEyZTdoYXhqeFFKejQteXJnZjNkc0JaTVV1LW9vMkxWRzJpU3JuS1RBQm03WHNnTlB3SWFuVA?oc=5"
     },
     {
-      "headline": "Where Hamilton now ranks among the oldest GP winners - Formula 1",
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPbHl4cUJ5RFRVYUd0ZS1BWkUzR1lrRUJKZF9zNW84Z2plbTU4a2xGdmR4U1QzTmZUY1JvUHdMWWFtRUwyMjJpYnZ3LVlEUExYakxLWVhGdU9TQktPX210S2k3c2REOHRqdmhCWU1fWHpwZUFNbVU1djRpODZ0dHJuZFRHMTZ5VFZlRFdzeFhWSHNXTmZaVk82ckViYVdqd3MwbHduX1h5OVdfWWEwbTlWSjUzYU9QckFCcERwSlRyR0h6ckduMEVkSXlTdS1CaEU?oc=5"
-    },
-    {
-      "headline": "Mercedes withdraw Right of Review request over Monaco result - Formula 1",
-      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPUnFaTTRfR1B5Q2xteUJfQml5YkhlaU5MME9aSWh3eUhmYmR4czl0TGl1N3pfeWJ0OGFDTEI1ZGtwbXdNejJvMFAzYXhXRThlQjF4WnVKRTVUXzVKdVIwd1J1amlhNTRPZUZzdW5nRjlTV0VqakF6SGp4NV80U3plNk5RcDhyWm9vY1ota1NubmtwQnhKUlVEODVNQTJsRHBWTEt2eWI4aEpRQ0trcS1SMnQyYm41VGhiRnE2ZUEyNm5HVlZhWWZjd3dkY0JiSGJsNndv?oc=5"
+      "headline": "F1's 2027 engine plan in jeopardy - The Race",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQR2xIakphZFhvaURLNGlsTWhjd0RiWjVOUjRLOWFpVEgyLXEyeHQtbWVTaTd5RWZubnZKTUphajR2NmxkNTJkaU44T0hQNDV5bHdsNXRxX1R0cDVuVTNBZld4UjlnUTJTY3plZTNwNU4zc0JmSmFPTHJuaHBhNkpqNU1FcGR0cDdQclBYM3RoQnBqZmpYWUsyWA?oc=5"
     }
   ],
   "stats": {
@@ -6676,22 +6676,22 @@
       {
         "driver_id": "antonelli",
         "name": "A. Antonelli",
-        "prob": 78.5
+        "prob": 78.9
       },
       {
         "driver_id": "hamilton",
         "name": "L. Hamilton",
-        "prob": 11.9
+        "prob": 11.7
       },
       {
         "driver_id": "russell",
         "name": "G. Russell",
-        "prob": 7.3
+        "prob": 7.4
       },
       {
         "driver_id": "leclerc",
         "name": "C. Leclerc",
-        "prob": 1.0
+        "prob": 0.8
       },
       {
         "driver_id": "norris",
@@ -6706,12 +6706,12 @@
       {
         "driver_id": "max_verstappen",
         "name": "M. Verstappen",
-        "prob": 0.2
+        "prob": 0.1
       },
       {
         "driver_id": "gasly",
         "name": "P. Gasly",
-        "prob": 0.1
+        "prob": 0.0
       }
     ],
     "luck_index": [
