@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-27T19:17:38.398262+00:00",
+  "updated_at": "2026-06-28T06:16:37.154230+00:00",
   "season": 2026,
   "drivers": [
     {
@@ -592,16 +592,16 @@
       "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxON0wyeklRTFFwQ2YweU11bHZrNG1HRVlUUVZabVB4cGdtTjRkS081WTM1YmEwUlFzbDgxSnJTZVBJaEpRRjZLUFVIZHc0VW9FejQxN3BPMTZGenlWUFBpNW5nTi1iOEE2NHJQLUphM1dvV2xTLUUtNDVZZTNkMFY5elBzbUlPZnB4aVppUHVhc19SRHZJUzlqdUQ4TWZuMTJHenNmOU44SV9sQ1VVSlRWbkxwSVc3aElXRHVLR2NoUkprZ29XbWIwRUk0TWZZbjZ1YnNOVjMzaDRpSV9mdWVLRHhmMHZZOHlPLVNYNlZn?oc=5"
     },
     {
-      "headline": "Antonelli leads in Austria FP1 from Russell and Piastri - Formula 1",
-      "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxQRXpCUmJBa1A0TVZsa2hzMVhBM2xxTTJnTExWeTFpYk9LajFqV0ltRXE2ZExabjl5bzRWRzQwaGZyVUhyZ0kwQnVfaGZialhQRVY2SDNBNjBJZEU1VTVqOWVvMGt0aUhjN2RSYURSbEtHTlVVNzdBREpmamo4SkZtbFEwYzIyLUFDVkdnaTJCVEFrRU1JcFd5dndtOURsR09VZHBIaWM0NUYwOHktejVOa3ZsNV9kOG40YlJjbE84eWxRRmMyS0d3QW10aW5TTHVEczVER1FWSzBQdlBWa1N2NzBqRWtEaGdWOGt6RzdhVnUwVGpCLXhMMUx4VWJJeVR6UTdRdnJn?oc=5"
-    },
-    {
-      "headline": "F1 Austrian GP 2026 practice results - The Race",
-      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9ldGdWT21fQ1h3UWtIT09yQVlKazBjUXJraVdwQnBxZVRJYTB0LU02bmpwSkhJY2hROXhsMHEwZXBNcVRjSGx6elBvWU1nRW42dXZ6dlM1WVpubnpZZ0R1VnN6TkpQMTMyMjE1Z2hURDZhbGVpbEhNSW5VZjA?oc=5"
-    },
-    {
       "headline": "Why Russell escaped investigation for yellow flag on Austrian GP pole lap - Autosport",
       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOaF9RV1JPamVDNGZVb1o3NWNZZ1dEU0Izb3hIUkw2aFk2Z0tWcjZEWmlpUmVPUWRlVDdiZTkzR3FtNXJ0RlUxdzVUX2xSRGdVb2tRNmFzdUhRRVl6aEVEenhjdTdvVzhiTTFSbzh4ems4U05Kd2IyTU52TVJyWDJid3hFMnBUdkRiU0IxalVvZEt2TndVV0tzblc1SUxRcS15UzdaNEFxQmFDUDRrMHFEbFk3REJhSGk5?oc=5"
+    },
+    {
+      "headline": "LIVE COVERAGE: Qualifying for the Austrian GP - Formula 1",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPdnVTLU9kb1dNd2NpNUdQYkRINnd4eVlpSWdYTldLbHNWVS15U1FDUTcyWVc5R0xyU0Y2UnVfdlFmZV9zdjYzaGhQNzJQTWxORjJRYXhFTVdCcEg1eS1XOWNzbjdTWU54Yl92NlphcUJSTFV2SlMxb1VTMWh0T2FRR202V2twOEUwWFA3VEhxQ3pRcG40OGZjbC1zbWRZbWxxRXBsNWYxVU5Edw?oc=5"
+    },
+    {
+      "headline": "What the teams said \u2013 Qualifying in Austria - Formula 1",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNUnFVUFJzQVg4eXFQQ3pGSENCQV9tQWhTRHFyRXFKZGRZTnRST3Z1UnJ0WV94bVJGRDBDbTRQbzYzXzEtMHZPYjBTaXRRV3NiZlFFUXY2cTdjWFUtUlNCQXBZZzJ4Z0w4TGRGNGhwQ2NfVkRVdTVBT3Y5aWVoVEwtNHZ3N1YwckxVTmRZTHVwUFpaandLdExyZ0VjNlUyb2M4V3NyLWJRd1lMczZpMFdWTElR?oc=5"
     }
   ],
   "stats": {
@@ -6676,32 +6676,32 @@
       {
         "driver_id": "antonelli",
         "name": "A. Antonelli",
-        "prob": 79.0
+        "prob": 79.4
       },
       {
         "driver_id": "hamilton",
         "name": "L. Hamilton",
-        "prob": 12.3
+        "prob": 11.2
       },
       {
         "driver_id": "russell",
         "name": "G. Russell",
-        "prob": 6.3
+        "prob": 7.5
       },
       {
         "driver_id": "leclerc",
         "name": "C. Leclerc",
-        "prob": 0.9
+        "prob": 0.7
       },
       {
         "driver_id": "norris",
         "name": "L. Norris",
-        "prob": 0.7
+        "prob": 0.5
       },
       {
         "driver_id": "piastri",
         "name": "O. Piastri",
-        "prob": 0.6
+        "prob": 0.5
       },
       {
         "driver_id": "max_verstappen",
