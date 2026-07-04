@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-29T06:53:45.789867+00:00",
+  "updated_at": "2026-07-04T19:08:36.935461+00:00",
   "season": 2026,
   "drivers": [
     {
@@ -9,7 +9,7 @@
       "full_name": "Andrea Kimi Antonelli",
       "driver_id": "antonelli",
       "team": "Mercedes",
-      "pts": 171,
+      "pts": 179,
       "wins": 5,
       "nat": "Italian"
     },
@@ -20,7 +20,7 @@
       "full_name": "George Russell",
       "driver_id": "russell",
       "team": "Mercedes",
-      "pts": 131,
+      "pts": 136,
       "wins": 2,
       "nat": "British"
     },
@@ -31,42 +31,42 @@
       "full_name": "Lewis Hamilton",
       "driver_id": "hamilton",
       "team": "Ferrari",
-      "pts": 125,
+      "pts": 132,
       "wins": 1,
       "nat": "British"
     },
     {
       "pos": 4,
-      "code": "PIA",
-      "name": "O. Piastri",
-      "full_name": "Oscar Piastri",
-      "driver_id": "piastri",
-      "team": "McLaren",
-      "pts": 80,
-      "wins": 0,
-      "nat": "Australian"
-    },
-    {
-      "pos": 5,
       "code": "NOR",
       "name": "L. Norris",
       "full_name": "Lando Norris",
       "driver_id": "norris",
       "team": "McLaren",
-      "pts": 79,
+      "pts": 85,
       "wins": 0,
       "nat": "British"
     },
     {
-      "pos": 6,
+      "pos": 5,
       "code": "LEC",
       "name": "C. Leclerc",
       "full_name": "Charles Leclerc",
       "driver_id": "leclerc",
       "team": "Ferrari",
-      "pts": 79,
+      "pts": 83,
       "wins": 0,
       "nat": "Monegasque"
+    },
+    {
+      "pos": 6,
+      "code": "PIA",
+      "name": "O. Piastri",
+      "full_name": "Oscar Piastri",
+      "driver_id": "piastri",
+      "team": "McLaren",
+      "pts": 82,
+      "wins": 0,
+      "nat": "Australian"
     },
     {
       "pos": 7,
@@ -75,7 +75,7 @@
       "full_name": "Max Verstappen",
       "driver_id": "max_verstappen",
       "team": "Red Bull",
-      "pts": 73,
+      "pts": 76,
       "wins": 0,
       "nat": "Dutch"
     },
@@ -108,7 +108,7 @@
       "full_name": "Liam Lawson",
       "driver_id": "lawson",
       "team": "Racing Bulls",
-      "pts": 30,
+      "pts": 31,
       "wins": 0,
       "nat": "New Zealander"
     },
@@ -249,7 +249,7 @@
     {
       "pos": 1,
       "name": "Mercedes",
-      "pts": 302,
+      "pts": 315,
       "wins": 7,
       "bar_pct": 100.0,
       "nat": "German",
@@ -258,27 +258,27 @@
     {
       "pos": 2,
       "name": "Ferrari",
-      "pts": 204,
+      "pts": 215,
       "wins": 1,
-      "bar_pct": 67.5,
+      "bar_pct": 68.3,
       "nat": "Italian",
       "pu": "Ferrari PU"
     },
     {
       "pos": 3,
       "name": "McLaren",
-      "pts": 159,
+      "pts": 167,
       "wins": 0,
-      "bar_pct": 52.6,
+      "bar_pct": 53.0,
       "nat": "British",
       "pu": "Mercedes PU"
     },
     {
       "pos": 4,
       "name": "Red Bull",
-      "pts": 115,
+      "pts": 118,
       "wins": 0,
-      "bar_pct": 38.1,
+      "bar_pct": 37.5,
       "nat": "Austrian",
       "pu": "Red Bull Ford"
     },
@@ -287,16 +287,16 @@
       "name": "Alpine",
       "pts": 57,
       "wins": 0,
-      "bar_pct": 18.9,
+      "bar_pct": 18.1,
       "nat": "French",
       "pu": "Mercedes PU"
     },
     {
       "pos": 6,
       "name": "Racing Bulls",
-      "pts": 44,
+      "pts": 45,
       "wins": 0,
-      "bar_pct": 14.6,
+      "bar_pct": 14.3,
       "nat": "Italian",
       "pu": "Red Bull Ford"
     },
@@ -305,7 +305,7 @@
       "name": "Haas",
       "pts": 21,
       "wins": 0,
-      "bar_pct": 7.0,
+      "bar_pct": 6.7,
       "nat": "American",
       "pu": "Ferrari PU"
     },
@@ -314,7 +314,7 @@
       "name": "Williams",
       "pts": 11,
       "wins": 0,
-      "bar_pct": 3.6,
+      "bar_pct": 3.5,
       "nat": "British",
       "pu": "Mercedes PU"
     },
@@ -323,7 +323,7 @@
       "name": "Audi",
       "pts": 2,
       "wins": 0,
-      "bar_pct": 0.7,
+      "bar_pct": 0.6,
       "nat": "German",
       "pu": "Audi PU"
     },
@@ -588,24 +588,24 @@
   ],
   "news": [
     {
-      "headline": "Russell beats Leclerc to Austria pole after Verstappen crash - Formula 1",
-      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxON0wyeklRTFFwQ2YweU11bHZrNG1HRVlUUVZabVB4cGdtTjRkS081WTM1YmEwUlFzbDgxSnJTZVBJaEpRRjZLUFVIZHc0VW9FejQxN3BPMTZGenlWUFBpNW5nTi1iOEE2NHJQLUphM1dvV2xTLUUtNDVZZTNkMFY5elBzbUlPZnB4aVppUHVhc19SRHZJUzlqdUQ4TWZuMTJHenNmOU44SV9sQ1VVSlRWbkxwSVc3aElXRHVLR2NoUkprZ29XbWIwRUk0TWZZbjZ1YnNOVjMzaDRpSV9mdWVLRHhmMHZZOHlPLVNYNlZn?oc=5"
+      "headline": "Antonelli beats Hamilton to Silverstone Sprint win - Formula 1",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNellRaHF4ZE1FeEpDZHV3MC1hNHlQQzR1NkE4a2M4d0N6ZWpQblRxV182VzhfZTlUOGxJZUMxY3JmWlMxd291U0lNaDVKT0VQQkplLVFSQUsxc1A3bW9YZkY1eEJNMmNhekI5R2pNWlBZZzBLdEFiaDdiU3VGenppNHVQVEQ1MlVoRm5POXZFT1B4UHFmSDV3V2VwMm1Db21vS3hLczVFNWN2a2NKMmhBMUE4TER4azRkb0hUVVRFYm82bzdQYW9VTElMeGduUURLeUQ0?oc=5"
     },
     {
-      "headline": "LIVE COVERAGE: Follow the action from the Austrian GP - Formula 1",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNSTh0RkJmUnFOVy1vQkpXek8wbElLcFNGdlZrMGpheWM5Z0t1a2VIYWtyVGZqc2ZoSkppZXNkQXk0ZmZJeDJBYnVqVThFN2xXcGUxM2theG1PREV1clM1YzVZTEgwN05saEpPS182ME9FN2NfbWpnZkNmem1oUDVzV2FZaHVfdWhYMWY3YWZnTlhlUG1DU29abVRXbElNMERIWTEzeUh2THJsN2xILUFQNzVnSHp0ZlpleTNjSXhB?oc=5"
+      "headline": "LIVE: F1 British GP commentary and updates - sprint race | Live text - Autosport",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNcU14M2gyNE80czFBclVGVEYwMERCVDgzaXViX0VpbGJhMmpkV1BXUjZ0eTFQQTRmcGxoaTJIclplNmNSSE15MkhwOVhoa2NTbzFaZUVvcy00Mld0WTJVeEJpdFduSmJZaVRVTG5NMVNza3I2c3ZQanhVbFhVNkhZRTVkT2JsVURJa3pseFJ4ci11QnFodGU4d2w1dlBBQ19zamR3?oc=5"
     },
     {
-      "headline": "F1 free live streams: How to watch Formula 1 2026 Austrian Grand Prix without cable - Yahoo Sports",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNdnozMHpqREttaFhMdzF0eTVyLTNOdmtxR0h3N0RXNThLSWdyWDNHM1Q5VU5WeFNLaTZmckVsWk50TkVRTUIzTXplRU11VTNoLWhDemhPX1BBVHprYmRsbzJ1bU9XLVRwSFZ2WnBlaXp6UUJrREhxVDBDY00wbDZKVA?oc=5"
+      "headline": "Lego returns to Formula 1 driver parade with 22 minicars at Silverstone - ESPN",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPMnRqYTl4QjVCNllwa3ZNd01ORUl2T0M4Nk52bDA4Y2RwQ1gxYklsVVRTUGN4aHRDaDY0ZWwxejNlX1pza0lzMGk1dG9NQ282bFpGeEV5LUpwd09fWFY2R0s5a1g2MWxVamFPSGd1c3Y2YmNnb3R5Y2x2LXN6WFpRX3B4ZW9LQld1bGd2cDRkSzJoTUhXNUxiMTdQWFlaMThfRG9kS3F1Yw?oc=5"
     },
     {
-      "headline": "Piastri escapes punishment at F1 Austrian GP - Autosport",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOUUFCblJqMDEzVnVCZ09IQ0JtakYyRWRoRDMxNy1aaDJNZ3RtX0xzVE8yM0VfVndkX19CYUdram5YZnZBUHh2RkxlVHN2T1VwTGdHTGU2ZEQybnFSZTlzWFJDYjZhV1ZsbmJOZnBudHY2YnBNRXoxYzJ3OUZodE8xM1ZxYmJKR3FCaDJhYjIwVEIxT0ttWmV6eg?oc=5"
+      "headline": "This is the starting grid for the 2026 F1 British GP sprint - Motorsport.com",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOOHY2dFJta3RHTHZWU2pSZmxSXy1faDJ4NThlR1NmRFREVG5vWlB2TmNXVHY0T3dJS0N4MVBOVXJkMklyTkZaYzdvaWFta2tzQjA4cnVfVkFGdGRYZVpJMUpKT2t0dUI1bUNsOWdpejM2YWZaay1haDFNYl83WUVJTnNkUmluYWs4QzV4U1BYU2pJZkNIZFdqQVgyanpyT0lxMjF3aHFLWUhZNDc4VUNJag?oc=5"
     }
   ],
   "stats": {
-    "champ_gap": 40,
+    "champ_gap": 43,
     "champ_leader": "A. Antonelli",
     "champ_runner_up": "G. Russell",
     "fastest_lap": "1:10.374",
@@ -6301,7 +6301,7 @@
         "id": "norris",
         "name": "Lando Norris",
         "code": "NOR",
-        "points": 79,
+        "points": 85,
         "wins": 0,
         "podiums": 1,
         "poles": 0,
@@ -6316,7 +6316,7 @@
         "id": "piastri",
         "name": "Oscar Piastri",
         "code": "PIA",
-        "points": 80,
+        "points": 82,
         "wins": 0,
         "podiums": 2,
         "poles": 0,
@@ -6335,7 +6335,7 @@
         "id": "russell",
         "name": "George Russell",
         "code": "RUS",
-        "points": 131,
+        "points": 136,
         "wins": 1,
         "podiums": 2,
         "poles": 2,
@@ -6350,7 +6350,7 @@
         "id": "antonelli",
         "name": "Andrea Kimi Antonelli",
         "code": "ANT",
-        "points": 171,
+        "points": 179,
         "wins": 4,
         "podiums": 5,
         "poles": 3,
@@ -6369,7 +6369,7 @@
         "id": "leclerc",
         "name": "Charles Leclerc",
         "code": "LEC",
-        "points": 79,
+        "points": 83,
         "wins": 0,
         "podiums": 2,
         "poles": 0,
@@ -6384,7 +6384,7 @@
         "id": "hamilton",
         "name": "Lewis Hamilton",
         "code": "HAM",
-        "points": 125,
+        "points": 132,
         "wins": 0,
         "podiums": 2,
         "poles": 0,
@@ -6403,7 +6403,7 @@
         "id": "max_verstappen",
         "name": "Max Verstappen",
         "code": "VER",
-        "points": 73,
+        "points": 76,
         "wins": 0,
         "podiums": 1,
         "poles": 0,
@@ -6539,7 +6539,7 @@
         "id": "lawson",
         "name": "Liam Lawson",
         "code": "LAW",
-        "points": 30,
+        "points": 31,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -6676,31 +6676,31 @@
       {
         "driver_id": "antonelli",
         "name": "A. Antonelli",
-        "prob": 78.5
+        "prob": 81.3
       },
       {
         "driver_id": "russell",
         "name": "G. Russell",
-        "prob": 12.7
+        "prob": 9.8
       },
       {
         "driver_id": "hamilton",
         "name": "L. Hamilton",
-        "prob": 7.9
-      },
-      {
-        "driver_id": "piastri",
-        "name": "O. Piastri",
-        "prob": 0.3
-      },
-      {
-        "driver_id": "leclerc",
-        "name": "C. Leclerc",
-        "prob": 0.3
+        "prob": 8.2
       },
       {
         "driver_id": "norris",
         "name": "L. Norris",
+        "prob": 0.2
+      },
+      {
+        "driver_id": "leclerc",
+        "name": "C. Leclerc",
+        "prob": 0.2
+      },
+      {
+        "driver_id": "piastri",
+        "name": "O. Piastri",
         "prob": 0.2
       },
       {
