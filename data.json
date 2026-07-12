@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-12T05:26:45.563676+00:00",
+  "updated_at": "2026-07-12T18:52:51.785077+00:00",
   "season": 2026,
   "drivers": [
     {
@@ -588,16 +588,16 @@
   ],
   "news": [
     {
-      "headline": "What will Verstappen do next amid Red Bull's struggles? - Formula 1",
-      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxORm8yMERJb2g3T1llcVFwTnFIay1sdWYzTmZRU3l2cTBXN1U2ZjE2cHJrMWd5ZGdCZHF2c0VnTmozbVFpUXJQQ2VQa3ZhQzE5LVJ4bWRMcVFheWdTYmt1QTVRQS1VdGFLZXZOX2hwU2VIXzhEend6cGlla1NPa0xNQk1OUzh3VGtDY1g2RmhZNUlSQkMwNGEzVUV5SFU5RkhqRkg0WF84ZjFLdWhvSWh6S2VHbVlzeTh1WXRyZThJNDlmSjhTZEdzSllnQ21Bd1RfZTRhZ0J5TGNnV0U?oc=5"
-    },
-    {
       "headline": "Gary Anderson: F1's customer engine idea is doomed to fail - The Race",
       "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOVGg2cjVQd3pONDBmb2VKSUFQSnFFNEpad28xYVRpRlJkNWZDbHVReVFWbXdvcy1tTTBwMmJPOFBqWkFkYWc5WlhIVldMNGV4R0F6VlIxNE53UW9sMF9ydEdjeEF0TUNVMzJKaWVPV2FUaFAySVhpWl9xcEduSGY2cmVEOA?oc=5"
     },
     {
-      "headline": "POLL: Which driver will win the 2026 World Championship? - Formula 1",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNWk80WmFIVEstbU1WaTBwRkkyd3RBSTJabTByaVJ5bVViU09tN0ZBbFJyWWlyek5LeUlKRzd3U3JYY282NXlJYUdOZ3A3VTNKd08tTVRBbWRpSUg0RFRVQWUyVTJxc2dXd0VlSzJ5V2xhT1F5WFdaRnZqLWlHRFprVVpMX2tqeUUxMGVlX1czeURXbm5NVFVtckFtTlh4ZXZNeDZSVHRpeVdPVE9ZLWo1ekJBN2xaMDV4ZkZQSg?oc=5"
+      "headline": "What will Verstappen do next amid Red Bull's struggles? - Formula 1",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxORm8yMERJb2g3T1llcVFwTnFIay1sdWYzTmZRU3l2cTBXN1U2ZjE2cHJrMWd5ZGdCZHF2c0VnTmozbVFpUXJQQ2VQa3ZhQzE5LVJ4bWRMcVFheWdTYmt1QTVRQS1VdGFLZXZOX2hwU2VIXzhEend6cGlla1NPa0xNQk1OUzh3VGtDY1g2RmhZNUlSQkMwNGEzVUV5SFU5RkhqRkg0WF84ZjFLdWhvSWh6S2VHbVlzeTh1WXRyZThJNDlmSjhTZEdzSllnQ21Bd1RfZTRhZ0J5TGNnV0U?oc=5"
+    },
+    {
+      "headline": "The F1 teams and drivers at 2026 Goodwood Festival of Speed - Formula 1",
+      "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOYjJwZjhGbUlpZVo2b3VmdHZBSXNTVWxlUkdLcjh2aEF6dndPTnYwSDVSTlNkNDNvVUd5ekZUcmNPUjcwdVAwdzdSLUVVdFRvdUNSSTdwakYwZ3JFbEVnMDFwa3h4RVNRTkh1VmdYcURMRHF5RFZSNTNzbVB3S3d6SFpIVkozOGE1cEo5SEU0b2dGMEdUTHNIc0RHaGJHZ0dJcTNHNERtQ09COEl5YThVNTJJQm00YVVDNThVSEM5bW9scDk3YlExcVVQdURGV0NSb0dtUW5FUl9SNWlZOVBCOHFpQ3pwZ0JwLVR3?oc=5"
     },
     {
       "headline": "Ferrari complete first laps around Madring in an F1 car as part of filming day - Formula 1",
@@ -6676,17 +6676,17 @@
       {
         "driver_id": "antonelli",
         "name": "A. Antonelli",
-        "prob": 66.5
+        "prob": 66.4
       },
       {
         "driver_id": "russell",
         "name": "G. Russell",
-        "prob": 19.0
+        "prob": 19.3
       },
       {
         "driver_id": "hamilton",
         "name": "L. Hamilton",
-        "prob": 13.1
+        "prob": 13.0
       },
       {
         "driver_id": "leclerc",
@@ -6696,16 +6696,16 @@
       {
         "driver_id": "norris",
         "name": "L. Norris",
-        "prob": 0.4
-      },
-      {
-        "driver_id": "piastri",
-        "name": "O. Piastri",
-        "prob": 0.0
+        "prob": 0.3
       },
       {
         "driver_id": "max_verstappen",
         "name": "M. Verstappen",
+        "prob": 0.1
+      },
+      {
+        "driver_id": "piastri",
+        "name": "O. Piastri",
         "prob": 0.0
       },
       {
