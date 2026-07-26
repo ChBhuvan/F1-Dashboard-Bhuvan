@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-25T19:04:07.975124+00:00",
+  "updated_at": "2026-07-26T05:32:19.620519+00:00",
   "season": 2026,
   "drivers": [
     {
@@ -592,16 +592,16 @@
       "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPVk9HM0pTNFBkZ3ZvbHpZdWpfakhFOGJERk5nUjliOGNKbl84ZHNrQTVydWJCekx6bVJUWWxRdTJSd3IzbDZBMHRRT1V3a3d4ZzlpNnBETF9rTzVwNmpIbl9FQ1ZfTEd3Tm1SNlUtVWd3M2t6Tjk3VFk4VU1fYWdVV0k3Ty1HWHExMVB3VEduQ2p6VTFvbTc5RE5TMkREVVluRW1OV3pUcGhzV1BmM3FJWkJGQVV2dmxhdFVIVFNkeEY1LS1tQk1TVzRhTTNqZzZtN3RjeTI2Q1I?oc=5"
     },
     {
-      "headline": "F1 Hungarian GP: Norris beats Hamilton to top final practice - Autosport",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1pRnBiU3J3Mm8zUlpuNjNHQ1RtbnFBWkRybEQ0ckIyejZtZFJKd3pHQlhJcXN5RUZmM1lSbGMzT21KY2EzX1lUcWx5UXlpZHBkajZjd2NkZ3ZOa0FQMFRZY3pLWDV5clhCV1M3RnNHbkE5UlJSU21XaGNCUQ?oc=5"
-    },
-    {
-      "headline": "New contender emerges as F1's 2026 season finale back-up - The Race",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPaVNGQXMyZlpNZ3pIbmZ3Tl8wbmJnNTVmQXluMWdDQkc5WElMRTdlMzlubDd0QzRFcjJYQzNvU1l1ZTZhaFdjVTdKWFpQLXFzT1plUGNNOUwya1lJZC1QbGEwY0JSc2Q3eTF0QlZGcEU5dUdHUlhaTzJfZzU5SWtqTERKT1NOVzVXUHBCSmlmS0VpUjB3?oc=5"
+      "headline": "F1 2026 Hungarian GP starting grid after Hamilton, Antonelli penalties - The Race",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOLTBNWERneW11dGVDb2VKLThHZmxqSmxmejFCX2tTUzVyVG5ycXhUelFIUm1KUEZSUHE4aGp6VGlzSWNIUDJLM1BHWmpiN1JaMjBXdTZWNl94WktSeFoybmszalVzXzg0WEx3UGhzVDBzYUJTa256VFR4UG9ON3NqYW9PZ2VmcXZNYmVaZXVZOGRkMzZScHZpS2F3bmFZNXpUU2FVNHZ0NWQ?oc=5"
     },
     {
       "headline": "Max Verstappen 'fed up' complaining: 'It's already hard enough just having to drive it' - ESPN",
       "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNNHVMZExzbDRJNDlYU3hLa1RIUlo0SGZLRHpwZ1llTjVNT3hEWk0ySnF2VDVuM0JRcnh1RHBHTmZycWxENFR1TkFnOTZNQk1FcjBoQjlIcWNSdDRJZndFdnA4b1B6cmp5WFV1blQ4dlBjZ05DNGRVQlgweGhSTVRFRDcxQVByTGFQaWpqdnJ1b1QxeGdGVlZXQVJvbUFIT2ItS2pvbTdHVWVQbHpNRnFqUVNqSl93MHQ0eG9ZNmdBSlVWeTduemNrd2ZSRG5NUllkODI5WHp5WGxTZldXLTlRalJRdENFSFVRakln?oc=5"
+    },
+    {
+      "headline": "Antonelli hit with grid drop for yellow flag infringement in F1 Hungarian GP qualifying - Autosport",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOcWxFckZ6NmdwMm00NnFVaWlrbTk4Snd5ODlPYWduaW5wLVVTTGZlOFk1M2RocUJzWUhYbUM0YzQtYkk5RkFTdEhGRkJVY1hlSk5DbEZkNnZHeVZacHdlQkNXbTFFRDhLRUlfdV9GZlc1VEVLZ3FoYUIyVC11UUJYdTdvcWZpLU9ZN2lVOEQ1bDFvYmZIRXFiRk1PdjNCOXQxZjhhVEwxVE1aUzJHNDMwZjNMR0RwZG01cTktcThidXJMaXdGb3hPdTFPd2EyYVE?oc=5"
     }
   ],
   "stats": {
@@ -9167,22 +9167,22 @@
       {
         "driver_id": "antonelli",
         "name": "A. Antonelli",
-        "prob": 84.9
+        "prob": 85.8
       },
       {
         "driver_id": "hamilton",
         "name": "L. Hamilton",
-        "prob": 8.6
+        "prob": 7.6
       },
       {
         "driver_id": "russell",
         "name": "G. Russell",
-        "prob": 5.6
+        "prob": 6.0
       },
       {
         "driver_id": "leclerc",
         "name": "C. Leclerc",
-        "prob": 0.7
+        "prob": 0.5
       },
       {
         "driver_id": "piastri",
