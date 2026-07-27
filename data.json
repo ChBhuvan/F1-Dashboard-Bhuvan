@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-26T19:02:48.758884+00:00",
+  "updated_at": "2026-07-27T05:55:16.474041+00:00",
   "season": 2026,
   "drivers": [
     {
@@ -483,7 +483,7 @@
       "circuit": "Hungaroring",
       "country": "Hungary",
       "date": "2026-07-26",
-      "status": "upcoming",
+      "status": "done",
       "winner": "L. Norris"
     },
     {
@@ -600,8 +600,8 @@
       "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE0teWtQNWQ1LW1IUzNkcDNnUURpM0UxZ3FyVlRpcnJxLTg2aEhCN2N3M25oOUczZmxTSFYxaEw3dXVoeU5SbjVDakF0dDRKX0djek13RmM3ajdyTFl3MUgxWmlEelcwbnVSNUp4bnJfVS1BYlJqRXJ5aUZZQTFiQQ?oc=5"
     },
     {
-      "headline": "F1 drivers concerned over 'lottery' track surface at Hungarian GP - The Race",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQRkVtdlpWVXduMWxIRmhVUVFDZ015eHBFMGFTQTFCZkpQd2RGUk82WXhHTTVPV3VNcHhEckRiUlhOa1lRNFlfbUp0YjVmTG9naUlsNlF2ZkU5YjVsLWxjZ01Nc1BIcDlKbTQxaTZGNDA3a2pyM0dDNVFQOEdyS0xVVjY0U2hvVGhLVUJqNUI5THU2QVRTT2lWY0Z5YldJZzJI?oc=5"
+      "headline": "Norris beats Verstappen and Antonelli to victory in Hungary - Formula 1",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQMVdXR0ZDTnJtX3RLUUNkbGxNUlRuTHNEdFdycURLX24wNXpqcEk0aGNKOGwwWU50RzhpWWVQdzlNSHhCM0NvWXFKWTV2ZUlBTG41dHMwVkpfa2dTVDlVT3dvZ204Zkl2MlgxSV9ZdDQ5RE8taVNoSGpZWHlVMURHNVJDb1JLOHRpcGFIem56eVBFdURnamxNaGRNVVlINEtJM2FoVU5fZHNFZ0VmYmNGWG55Z2NCWU1MYXNPU1E3NUVMRUZvZ1BvVUFieVh6VHJZOHY0SXhB?oc=5"
     }
   ],
   "stats": {
@@ -10041,27 +10041,27 @@
   ],
   "ai_insights": {
     "sim_runs": 5000,
-    "total_remaining": 12,
+    "total_remaining": 11,
     "champ_probability": [
       {
         "driver_id": "antonelli",
         "name": "A. Antonelli",
-        "prob": 90.1
+        "prob": 91.2
       },
       {
         "driver_id": "hamilton",
         "name": "L. Hamilton",
-        "prob": 6.3
+        "prob": 5.4
       },
       {
         "driver_id": "russell",
         "name": "G. Russell",
-        "prob": 2.7
+        "prob": 2.9
       },
       {
         "driver_id": "leclerc",
         "name": "C. Leclerc",
-        "prob": 0.7
+        "prob": 0.4
       },
       {
         "driver_id": "norris",
