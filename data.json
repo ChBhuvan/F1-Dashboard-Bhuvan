@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-27T05:55:16.474041+00:00",
+  "updated_at": "2026-08-01T19:05:14.793482+00:00",
   "season": 2026,
   "drivers": [
     {
@@ -524,6 +524,15 @@
     },
     {
       "round": 16,
+      "name": "Bahrain Grand Prix in Malaysia",
+      "circuit": "Sepang International Circuit",
+      "country": "Malaysia",
+      "date": "2026-10-04",
+      "status": "upcoming",
+      "winner": ""
+    },
+    {
+      "round": 17,
       "name": "Singapore Grand Prix",
       "circuit": "Marina Bay Street Circuit",
       "country": "Singapore",
@@ -532,7 +541,7 @@
       "winner": ""
     },
     {
-      "round": 17,
+      "round": 18,
       "name": "United States Grand Prix",
       "circuit": "Circuit of the Americas",
       "country": "USA",
@@ -541,7 +550,7 @@
       "winner": ""
     },
     {
-      "round": 18,
+      "round": 19,
       "name": "Mexico City Grand Prix",
       "circuit": "Aut\u00f3dromo Hermanos Rodr\u00edguez",
       "country": "Mexico",
@@ -550,7 +559,7 @@
       "winner": ""
     },
     {
-      "round": 19,
+      "round": 20,
       "name": "Brazilian Grand Prix",
       "circuit": "Aut\u00f3dromo Jos\u00e9 Carlos Pace",
       "country": "Brazil",
@@ -559,7 +568,7 @@
       "winner": ""
     },
     {
-      "round": 20,
+      "round": 21,
       "name": "Las Vegas Grand Prix",
       "circuit": "Las Vegas Strip Street Circuit",
       "country": "USA",
@@ -568,7 +577,7 @@
       "winner": ""
     },
     {
-      "round": 21,
+      "round": 22,
       "name": "Qatar Grand Prix",
       "circuit": "Losail International Circuit",
       "country": "Qatar",
@@ -577,7 +586,7 @@
       "winner": ""
     },
     {
-      "round": 22,
+      "round": 23,
       "name": "Abu Dhabi Grand Prix",
       "circuit": "Yas Marina Circuit",
       "country": "UAE",
@@ -588,20 +597,20 @@
   ],
   "news": [
     {
-      "headline": "Formula 1 and FIA confirm Malaysia will join 2026 calendar as host venue for Bahrain Grand Prix - Formula 1",
-      "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOSnQtMmVlZkNFT1MyLXpibkgyTXFfbnJPYXRFR0pZOEFkZDQ5bWd1TkFQNnZzLUFXUWtFUFF3VjlYN2FKQkxJNGtLVmJ4dU92SWp5akNvdVF6ckR6Skx4dkhHY3lzMURIN2dvMlQ0bUxiTF9GRFBsblMzc3hjVTA5TlB0NnpNTEs2REFreEF5alRPUTBHZmg4TjY3M2l4empQYXR1Zm9VVGZLcmlJUUp3eXJEWGxaVG03THJnYzJLeXEtcTdHbkJGR0hpWW1VNEFSbjlQUzI5RGd6MzRMMDdLUHRsX21jek80Y3pWcTZtSW1CZm8?oc=5"
+      "headline": "The inconvenient truth behind F1's battery graphics stance - The Race",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPdzBHdjFaY2tjV1VkWmxJMVRPQU1WVFFxWUVkUTc1ZGJvdlRWRFFEUko5NUpscEhqR3FTR2NWSkZ3LWF3Nk9JQWttZC1xV2FNRkdnR3ZkbEVxM1M4bXkzRi1kR2pHQks2cUJSVjN4TVRWNnh5NkdKZU0tLU9UaGk4aEFHUVA?oc=5"
     },
     {
-      "headline": "The 'Formula 1 Gulf Air Bahrain Grand Prix in Malaysia': Quirky new race confirmed as calendar changes - ESPN",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQRUdHbTMweERydVgtRkVXcjBoY1JGYmcwMWpOVjByWDhmSEsxZzRXUnotNlprejJwNUlGQklfVHR2aTJBQ1JKRXZES1YzM1U5RzFULThEaXBEdTAtVHR0cFZpMkl2NGpqMEhLd2Y4S09mV0lESTUzb3p0WHdoQXBvR2N5TnRBM2M3MjRNQUhfZWZTaFZVckNCdGMyLUlLMm1kbWN0aGlPa00wRHZBY2VHaTNLOGF1NWJhU0JCVlhXLVdaM28?oc=5"
+      "headline": "Grill The Grid 2026 | Episode 1: Guess the driver by team career - Formula 1",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOVkxXOVA4UVZ6eG1EVlFLc05rOWcwREJpZll2eERCVWpMV0hENTJUb2dVbDhqVDZUVTRKdUFjaWwzQlNvLVloWnp4UG9VYnJuOFdhMWZiLS1hVmVvSi1sSmFSTUVWd1lJLXFQN1RkVUIwcTcycmRzR1lzMEdjdTQ3ZmpiNV9lUUJvdk5CVGt6bUhPRjZpNlQ5WDgwcThPU1B6OS1nc0RyMWYtTndPeEw3bXMzUXpBUQ?oc=5"
     },
     {
-      "headline": "F1's 'Bahrain GP' to be held in Malaysia - The Race",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE0teWtQNWQ1LW1IUzNkcDNnUURpM0UxZ3FyVlRpcnJxLTg2aEhCN2N3M25oOUczZmxTSFYxaEw3dXVoeU5SbjVDakF0dDRKX0djek13RmM3ajdyTFl3MUgxWmlEelcwbnVSNUp4bnJfVS1BYlJqRXJ5aUZZQTFiQQ?oc=5"
+      "headline": "Austin open to hosting two races to finish Formula 1 season - ESPN",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPNHJIdy1GU0l5MGNwekJfWVpmcnU0WGYzRV9tZEVPNXJzVGRjaWRxZXhRcC1WdmZoeTd0SnhObU9XRzlUY0VmaHlYMzIzVjNQX0NuazVxQXFvSlJXVEw5QUMySGp2ei1ic1ZxMVFTa0thVHUxYUM0dG9DclVEckxqRjg2QzhJaXI3YWdreXh6LWx0RVlGcXBjVWthNmxmdw?oc=5"
     },
     {
-      "headline": "Norris beats Verstappen and Antonelli to victory in Hungary - Formula 1",
-      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQMVdXR0ZDTnJtX3RLUUNkbGxNUlRuTHNEdFdycURLX24wNXpqcEk0aGNKOGwwWU50RzhpWWVQdzlNSHhCM0NvWXFKWTV2ZUlBTG41dHMwVkpfa2dTVDlVT3dvZ204Zkl2MlgxSV9ZdDQ5RE8taVNoSGpZWHlVMURHNVJDb1JLOHRpcGFIem56eVBFdURnamxNaGRNVVlINEtJM2FoVU5fZHNFZ0VmYmNGWG55Z2NCWU1MYXNPU1E3NUVMRUZvZ1BvVUFieVh6VHJZOHY0SXhB?oc=5"
+      "headline": "Formula 1: 2026 season to end in Europe if Qatar and Abu Dhabi unable to host final rounds because of Middle East conflict - skysports.com",
+      "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxOY244b3ZvRjRibkRQQXlzS3RLTllBOEtQYkJPYXdFVUlHUEx5WmlXeldRRGJGTWpyOVZCVk53cXdzX3BzRmxsYUh2TWlMdWNJVUJJMmkxTXRyZEI5VWRnLUxYUFRHMVYtQ2FKRTBDcHJCck5TTUZnZ2luWGJlc0xWTjJVVlZyRHRua2dMNElQV0hEb1NFMU03OXFZZF8xZ1dTR2N3LXJXMnZlNkU1d25oUW9IejQ2S0pUSWxreFhMSWlfeDVPa3JYMTJnRUNMdm9hNUN2WXdBRzNxRUJnckJZOXNmbVQwaVBldGlJZzJGem90VmNpbFZXTTRISjUxOWs?oc=5"
     }
   ],
   "stats": {
@@ -10041,22 +10050,22 @@
   ],
   "ai_insights": {
     "sim_runs": 5000,
-    "total_remaining": 11,
+    "total_remaining": 12,
     "champ_probability": [
       {
         "driver_id": "antonelli",
         "name": "A. Antonelli",
-        "prob": 91.2
+        "prob": 89.5
       },
       {
         "driver_id": "hamilton",
         "name": "L. Hamilton",
-        "prob": 5.4
+        "prob": 6.3
       },
       {
         "driver_id": "russell",
         "name": "G. Russell",
-        "prob": 2.9
+        "prob": 3.4
       },
       {
         "driver_id": "leclerc",
@@ -10066,7 +10075,7 @@
       {
         "driver_id": "norris",
         "name": "L. Norris",
-        "prob": 0.1
+        "prob": 0.3
       },
       {
         "driver_id": "max_verstappen",
