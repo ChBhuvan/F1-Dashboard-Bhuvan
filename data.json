@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-16T02:57:45.696740+00:00",
+  "updated_at": "2026-08-16T18:16:05.923127+00:00",
   "season": 2026,
   "drivers": [
     {
@@ -597,7 +597,7 @@
   ],
   "news": [
     {
-      "headline": "Formula 1\u00ae and Disney extend \"Fuel the Magic\" collaboration through 2028 season and welcome Disney and Pixar's Cars - corp.formula1.com",
+      "headline": "Formula 1\u00ae and Disney extend \"Fuel the Magic\" collaboration through 2028 season and welcome Disney and Pixar's Cars - Formula One World Championship Limited",
       "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNZ0toNHg2Yzc2WHQ0RmRIR0FZSHNLbUlwV3JVaHNZdHNJWVQ4c3o4MF80UFg2T01xcXR5ei1xU1hhRUNmdUFXUVRTVWhrOVJwRU1xY3IzZFozQlZ5Wkw2RDVWM3djZC1TSU5PVWRnZEFjSzNraVFmTml1dlFLWUFVUmU0UGRfYVpUT05Ga3RXLTN4YUJXenJUUFZxdzN3Ykc5eHJ0Vl94M1hjVHBlNjhEZHdtYUoxdVk1ZEFkYkhSMWRSSjA3SHItdnVJcUlYa1pMMS0yTg?oc=5"
     },
     {
@@ -605,12 +605,12 @@
       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOUjR6b2NBWFp0TF93WndiT3pkMU9HTVNyRlpId3JHb2xlWWY0dFVoUjVuWlNzWnpHbk9BZG5JWTVUaV9LblQxUi1nZU9nSVBBSjJ0ZHgyYjJoNml3QzNHRzhWVndlSjQ2OFVkNTBHdzl0VF9wTVRBZHZlYnpsTWdCdnF4SlBac29LT01n?oc=5"
     },
     {
-      "headline": "Tickets launched for 2026 Bahrain Grand Prix in Malaysia - Formula 1",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNTEVISFplUGMxQ3k1ckFvVGFuOHN2RjFRQkFZTlhQOVNuVUFDajU5aW5zLXRZTjYzWDM5eGlPcVNNWFdObmdFSGtjQWxsR1l2UEpjd2VvLTFvN2Z2Ml9MRl9uUF9mcklPZ2FoSXB5VUs1UGNSM0EtMUlVWGRfS0dSMi1KZlhLRnNEdE14a3ZJcjZTS0hyejI5ZFNVUm5VMHU0RjM5VGFZSzlrWjVGMTdQaS1ORHI2OFRIdEZhTWtCaw?oc=5"
+      "headline": "History: 50 years since the last time a woman started a Formula 1 race - RaceFans",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOMEs1ZW15VjBaeXhWVUExNE9rY0l4QWpfT2lBVDZlRFVoamNWcjFtTE5UMFhqbFFia1djYkRzVXBHMTFRdzdKclI5SEJDSWlYS0sxaFJELTV5b3Q5YlJGS3ByNTBJdXdFNkRrWGhQV0hnbE42LUlzQ1ZGNkNLM2ZWY1UybHhzajgxVmM5bDlSU1ZsbzQ5cUlXejM3M3Z4OE9SdkswTkVmdG1TZw?oc=5"
     },
     {
-      "headline": "5 things to look forward to in the second half of 2026 - Formula 1",
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOZ0V4YmtOQWdFeGQzNGtJRXdKR09ldE9heHlOeVo0Nmt2WEFHa3VPVll2RXZ2QnlDVFB4YjMzbVZKM3B1eDdIeUdNdHkzc2QydTFyVEhsdDJrX0NCelRET09lSEY5LTBhSG5USTJMNllrZk56U3piaGVxREJnc1Nfa2xhQ0pWanI5eURPM2F3TmFhc2JNMjZaN01ZNzQ0NGdUSF9KZjRpbEJ3a3pXZnhjbjhZNnp0TVFtRUFhQXNZR1BIQkZDQ09uUXRSTlBjSUoyTFE?oc=5"
+      "headline": "Tickets launched for 2026 Bahrain Grand Prix in Malaysia - Formula 1",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNTEVISFplUGMxQ3k1ckFvVGFuOHN2RjFRQkFZTlhQOVNuVUFDajU5aW5zLXRZTjYzWDM5eGlPcVNNWFdObmdFSGtjQWxsR1l2UEpjd2VvLTFvN2Z2Ml9MRl9uUF9mcklPZ2FoSXB5VUs1UGNSM0EtMUlVWGRfS0dSMi1KZlhLRnNEdE14a3ZJcjZTS0hyejI5ZFNVUm5VMHU0RjM5VGFZSzlrWjVGMTdQaS1ORHI2OFRIdEZhTWtCaw?oc=5"
     }
   ],
   "stats": {
@@ -6300,6 +6300,885 @@
           ]
         }
       ]
+    },
+    {
+      "session_key": 11342,
+      "meeting_key": 1291,
+      "name": "Hungarian GP \u00b7 2026",
+      "date": "2026-07-26",
+      "total_laps": 70,
+      "fastest_stop": {
+        "driver": 41,
+        "lap": 20,
+        "duration": 21.3,
+        "code": "LIN"
+      },
+      "drivers": [
+        {
+          "driver_number": 23,
+          "code": "ALB",
+          "name": "Albon",
+          "team": "Williams",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 26,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 27,
+              "lap_end": 54,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "SOFT",
+              "lap_start": 55,
+              "lap_end": 68,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 26,
+              "duration": 22.1
+            },
+            {
+              "lap": 54,
+              "duration": 22.7
+            }
+          ]
+        },
+        {
+          "driver_number": 14,
+          "code": "ALO",
+          "name": "Alonso",
+          "team": "Aston Martin",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "SOFT",
+              "lap_start": 1,
+              "lap_end": 34,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "MEDIUM",
+              "lap_start": 35,
+              "lap_end": 55,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "SOFT",
+              "lap_start": 56,
+              "lap_end": 69,
+              "fresh": false
+            }
+          ],
+          "pits": [
+            {
+              "lap": 34,
+              "duration": 22.1
+            },
+            {
+              "lap": 55,
+              "duration": 22.6
+            }
+          ]
+        },
+        {
+          "driver_number": 12,
+          "code": "ANT",
+          "name": "Antonelli",
+          "team": "Mercedes",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 22,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 23,
+              "lap_end": 53,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "HARD",
+              "lap_start": 54,
+              "lap_end": 70,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 22,
+              "duration": 21.3
+            },
+            {
+              "lap": 53,
+              "duration": 21.3
+            }
+          ]
+        },
+        {
+          "driver_number": 87,
+          "code": "BEA",
+          "name": "Bearman",
+          "team": "Haas F1 Team",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 22,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 23,
+              "lap_end": 42,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "HARD",
+              "lap_start": 43,
+              "lap_end": 68,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 22,
+              "duration": 22.5
+            },
+            {
+              "lap": 42,
+              "duration": 22.3
+            }
+          ]
+        },
+        {
+          "driver_number": 5,
+          "code": "BOR",
+          "name": "Bortoleto",
+          "team": "Audi",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "SOFT",
+              "lap_start": 1,
+              "lap_end": 29,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 30,
+              "lap_end": 69,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 29,
+              "duration": 21.7
+            }
+          ]
+        },
+        {
+          "driver_number": 77,
+          "code": "BOT",
+          "name": "Bottas",
+          "team": "Cadillac",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 13,
+              "fresh": true
+            }
+          ],
+          "pits": []
+        },
+        {
+          "driver_number": 43,
+          "code": "COL",
+          "name": "Colapinto",
+          "team": "Alpine",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 15,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 16,
+              "lap_end": 37,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "HARD",
+              "lap_start": 38,
+              "lap_end": 68,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 15,
+              "duration": 22.9
+            },
+            {
+              "lap": 37,
+              "duration": 22.2
+            }
+          ]
+        },
+        {
+          "driver_number": 10,
+          "code": "GAS",
+          "name": "Gasly",
+          "team": "Alpine",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 16,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 17,
+              "lap_end": 39,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "HARD",
+              "lap_start": 40,
+              "lap_end": 55,
+              "fresh": true
+            },
+            {
+              "stint": 4,
+              "compound": "SOFT",
+              "lap_start": 56,
+              "lap_end": 69,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 16,
+              "duration": 21.4
+            },
+            {
+              "lap": 39,
+              "duration": 21.5
+            },
+            {
+              "lap": 55,
+              "duration": 21.7
+            }
+          ]
+        },
+        {
+          "driver_number": 6,
+          "code": "HAD",
+          "name": "Hadjar",
+          "team": "Red Bull Racing",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 19,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 20,
+              "lap_end": 42,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "HARD",
+              "lap_start": 43,
+              "lap_end": 70,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 19,
+              "duration": 21.8
+            },
+            {
+              "lap": 42,
+              "duration": 22.2
+            }
+          ]
+        },
+        {
+          "driver_number": 44,
+          "code": "HAM",
+          "name": "Hamilton",
+          "team": "Ferrari",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "SOFT",
+              "lap_start": 1,
+              "lap_end": 13,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 14,
+              "lap_end": 30,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "HARD",
+              "lap_start": 31,
+              "lap_end": 56,
+              "fresh": true
+            },
+            {
+              "stint": 4,
+              "compound": "SOFT",
+              "lap_start": 57,
+              "lap_end": 70,
+              "fresh": false
+            }
+          ],
+          "pits": [
+            {
+              "lap": 13,
+              "duration": 21.7
+            },
+            {
+              "lap": 30,
+              "duration": 21.6
+            },
+            {
+              "lap": 56,
+              "duration": 22.4
+            }
+          ]
+        },
+        {
+          "driver_number": 27,
+          "code": "HUL",
+          "name": "Hulkenberg",
+          "team": "Audi",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 19,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 20,
+              "lap_end": 39,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "SOFT",
+              "lap_start": 40,
+              "lap_end": 69,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 19,
+              "duration": 21.4
+            },
+            {
+              "lap": 39,
+              "duration": 22.1
+            }
+          ]
+        },
+        {
+          "driver_number": 30,
+          "code": "LAW",
+          "name": "Lawson",
+          "team": "Racing Bulls",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 21,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 22,
+              "lap_end": 42,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "SOFT",
+              "lap_start": 43,
+              "lap_end": 69,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 21,
+              "duration": 21.9
+            },
+            {
+              "lap": 42,
+              "duration": 21.5
+            }
+          ]
+        },
+        {
+          "driver_number": 16,
+          "code": "LEC",
+          "name": "Leclerc",
+          "team": "Ferrari",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "SOFT",
+              "lap_start": 1,
+              "lap_end": 16,
+              "fresh": false
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 17,
+              "lap_end": 36,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "HARD",
+              "lap_start": 37,
+              "lap_end": 56,
+              "fresh": true
+            },
+            {
+              "stint": 4,
+              "compound": "SOFT",
+              "lap_start": 57,
+              "lap_end": 70,
+              "fresh": false
+            }
+          ],
+          "pits": [
+            {
+              "lap": 16,
+              "duration": 21.9
+            },
+            {
+              "lap": 36,
+              "duration": 21.7
+            },
+            {
+              "lap": 56,
+              "duration": 21.9
+            }
+          ]
+        },
+        {
+          "driver_number": 41,
+          "code": "LIN",
+          "name": "Lindblad",
+          "team": "Racing Bulls",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 20,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 21,
+              "lap_end": 69,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 20,
+              "duration": 21.3
+            }
+          ]
+        },
+        {
+          "driver_number": 1,
+          "code": "NOR",
+          "name": "Norris",
+          "team": "McLaren",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 17,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 18,
+              "lap_end": 39,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "UNKNOWN",
+              "lap_start": 40,
+              "lap_end": 56,
+              "fresh": false
+            },
+            {
+              "stint": 4,
+              "compound": "SOFT",
+              "lap_start": 57,
+              "lap_end": 70,
+              "fresh": false
+            }
+          ],
+          "pits": [
+            {
+              "lap": 17,
+              "duration": 22.1
+            },
+            {
+              "lap": 56,
+              "duration": 21.8
+            }
+          ]
+        },
+        {
+          "driver_number": 31,
+          "code": "OCO",
+          "name": "Ocon",
+          "team": "Haas F1 Team",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 17,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 18,
+              "lap_end": 35,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "HARD",
+              "lap_start": 36,
+              "lap_end": 68,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 17,
+              "duration": 22.5
+            },
+            {
+              "lap": 35,
+              "duration": 22.3
+            }
+          ]
+        },
+        {
+          "driver_number": 11,
+          "code": "PER",
+          "name": "Perez",
+          "team": "Cadillac",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 1,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "MEDIUM",
+              "lap_start": 2,
+              "lap_end": 46,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "SOFT",
+              "lap_start": 47,
+              "lap_end": 48,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 21,
+              "duration": 23.2
+            },
+            {
+              "lap": 46,
+              "duration": 24.2
+            }
+          ]
+        },
+        {
+          "driver_number": 81,
+          "code": "PIA",
+          "name": "Piastri",
+          "team": "McLaren",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 16,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 17,
+              "lap_end": 33,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "HARD",
+              "lap_start": 34,
+              "lap_end": 55,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 16,
+              "duration": 21.7
+            },
+            {
+              "lap": 33,
+              "duration": 21.7
+            }
+          ]
+        },
+        {
+          "driver_number": 63,
+          "code": "RUS",
+          "name": "Russell",
+          "team": "Mercedes",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 27,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 28,
+              "lap_end": 54,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "HARD",
+              "lap_start": 55,
+              "lap_end": 70,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 27,
+              "duration": 22.2
+            },
+            {
+              "lap": 54,
+              "duration": 22.0
+            }
+          ]
+        },
+        {
+          "driver_number": 55,
+          "code": "SAI",
+          "name": "Sainz",
+          "team": "Williams",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "SOFT",
+              "lap_start": 1,
+              "lap_end": 18,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "MEDIUM",
+              "lap_start": 19,
+              "lap_end": 43,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "SOFT",
+              "lap_start": 44,
+              "lap_end": 54,
+              "fresh": false
+            },
+            {
+              "stint": 4,
+              "compound": "SOFT",
+              "lap_start": 55,
+              "lap_end": 68,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 18,
+              "duration": 21.6
+            },
+            {
+              "lap": 43,
+              "duration": 28.6
+            },
+            {
+              "lap": 54,
+              "duration": 22.0
+            }
+          ]
+        },
+        {
+          "driver_number": 18,
+          "code": "STR",
+          "name": "Stroll",
+          "team": "Aston Martin",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "SOFT",
+              "lap_start": 1,
+              "lap_end": 8,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "MEDIUM",
+              "lap_start": 9,
+              "lap_end": 37,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "SOFT",
+              "lap_start": 38,
+              "lap_end": 69,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 8,
+              "duration": 21.7
+            },
+            {
+              "lap": 37,
+              "duration": 24.2
+            }
+          ]
+        },
+        {
+          "driver_number": 3,
+          "code": "VER",
+          "name": "Verstappen",
+          "team": "Red Bull Racing",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 14,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 15,
+              "lap_end": 41,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "SOFT",
+              "lap_start": 42,
+              "lap_end": 70,
+              "fresh": false
+            }
+          ],
+          "pits": [
+            {
+              "lap": 14,
+              "duration": 21.6
+            },
+            {
+              "lap": 41,
+              "duration": 22.0
+            }
+          ]
+        }
+      ]
     }
   ],
   "teammates": [
@@ -6685,17 +7564,17 @@
       {
         "driver_id": "antonelli",
         "name": "A. Antonelli",
-        "prob": 89.6
+        "prob": 90.0
       },
       {
         "driver_id": "hamilton",
         "name": "L. Hamilton",
-        "prob": 6.4
+        "prob": 5.9
       },
       {
         "driver_id": "russell",
         "name": "G. Russell",
-        "prob": 3.5
+        "prob": 3.2
       },
       {
         "driver_id": "leclerc",
@@ -6705,7 +7584,7 @@
       {
         "driver_id": "norris",
         "name": "L. Norris",
-        "prob": 0.1
+        "prob": 0.2
       },
       {
         "driver_id": "max_verstappen",
