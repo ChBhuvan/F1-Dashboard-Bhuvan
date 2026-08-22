@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-17T03:03:22.902727+00:00",
+  "updated_at": "2026-08-22T18:26:15.370949+00:00",
   "season": 2026,
   "drivers": [
     {
@@ -9,7 +9,7 @@
       "full_name": "Andrea Kimi Antonelli",
       "driver_id": "antonelli",
       "team": "Mercedes",
-      "pts": 219,
+      "pts": 224,
       "wins": 6,
       "nat": "Italian"
     },
@@ -20,7 +20,7 @@
       "full_name": "Lewis Hamilton",
       "driver_id": "hamilton",
       "team": "Ferrari",
-      "pts": 169,
+      "pts": 171,
       "wins": 1,
       "nat": "British"
     },
@@ -31,7 +31,7 @@
       "full_name": "George Russell",
       "driver_id": "russell",
       "team": "Mercedes",
-      "pts": 160,
+      "pts": 168,
       "wins": 2,
       "nat": "British"
     },
@@ -42,7 +42,7 @@
       "full_name": "Charles Leclerc",
       "driver_id": "leclerc",
       "team": "Ferrari",
-      "pts": 138,
+      "pts": 145,
       "wins": 1,
       "nat": "Monegasque"
     },
@@ -53,7 +53,7 @@
       "full_name": "Lando Norris",
       "driver_id": "norris",
       "team": "McLaren",
-      "pts": 128,
+      "pts": 134,
       "wins": 1,
       "nat": "British"
     },
@@ -64,7 +64,7 @@
       "full_name": "Max Verstappen",
       "driver_id": "max_verstappen",
       "team": "Red Bull",
-      "pts": 109,
+      "pts": 112,
       "wins": 0,
       "nat": "Dutch"
     },
@@ -75,7 +75,7 @@
       "full_name": "Oscar Piastri",
       "driver_id": "piastri",
       "team": "McLaren",
-      "pts": 92,
+      "pts": 96,
       "wins": 0,
       "nat": "Australian"
     },
@@ -92,6 +92,17 @@
     },
     {
       "pos": 9,
+      "code": "GAS",
+      "name": "P. Gasly",
+      "full_name": "Pierre Gasly",
+      "driver_id": "gasly",
+      "team": "Alpine",
+      "pts": 43,
+      "wins": 0,
+      "nat": "French"
+    },
+    {
+      "pos": 10,
       "code": "LAW",
       "name": "L. Lawson",
       "full_name": "Liam Lawson",
@@ -100,17 +111,6 @@
       "pts": 43,
       "wins": 0,
       "nat": "New Zealander"
-    },
-    {
-      "pos": 10,
-      "code": "GAS",
-      "name": "P. Gasly",
-      "full_name": "Pierre Gasly",
-      "driver_id": "gasly",
-      "team": "Alpine",
-      "pts": 42,
-      "wins": 0,
-      "nat": "French"
     },
     {
       "pos": 11,
@@ -243,13 +243,24 @@
       "pts": 0,
       "wins": 0,
       "nat": "Mexican"
+    },
+    {
+      "pos": 23,
+      "code": "TSU",
+      "name": "Y. Tsunoda",
+      "full_name": "Yuki Tsunoda",
+      "driver_id": "tsunoda",
+      "team": "Racing Bulls",
+      "pts": 0,
+      "wins": 0,
+      "nat": "Japanese"
     }
   ],
   "constructors": [
     {
       "pos": 1,
       "name": "Mercedes",
-      "pts": 379,
+      "pts": 392,
       "wins": 8,
       "bar_pct": 100.0,
       "nat": "German",
@@ -258,27 +269,27 @@
     {
       "pos": 2,
       "name": "Ferrari",
-      "pts": 307,
+      "pts": 316,
       "wins": 2,
-      "bar_pct": 81.0,
+      "bar_pct": 80.6,
       "nat": "Italian",
       "pu": "Ferrari PU"
     },
     {
       "pos": 3,
       "name": "McLaren",
-      "pts": 220,
+      "pts": 230,
       "wins": 1,
-      "bar_pct": 58.0,
+      "bar_pct": 58.7,
       "nat": "British",
       "pu": "Mercedes PU"
     },
     {
       "pos": 4,
       "name": "Red Bull",
-      "pts": 177,
+      "pts": 180,
       "wins": 0,
-      "bar_pct": 46.7,
+      "bar_pct": 45.9,
       "nat": "Austrian",
       "pu": "Red Bull Ford"
     },
@@ -287,16 +298,16 @@
       "name": "Racing Bulls",
       "pts": 66,
       "wins": 0,
-      "bar_pct": 17.4,
+      "bar_pct": 16.8,
       "nat": "Italian",
       "pu": "Red Bull Ford"
     },
     {
       "pos": 6,
       "name": "Alpine",
-      "pts": 61,
+      "pts": 62,
       "wins": 0,
-      "bar_pct": 16.1,
+      "bar_pct": 15.8,
       "nat": "French",
       "pu": "Mercedes PU"
     },
@@ -305,7 +316,7 @@
       "name": "Haas",
       "pts": 21,
       "wins": 0,
-      "bar_pct": 5.5,
+      "bar_pct": 5.4,
       "nat": "American",
       "pu": "Ferrari PU"
     },
@@ -314,7 +325,7 @@
       "name": "Audi",
       "pts": 12,
       "wins": 0,
-      "bar_pct": 3.2,
+      "bar_pct": 3.1,
       "nat": "German",
       "pu": "Audi PU"
     },
@@ -323,7 +334,7 @@
       "name": "Williams",
       "pts": 11,
       "wins": 0,
-      "bar_pct": 2.9,
+      "bar_pct": 2.8,
       "nat": "British",
       "pu": "Mercedes PU"
     },
@@ -597,24 +608,24 @@
   ],
   "news": [
     {
-      "headline": "Formula 1\u00ae and Disney extend \"Fuel the Magic\" collaboration through 2028 season and welcome Disney and Pixar's Cars - Formula One World Championship Limited",
-      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNZ0toNHg2Yzc2WHQ0RmRIR0FZSHNLbUlwV3JVaHNZdHNJWVQ4c3o4MF80UFg2T01xcXR5ei1xU1hhRUNmdUFXUVRTVWhrOVJwRU1xY3IzZFozQlZ5Wkw2RDVWM3djZC1TSU5PVWRnZEFjSzNraVFmTml1dlFLWUFVUmU0UGRfYVpUT05Ga3RXLTN4YUJXenJUUFZxdzN3Ykc5eHJ0Vl94M1hjVHBlNjhEZHdtYUoxdVk1ZEFkYkhSMWRSSjA3SHItdnVJcUlYa1pMMS0yTg?oc=5"
+      "headline": "Russell surges to victory in Zandvoort Sprint ahead of Leclerc and Norris - Formula 1",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNR3Jyc2JfcFQzcF9xUXd3MU8ydFhWc2w1Y1dkZ1pfZWN1WUc1eXhmUHhORTk0bm5NbV81a3dZMU5rVkszbjVickU0S0pLX3A1NUpjY3phbkpuZFc0QTh4UXl0TWVQNmVPa0JyRXNWQkY2T1pCZVI0dXF0d2J5QWVLcEgySV9KM2xGa2RNS1Awb2ZsOXBzZDRkekZ6LXpqN09UeVFNMDJ3Vm9tOUxQeU9oWGJmU0xfWnV4OFlvMC01eUdQaF9Rb1hYekZUS0s1SUpXV2VNZWRn?oc=5"
     },
     {
-      "headline": "Why F1's top teams face a big $6million dilemma - The Race",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOUjR6b2NBWFp0TF93WndiT3pkMU9HTVNyRlpId3JHb2xlWWY0dFVoUjVuWlNzWnpHbk9BZG5JWTVUaV9LblQxUi1nZU9nSVBBSjJ0ZHgyYjJoNml3QzNHRzhWVndlSjQ2OFVkNTBHdzl0VF9wTVRBZHZlYnpsTWdCdnF4SlBac29LT01n?oc=5"
+      "headline": "Antonelli leads Norris and Russell in Dutch GP FP1 - Formula 1",
+      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQdERVTDZhUXVNZGFxR1dtVDdvSHREb2xrajhsSUNIcE9MY0VjTWRKdnNrbGdvelNmMHU2aUwtcmFWZjFPYS1ncUt3dXo3X29vZHhBZkxjLWRCSThtdmV5bkloZFdCNDVycXJ2U2hNeUIzc0hDYV9DbFVNeXF4ZHlQbFRqX0NJaEpvNk1UUTZEVVdoUTktU1ROV3Vub2daQ2huQV9TN0ZxSFNXQlE5UXFyMXJUMllQV0F0UldWVkVaSi10OWVYTXRHbmdDckpkWkY5cHBza2Y2U1pqVmlVUkJnNg?oc=5"
     },
     {
-      "headline": "History: 50 years since the last time a woman started a Formula 1 race - RaceFans",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOMEs1ZW15VjBaeXhWVUExNE9rY0l4QWpfT2lBVDZlRFVoamNWcjFtTE5UMFhqbFFia1djYkRzVXBHMTFRdzdKclI5SEJDSWlYS0sxaFJELTV5b3Q5YlJGS3ByNTBJdXdFNkRrWGhQV0hnbE42LUlzQ1ZGNkNLM2ZWY1UybHhzajgxVmM5bDlSU1ZsbzQ5cUlXejM3M3Z4OE9SdkswTkVmdG1TZw?oc=5"
+      "headline": "F1 2026 Dutch Grand Prix starting grid - The Race",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5fNHRnaWJCY2g2UHZEVHpKbklsTmpuMU1LT0YxMzZVVTU5cGdaRUl3XzdsUDFITTRfQ3FhQmQzRFpRZ3dUeDJ6RXJpQ2FqSE9MWkJYYkdPNV82TkRIanlZOW96cGdCOVhoSHYzblBtTWUxOWRxallLQkJwSW1aSEk?oc=5"
     },
     {
-      "headline": "Tickets launched for 2026 Bahrain Grand Prix in Malaysia - Formula 1",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNTEVISFplUGMxQ3k1ckFvVGFuOHN2RjFRQkFZTlhQOVNuVUFDajU5aW5zLXRZTjYzWDM5eGlPcVNNWFdObmdFSGtjQWxsR1l2UEpjd2VvLTFvN2Z2Ml9MRl9uUF9mcklPZ2FoSXB5VUs1UGNSM0EtMUlVWGRfS0dSMi1KZlhLRnNEdE14a3ZJcjZTS0hyejI5ZFNVUm5VMHU0RjM5VGFZSzlrWjVGMTdQaS1ORHI2OFRIdEZhTWtCaw?oc=5"
+      "headline": "Dutch GP: Kimi Antonelli fastest from Lando Norris ahead of Sprint Qualifying as Formula 1 returns - Sky Sports",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNUDZOcW8ya09YZGFCUkpCVF9qcDF0LVhJMURhdzQxUWpPbWVrTmpYZTJvdmpXRjQyQ21rT3V0Mnd3Q2FvUGVqTndncExYRE5nNnl2d3lJSmRrWlVaN0ZNZndpSUYwUHVTcXNoNlVtMDdnVmwxNkEtUy0tc0REbFhmWlRtLXFtMkdUdjIzOGoxbEpsbUFTbTZKMEwwYllneWpJb3MwRzYtamdJdDVRRzlZem5OWXozRUZaMWVwYlRQS3lNVzVxM2VjendpN1pPQ3NjUTVSVVlPbm1jYlY2aFBV?oc=5"
     }
   ],
   "stats": {
-    "champ_gap": 50,
+    "champ_gap": 53,
     "champ_leader": "A. Antonelli",
     "champ_runner_up": "L. Hamilton",
     "fastest_lap": "1:22.000",
@@ -9680,7 +9691,7 @@
         "id": "norris",
         "name": "Lando Norris",
         "code": "NOR",
-        "points": 128,
+        "points": 134,
         "wins": 0,
         "podiums": 1,
         "poles": 0,
@@ -9695,7 +9706,7 @@
         "id": "piastri",
         "name": "Oscar Piastri",
         "code": "PIA",
-        "points": 92,
+        "points": 96,
         "wins": 0,
         "podiums": 2,
         "poles": 0,
@@ -9714,7 +9725,7 @@
         "id": "russell",
         "name": "George Russell",
         "code": "RUS",
-        "points": 160,
+        "points": 168,
         "wins": 1,
         "podiums": 2,
         "poles": 2,
@@ -9729,7 +9740,7 @@
         "id": "antonelli",
         "name": "Andrea Kimi Antonelli",
         "code": "ANT",
-        "points": 219,
+        "points": 224,
         "wins": 4,
         "podiums": 5,
         "poles": 3,
@@ -9748,7 +9759,7 @@
         "id": "leclerc",
         "name": "Charles Leclerc",
         "code": "LEC",
-        "points": 138,
+        "points": 145,
         "wins": 0,
         "podiums": 2,
         "poles": 0,
@@ -9763,7 +9774,7 @@
         "id": "hamilton",
         "name": "Lewis Hamilton",
         "code": "HAM",
-        "points": 169,
+        "points": 171,
         "wins": 0,
         "podiums": 2,
         "poles": 0,
@@ -9782,7 +9793,7 @@
         "id": "max_verstappen",
         "name": "Max Verstappen",
         "code": "VER",
-        "points": 109,
+        "points": 112,
         "wins": 0,
         "podiums": 1,
         "poles": 0,
@@ -9850,7 +9861,7 @@
         "id": "gasly",
         "name": "Pierre Gasly",
         "code": "GAS",
-        "points": 42,
+        "points": 43,
         "wins": 0,
         "podiums": 0,
         "poles": 0,
@@ -10055,32 +10066,32 @@
       {
         "driver_id": "antonelli",
         "name": "A. Antonelli",
-        "prob": 89.6
+        "prob": 89.4
       },
       {
         "driver_id": "hamilton",
         "name": "L. Hamilton",
-        "prob": 6.2
+        "prob": 5.1
       },
       {
         "driver_id": "russell",
         "name": "G. Russell",
-        "prob": 3.5
+        "prob": 4.4
       },
       {
         "driver_id": "leclerc",
         "name": "C. Leclerc",
-        "prob": 0.5
+        "prob": 0.9
       },
       {
         "driver_id": "norris",
         "name": "L. Norris",
-        "prob": 0.2
+        "prob": 0.1
       },
       {
         "driver_id": "max_verstappen",
         "name": "M. Verstappen",
-        "prob": 0.0
+        "prob": 0.1
       },
       {
         "driver_id": "piastri",
