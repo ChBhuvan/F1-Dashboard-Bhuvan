@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-22T18:26:15.370949+00:00",
+  "updated_at": "2026-08-23T03:00:16.708035+00:00",
   "season": 2026,
   "drivers": [
     {
@@ -608,12 +608,12 @@
   ],
   "news": [
     {
-      "headline": "Russell surges to victory in Zandvoort Sprint ahead of Leclerc and Norris - Formula 1",
-      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNR3Jyc2JfcFQzcF9xUXd3MU8ydFhWc2w1Y1dkZ1pfZWN1WUc1eXhmUHhORTk0bm5NbV81a3dZMU5rVkszbjVickU0S0pLX3A1NUpjY3phbkpuZFc0QTh4UXl0TWVQNmVPa0JyRXNWQkY2T1pCZVI0dXF0d2J5QWVLcEgySV9KM2xGa2RNS1Awb2ZsOXBzZDRkekZ6LXpqN09UeVFNMDJ3Vm9tOUxQeU9oWGJmU0xfWnV4OFlvMC01eUdQaF9Rb1hYekZUS0s1SUpXV2VNZWRn?oc=5"
+      "headline": "Norris denies Russell pole position in Dutch GP Qualifying - Formula 1",
+      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNQ1ViR3I3bWt5bEh3NjQ4RzZqdEt0Y2s4Y1F3NjVyUDh2QUpjYVgtSVp5Yi1JOUtxRGFob2FnRTF2WHZFb19uajl3WEVkNHU3czF6TnVkdkMxUENuZFAxQm16d2ZJQ2dCWVBsdTFBX0FqTnNSZVBvZ0hYc3ozSUhkNkdsMkpxbUhJajlTaFp1T2hGUG5PYk9GbDk3RjdRaFV0bmFiSjVNUHFPZy05UUVaOXhOeHdqZ0RlZUttdHpuMXQ1ekV3LTY2dVUxbHNZQmpvZWdBVUo2bjBKWlhmTkR1LU9HQ2hHdXRJNnRtaEZZbw?oc=5"
     },
     {
-      "headline": "Antonelli leads Norris and Russell in Dutch GP FP1 - Formula 1",
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQdERVTDZhUXVNZGFxR1dtVDdvSHREb2xrajhsSUNIcE9MY0VjTWRKdnNrbGdvelNmMHU2aUwtcmFWZjFPYS1ncUt3dXo3X29vZHhBZkxjLWRCSThtdmV5bkloZFdCNDVycXJ2U2hNeUIzc0hDYV9DbFVNeXF4ZHlQbFRqX0NJaEpvNk1UUTZEVVdoUTktU1ROV3Vub2daQ2huQV9TN0ZxSFNXQlE5UXFyMXJUMllQV0F0UldWVkVaSi10OWVYTXRHbmdDckpkWkY5cHBza2Y2U1pqVmlVUkJnNg?oc=5"
+      "headline": "Russell surges to victory in Zandvoort Sprint ahead of Leclerc and Norris - Formula 1",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNR3Jyc2JfcFQzcF9xUXd3MU8ydFhWc2w1Y1dkZ1pfZWN1WUc1eXhmUHhORTk0bm5NbV81a3dZMU5rVkszbjVickU0S0pLX3A1NUpjY3phbkpuZFc0QTh4UXl0TWVQNmVPa0JyRXNWQkY2T1pCZVI0dXF0d2J5QWVLcEgySV9KM2xGa2RNS1Awb2ZsOXBzZDRkekZ6LXpqN09UeVFNMDJ3Vm9tOUxQeU9oWGJmU0xfWnV4OFlvMC01eUdQaF9Rb1hYekZUS0s1SUpXV2VNZWRn?oc=5"
     },
     {
       "headline": "F1 2026 Dutch Grand Prix starting grid - The Race",
@@ -10066,32 +10066,32 @@
       {
         "driver_id": "antonelli",
         "name": "A. Antonelli",
-        "prob": 89.4
+        "prob": 88.8
       },
       {
         "driver_id": "hamilton",
         "name": "L. Hamilton",
-        "prob": 5.1
+        "prob": 5.7
       },
       {
         "driver_id": "russell",
         "name": "G. Russell",
-        "prob": 4.4
+        "prob": 4.6
       },
       {
         "driver_id": "leclerc",
         "name": "C. Leclerc",
-        "prob": 0.9
+        "prob": 0.7
       },
       {
         "driver_id": "norris",
         "name": "L. Norris",
-        "prob": 0.1
+        "prob": 0.2
       },
       {
         "driver_id": "max_verstappen",
         "name": "M. Verstappen",
-        "prob": 0.1
+        "prob": 0.0
       },
       {
         "driver_id": "piastri",
