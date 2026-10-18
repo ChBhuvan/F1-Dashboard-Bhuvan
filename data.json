@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18T06:58:07.652278+00:00",
+  "updated_at": "2026-10-18T19:53:48.039769+00:00",
   "season": 2026,
   "drivers": [
     {
@@ -608,12 +608,12 @@
   ],
   "news": [
     {
-      "headline": "Haas sign Ferrari junior Rafael Camara for 2027 - Formula 1",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPMTVPX1FMUE9la2ZmdDBRNWM4SEpOaXllXzlhSG5INU5YZnZrYUQwdGxWZUdWSlA4SXRCamVYVUZpUDYxX0d4Wng1QnNNSEg4OVJGYWhCYTZvNkItLVBYT2tnaDRNZmEtd3ZNUHZHT0tLSXhzUHdiRXlIZ3h3VVZlVlZCMUxBeWNVM2dIZzJIV25HU2pzNzRrLTltS0pibXVBdGJjTVlfX2RCWmstYUg1TXJJZVBOZkkydE5jT0UxTEcxOXBxdGw0?oc=5"
-    },
-    {
       "headline": "The top 10 driver/team combination wins in F1 history - Formula 1",
       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPU3cxM3NOS3FfTGNTQTN4LW44NkxFTXVoR3BsMW41RGkxTEIyeXZtVUlWX3NVNU9hOXFOdWtEVnJFTmZyWUU4Q1Zyc0U4ZTZoX3puU0Y1NVk5bWRMaXhSV20yMjhSQlVyZUlxRXN0U05OcEczSVBQeXJsbkNValFsUHEwS0dQWHkzblNyWktUeFp2elBsMjExT1lmUk5yUHhkT1dINF9VelMtbHkyZXJPZ1ZnOWtXNVI1NlFv?oc=5"
+    },
+    {
+      "headline": "Haas sign Ferrari junior Rafael Camara for 2027 - Formula 1",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPMTVPX1FMUE9la2ZmdDBRNWM4SEpOaXllXzlhSG5INU5YZnZrYUQwdGxWZUdWSlA4SXRCamVYVUZpUDYxX0d4Wng1QnNNSEg4OVJGYWhCYTZvNkItLVBYT2tnaDRNZmEtd3ZNUHZHT0tLSXhzUHdiRXlIZ3h3VVZlVlZCMUxBeWNVM2dIZzJIV25HU2pzNzRrLTltS0pibXVBdGJjTVlfX2RCWmstYUg1TXJJZVBOZkkydE5jT0UxTEcxOXBxdGw0?oc=5"
     },
     {
       "headline": "What you need to know about F1's new driver - Rafael Camara - The Race",
@@ -6313,16 +6313,16 @@
       ]
     },
     {
-      "session_key": 11731,
-      "meeting_key": 1308,
-      "name": "Bahrain GP in Malaysia \u00b7 2026",
-      "date": "2026-10-04",
-      "total_laps": 55,
+      "session_key": 11315,
+      "meeting_key": 1288,
+      "name": "Austrian GP \u00b7 2026",
+      "date": "2026-06-28",
+      "total_laps": 71,
       "fastest_stop": {
-        "driver": 12,
-        "lap": 44,
-        "duration": 27.2,
-        "code": "ANT"
+        "driver": 16,
+        "lap": 37,
+        "duration": 21.0,
+        "code": "LEC"
       },
       "drivers": [
         {
@@ -6333,45 +6333,34 @@
           "stints": [
             {
               "stint": 1,
-              "compound": "INTERMEDIATE",
+              "compound": "MEDIUM",
               "lap_start": 1,
-              "lap_end": 1,
+              "lap_end": 18,
               "fresh": true
             },
             {
               "stint": 2,
-              "compound": "SOFT",
-              "lap_start": 2,
-              "lap_end": 9,
+              "compound": "MEDIUM",
+              "lap_start": 19,
+              "lap_end": 37,
               "fresh": true
             },
             {
               "stint": 3,
               "compound": "HARD",
-              "lap_start": 10,
-              "lap_end": 16,
-              "fresh": true
-            },
-            {
-              "stint": 4,
-              "compound": "SOFT",
-              "lap_start": 17,
-              "lap_end": 41,
+              "lap_start": 38,
+              "lap_end": 69,
               "fresh": true
             }
           ],
           "pits": [
             {
-              "lap": 9,
-              "duration": 32.4
+              "lap": 18,
+              "duration": 21.2
             },
             {
-              "lap": 16,
-              "duration": 27.6
-            },
-            {
-              "lap": 29,
-              "duration": 27.8
+              "lap": 37,
+              "duration": 21.2
             }
           ]
         },
@@ -6385,43 +6374,32 @@
               "stint": 1,
               "compound": "MEDIUM",
               "lap_start": 1,
-              "lap_end": 1,
+              "lap_end": 24,
               "fresh": true
             },
             {
               "stint": 2,
-              "compound": "HARD",
-              "lap_start": 2,
-              "lap_end": 2,
+              "compound": "SOFT",
+              "lap_start": 25,
+              "lap_end": 49,
               "fresh": true
             },
             {
               "stint": 3,
-              "compound": "HARD",
-              "lap_start": 3,
-              "lap_end": 9,
-              "fresh": true
-            },
-            {
-              "stint": 4,
               "compound": "SOFT",
-              "lap_start": 10,
-              "lap_end": 55,
+              "lap_start": 50,
+              "lap_end": 68,
               "fresh": true
             }
           ],
           "pits": [
             {
-              "lap": 9,
-              "duration": 28.3
+              "lap": 24,
+              "duration": 22.3
             },
             {
-              "lap": 31,
-              "duration": 27.6
-            },
-            {
-              "lap": 45,
-              "duration": 27.8
+              "lap": 49,
+              "duration": 28.7
             }
           ]
         },
@@ -6433,45 +6411,34 @@
           "stints": [
             {
               "stint": 1,
-              "compound": "INTERMEDIATE",
+              "compound": "MEDIUM",
               "lap_start": 1,
-              "lap_end": 9,
+              "lap_end": 24,
               "fresh": true
             },
             {
               "stint": 2,
-              "compound": "MEDIUM",
-              "lap_start": 10,
-              "lap_end": 33,
+              "compound": "HARD",
+              "lap_start": 25,
+              "lap_end": 51,
               "fresh": true
             },
             {
               "stint": 3,
-              "compound": "SOFT",
-              "lap_start": 34,
-              "lap_end": 44,
+              "compound": "HARD",
+              "lap_start": 52,
+              "lap_end": 71,
               "fresh": true
-            },
-            {
-              "stint": 4,
-              "compound": "SOFT",
-              "lap_start": 45,
-              "lap_end": 55,
-              "fresh": false
             }
           ],
           "pits": [
             {
-              "lap": 9,
-              "duration": 27.7
+              "lap": 24,
+              "duration": 21.4
             },
             {
-              "lap": 33,
-              "duration": 27.6
-            },
-            {
-              "lap": 44,
-              "duration": 27.2
+              "lap": 51,
+              "duration": 21.5
             }
           ]
         },
@@ -6483,45 +6450,34 @@
           "stints": [
             {
               "stint": 1,
-              "compound": "SOFT",
-              "lap_start": 1,
-              "lap_end": 1,
-              "fresh": true
-            },
-            {
-              "stint": 2,
               "compound": "MEDIUM",
-              "lap_start": 2,
-              "lap_end": 10,
-              "fresh": true
-            },
-            {
-              "stint": 3,
-              "compound": "HARD",
-              "lap_start": 11,
+              "lap_start": 1,
               "lap_end": 24,
               "fresh": true
             },
             {
-              "stint": 4,
+              "stint": 2,
               "compound": "HARD",
               "lap_start": 25,
-              "lap_end": 55,
+              "lap_end": 45,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "MEDIUM",
+              "lap_start": 46,
+              "lap_end": 70,
               "fresh": true
             }
           ],
           "pits": [
             {
-              "lap": 10,
-              "duration": 28.5
-            },
-            {
               "lap": 24,
-              "duration": 29.0
+              "duration": 21.5
             },
             {
-              "lap": 38,
-              "duration": 28.0
+              "lap": 45,
+              "duration": 22.0
             }
           ]
         },
@@ -6535,65 +6491,32 @@
               "stint": 1,
               "compound": "SOFT",
               "lap_start": 1,
-              "lap_end": 1,
+              "lap_end": 17,
               "fresh": true
             },
             {
               "stint": 2,
-              "compound": "INTERMEDIATE",
-              "lap_start": 2,
-              "lap_end": 2,
-              "fresh": true
-            },
-            {
-              "stint": 3,
-              "compound": "SOFT",
-              "lap_start": 3,
-              "lap_end": 9,
-              "fresh": true
-            },
-            {
-              "stint": 4,
-              "compound": "HARD",
-              "lap_start": 10,
-              "lap_end": 15,
-              "fresh": true
-            },
-            {
-              "stint": 5,
-              "compound": "SOFT",
-              "lap_start": 16,
+              "compound": "MEDIUM",
+              "lap_start": 18,
               "lap_end": 44,
               "fresh": true
             },
             {
-              "stint": 6,
-              "compound": "SOFT",
+              "stint": 3,
+              "compound": "HARD",
               "lap_start": 45,
-              "lap_end": 55,
+              "lap_end": 70,
               "fresh": true
             }
           ],
           "pits": [
             {
-              "lap": 2,
-              "duration": 73.8
-            },
-            {
-              "lap": 9,
-              "duration": 27.8
-            },
-            {
-              "lap": 15,
-              "duration": 36.7
-            },
-            {
-              "lap": 34,
-              "duration": 51.8
+              "lap": 17,
+              "duration": 22.6
             },
             {
               "lap": 44,
-              "duration": 27.7
+              "duration": 21.8
             }
           ]
         },
@@ -6605,16 +6528,9 @@
           "stints": [
             {
               "stint": 1,
-              "compound": "SOFT",
+              "compound": "MEDIUM",
               "lap_start": 1,
-              "lap_end": 1,
-              "fresh": true
-            },
-            {
-              "stint": 2,
-              "compound": "SOFT",
-              "lap_start": 2,
-              "lap_end": 7,
+              "lap_end": 2,
               "fresh": true
             }
           ],
@@ -6628,45 +6544,34 @@
           "stints": [
             {
               "stint": 1,
-              "compound": "SOFT",
+              "compound": "MEDIUM",
               "lap_start": 1,
-              "lap_end": 1,
+              "lap_end": 20,
               "fresh": true
             },
             {
               "stint": 2,
-              "compound": "MEDIUM",
-              "lap_start": 2,
-              "lap_end": 2,
+              "compound": "HARD",
+              "lap_start": 21,
+              "lap_end": 46,
               "fresh": true
             },
             {
               "stint": 3,
-              "compound": "HARD",
-              "lap_start": 3,
-              "lap_end": 9,
-              "fresh": true
-            },
-            {
-              "stint": 4,
               "compound": "MEDIUM",
-              "lap_start": 10,
-              "lap_end": 55,
+              "lap_start": 47,
+              "lap_end": 70,
               "fresh": true
             }
           ],
           "pits": [
             {
-              "lap": 9,
-              "duration": 27.9
+              "lap": 20,
+              "duration": 21.5
             },
             {
-              "lap": 31,
-              "duration": 27.6
-            },
-            {
-              "lap": 42,
-              "duration": 28.2
+              "lap": 46,
+              "duration": 21.4
             }
           ]
         },
@@ -6678,56 +6583,45 @@
           "stints": [
             {
               "stint": 1,
-              "compound": "SOFT",
+              "compound": "MEDIUM",
               "lap_start": 1,
-              "lap_end": 1,
+              "lap_end": 13,
               "fresh": true
             },
             {
               "stint": 2,
-              "compound": "MEDIUM",
-              "lap_start": 2,
-              "lap_end": 2,
+              "compound": "HARD",
+              "lap_start": 14,
+              "lap_end": 38,
               "fresh": true
             },
             {
               "stint": 3,
-              "compound": "HARD",
-              "lap_start": 3,
-              "lap_end": 9,
+              "compound": "MEDIUM",
+              "lap_start": 39,
+              "lap_end": 51,
               "fresh": true
             },
             {
               "stint": 4,
               "compound": "SOFT",
-              "lap_start": 10,
-              "lap_end": 25,
-              "fresh": true
-            },
-            {
-              "stint": 5,
-              "compound": "SOFT",
-              "lap_start": 26,
-              "lap_end": 55,
+              "lap_start": 52,
+              "lap_end": 70,
               "fresh": true
             }
           ],
           "pits": [
             {
-              "lap": 9,
-              "duration": 28.1
+              "lap": 13,
+              "duration": 21.6
             },
             {
-              "lap": 25,
-              "duration": 27.7
+              "lap": 38,
+              "duration": 21.2
             },
             {
-              "lap": 37,
-              "duration": 27.8
-            },
-            {
-              "lap": 45,
-              "duration": 28.3
+              "lap": 51,
+              "duration": 21.5
             }
           ]
         },
@@ -6739,45 +6633,34 @@
           "stints": [
             {
               "stint": 1,
-              "compound": "INTERMEDIATE",
+              "compound": "MEDIUM",
               "lap_start": 1,
-              "lap_end": 1,
+              "lap_end": 18,
               "fresh": true
             },
             {
               "stint": 2,
-              "compound": "SOFT",
-              "lap_start": 2,
-              "lap_end": 9,
+              "compound": "MEDIUM",
+              "lap_start": 19,
+              "lap_end": 40,
               "fresh": true
             },
             {
               "stint": 3,
-              "compound": "SOFT",
-              "lap_start": 10,
-              "lap_end": 44,
+              "compound": "HARD",
+              "lap_start": 41,
+              "lap_end": 71,
               "fresh": true
-            },
-            {
-              "stint": 4,
-              "compound": "SOFT",
-              "lap_start": 45,
-              "lap_end": 55,
-              "fresh": false
             }
           ],
           "pits": [
             {
-              "lap": 9,
-              "duration": 28.1
+              "lap": 18,
+              "duration": 21.7
             },
             {
-              "lap": 31,
-              "duration": 28.5
-            },
-            {
-              "lap": 44,
-              "duration": 27.3
+              "lap": 40,
+              "duration": 21.2
             }
           ]
         },
@@ -6789,34 +6672,45 @@
           "stints": [
             {
               "stint": 1,
-              "compound": "SOFT",
+              "compound": "MEDIUM",
               "lap_start": 1,
-              "lap_end": 1,
+              "lap_end": 12,
               "fresh": true
             },
             {
               "stint": 2,
-              "compound": "MEDIUM",
-              "lap_start": 2,
-              "lap_end": 43,
+              "compound": "HARD",
+              "lap_start": 13,
+              "lap_end": 25,
               "fresh": true
             },
             {
               "stint": 3,
               "compound": "SOFT",
-              "lap_start": 44,
-              "lap_end": 55,
-              "fresh": false
+              "lap_start": 26,
+              "lap_end": 42,
+              "fresh": true
+            },
+            {
+              "stint": 4,
+              "compound": "HARD",
+              "lap_start": 43,
+              "lap_end": 71,
+              "fresh": true
             }
           ],
           "pits": [
             {
-              "lap": 31,
-              "duration": 27.8
+              "lap": 12,
+              "duration": 21.3
             },
             {
-              "lap": 43,
-              "duration": 28.0
+              "lap": 25,
+              "duration": 21.2
+            },
+            {
+              "lap": 42,
+              "duration": 21.2
             }
           ]
         },
@@ -6828,56 +6722,34 @@
           "stints": [
             {
               "stint": 1,
-              "compound": "SOFT",
+              "compound": "MEDIUM",
               "lap_start": 1,
-              "lap_end": 1,
+              "lap_end": 21,
               "fresh": true
             },
             {
               "stint": 2,
-              "compound": "INTERMEDIATE",
-              "lap_start": 2,
-              "lap_end": 2,
+              "compound": "MEDIUM",
+              "lap_start": 22,
+              "lap_end": 45,
               "fresh": true
             },
             {
               "stint": 3,
-              "compound": "SOFT",
-              "lap_start": 3,
-              "lap_end": 8,
-              "fresh": true
-            },
-            {
-              "stint": 4,
-              "compound": "SOFT",
-              "lap_start": 9,
-              "lap_end": 32,
-              "fresh": true
-            },
-            {
-              "stint": 5,
-              "compound": "SOFT",
-              "lap_start": 33,
-              "lap_end": 55,
+              "compound": "HARD",
+              "lap_start": 46,
+              "lap_end": 70,
               "fresh": true
             }
           ],
           "pits": [
             {
-              "lap": 2,
-              "duration": 61.1
-            },
-            {
-              "lap": 8,
-              "duration": 27.5
-            },
-            {
-              "lap": 32,
-              "duration": 28.4
+              "lap": 21,
+              "duration": 21.5
             },
             {
               "lap": 45,
-              "duration": 28.2
+              "duration": 22.5
             }
           ]
         },
@@ -6889,45 +6761,34 @@
           "stints": [
             {
               "stint": 1,
-              "compound": "INTERMEDIATE",
+              "compound": "MEDIUM",
               "lap_start": 1,
-              "lap_end": 1,
+              "lap_end": 19,
               "fresh": true
             },
             {
               "stint": 2,
               "compound": "HARD",
-              "lap_start": 2,
-              "lap_end": 9,
-              "fresh": true
-            },
-            {
-              "stint": 3,
-              "compound": "HARD",
-              "lap_start": 10,
+              "lap_start": 20,
               "lap_end": 45,
               "fresh": true
             },
             {
-              "stint": 4,
-              "compound": "SOFT",
+              "stint": 3,
+              "compound": "MEDIUM",
               "lap_start": 46,
-              "lap_end": 55,
+              "lap_end": 70,
               "fresh": true
             }
           ],
           "pits": [
             {
-              "lap": 9,
-              "duration": 28.6
-            },
-            {
-              "lap": 30,
-              "duration": 28.0
+              "lap": 19,
+              "duration": 22.0
             },
             {
               "lap": 45,
-              "duration": 29.6
+              "duration": 21.5
             }
           ]
         },
@@ -6939,56 +6800,45 @@
           "stints": [
             {
               "stint": 1,
-              "compound": "SOFT",
+              "compound": "MEDIUM",
               "lap_start": 1,
-              "lap_end": 1,
+              "lap_end": 13,
               "fresh": true
             },
             {
               "stint": 2,
-              "compound": "INTERMEDIATE",
-              "lap_start": 2,
-              "lap_end": 3,
+              "compound": "HARD",
+              "lap_start": 14,
+              "lap_end": 37,
               "fresh": true
             },
             {
               "stint": 3,
-              "compound": "SOFT",
-              "lap_start": 4,
-              "lap_end": 9,
+              "compound": "HARD",
+              "lap_start": 38,
+              "lap_end": 59,
               "fresh": true
             },
             {
               "stint": 4,
               "compound": "SOFT",
-              "lap_start": 10,
-              "lap_end": 43,
-              "fresh": true
-            },
-            {
-              "stint": 5,
-              "compound": "SOFT",
-              "lap_start": 44,
-              "lap_end": 55,
+              "lap_start": 60,
+              "lap_end": 71,
               "fresh": false
             }
           ],
           "pits": [
             {
-              "lap": 3,
-              "duration": 38.0
+              "lap": 13,
+              "duration": 21.7
             },
             {
-              "lap": 9,
-              "duration": 28.6
+              "lap": 37,
+              "duration": 21.0
             },
             {
-              "lap": 28,
-              "duration": 27.9
-            },
-            {
-              "lap": 43,
-              "duration": 28.1
+              "lap": 59,
+              "duration": 22.7
             }
           ]
         },
@@ -7000,45 +6850,34 @@
           "stints": [
             {
               "stint": 1,
-              "compound": "INTERMEDIATE",
+              "compound": "MEDIUM",
               "lap_start": 1,
-              "lap_end": 1,
+              "lap_end": 18,
               "fresh": true
             },
             {
               "stint": 2,
               "compound": "HARD",
-              "lap_start": 2,
-              "lap_end": 9,
+              "lap_start": 19,
+              "lap_end": 46,
               "fresh": true
             },
             {
               "stint": 3,
-              "compound": "HARD",
-              "lap_start": 10,
-              "lap_end": 28,
-              "fresh": true
-            },
-            {
-              "stint": 4,
-              "compound": "SOFT",
-              "lap_start": 29,
-              "lap_end": 55,
+              "compound": "MEDIUM",
+              "lap_start": 47,
+              "lap_end": 70,
               "fresh": true
             }
           ],
           "pits": [
             {
-              "lap": 9,
-              "duration": 28.5
+              "lap": 18,
+              "duration": 21.4
             },
             {
-              "lap": 28,
-              "duration": 29.2
-            },
-            {
-              "lap": 43,
-              "duration": 28.0
+              "lap": 46,
+              "duration": 21.5
             }
           ]
         },
@@ -7052,43 +6891,32 @@
               "stint": 1,
               "compound": "MEDIUM",
               "lap_start": 1,
-              "lap_end": 1,
+              "lap_end": 21,
               "fresh": true
             },
             {
               "stint": 2,
               "compound": "HARD",
-              "lap_start": 2,
-              "lap_end": 9,
+              "lap_start": 22,
+              "lap_end": 47,
               "fresh": true
             },
             {
               "stint": 3,
-              "compound": "SOFT",
-              "lap_start": 10,
-              "lap_end": 45,
-              "fresh": true
-            },
-            {
-              "stint": 4,
-              "compound": "SOFT",
-              "lap_start": 46,
-              "lap_end": 55,
+              "compound": "HARD",
+              "lap_start": 48,
+              "lap_end": 71,
               "fresh": true
             }
           ],
           "pits": [
             {
-              "lap": 9,
-              "duration": 30.7
+              "lap": 21,
+              "duration": 21.5
             },
             {
-              "lap": 34,
-              "duration": 28.2
-            },
-            {
-              "lap": 45,
-              "duration": 27.8
+              "lap": 47,
+              "duration": 21.8
             }
           ]
         },
@@ -7100,45 +6928,34 @@
           "stints": [
             {
               "stint": 1,
-              "compound": "INTERMEDIATE",
+              "compound": "MEDIUM",
               "lap_start": 1,
-              "lap_end": 1,
+              "lap_end": 18,
               "fresh": true
             },
             {
               "stint": 2,
-              "compound": "SOFT",
-              "lap_start": 2,
-              "lap_end": 9,
+              "compound": "MEDIUM",
+              "lap_start": 19,
+              "lap_end": 33,
               "fresh": true
             },
             {
               "stint": 3,
               "compound": "HARD",
-              "lap_start": 10,
-              "lap_end": 41,
-              "fresh": true
-            },
-            {
-              "stint": 4,
-              "compound": "SOFT",
-              "lap_start": 42,
-              "lap_end": 55,
+              "lap_start": 34,
+              "lap_end": 69,
               "fresh": true
             }
           ],
           "pits": [
             {
-              "lap": 9,
-              "duration": 28.6
+              "lap": 18,
+              "duration": 21.8
             },
             {
-              "lap": 29,
-              "duration": 29.0
-            },
-            {
-              "lap": 41,
-              "duration": 28.4
+              "lap": 33,
+              "duration": 25.4
             }
           ]
         },
@@ -7150,91 +6967,13 @@
           "stints": [
             {
               "stint": 1,
-              "compound": "SOFT",
+              "compound": "MEDIUM",
               "lap_start": 1,
-              "lap_end": 1,
-              "fresh": true
-            },
-            {
-              "stint": 2,
-              "compound": "INTERMEDIATE",
-              "lap_start": 2,
-              "lap_end": 1,
-              "fresh": true
-            },
-            {
-              "stint": 3,
-              "compound": "INTERMEDIATE",
-              "lap_start": 2,
-              "lap_end": 2,
-              "fresh": true
-            },
-            {
-              "stint": 4,
-              "compound": "MEDIUM",
-              "lap_start": 3,
-              "lap_end": 9,
-              "fresh": true
-            },
-            {
-              "stint": 5,
-              "compound": "HARD",
-              "lap_start": 10,
-              "lap_end": 18,
-              "fresh": true
-            },
-            {
-              "stint": 6,
-              "compound": "HARD",
-              "lap_start": 19,
-              "lap_end": 21,
-              "fresh": true
-            },
-            {
-              "stint": 7,
-              "compound": "MEDIUM",
-              "lap_start": 22,
-              "lap_end": 39,
-              "fresh": true
-            },
-            {
-              "stint": 8,
-              "compound": "SOFT",
-              "lap_start": 40,
-              "lap_end": 55,
+              "lap_end": 4,
               "fresh": true
             }
           ],
-          "pits": [
-            {
-              "lap": 1,
-              "duration": 38.0
-            },
-            {
-              "lap": 2,
-              "duration": 41.7
-            },
-            {
-              "lap": 9,
-              "duration": 29.8
-            },
-            {
-              "lap": 18,
-              "duration": 28.8
-            },
-            {
-              "lap": 21,
-              "duration": 29.2
-            },
-            {
-              "lap": 39,
-              "duration": 31.3
-            },
-            {
-              "lap": 44,
-              "duration": 28.9
-            }
-          ]
+          "pits": []
         },
         {
           "driver_number": 81,
@@ -7246,61 +6985,32 @@
               "stint": 1,
               "compound": "MEDIUM",
               "lap_start": 1,
-              "lap_end": 1,
+              "lap_end": 19,
               "fresh": true
             },
             {
               "stint": 2,
-              "compound": "INTERMEDIATE",
-              "lap_start": 2,
-              "lap_end": 2,
+              "compound": "HARD",
+              "lap_start": 20,
+              "lap_end": 42,
               "fresh": true
             },
             {
               "stint": 3,
               "compound": "HARD",
-              "lap_start": 3,
-              "lap_end": 2,
+              "lap_start": 43,
+              "lap_end": 71,
               "fresh": true
-            },
-            {
-              "stint": 4,
-              "compound": "HARD",
-              "lap_start": 3,
-              "lap_end": 9,
-              "fresh": true
-            },
-            {
-              "stint": 5,
-              "compound": "MEDIUM",
-              "lap_start": 10,
-              "lap_end": 34,
-              "fresh": true
-            },
-            {
-              "stint": 6,
-              "compound": "HARD",
-              "lap_start": 35,
-              "lap_end": 55,
-              "fresh": false
             }
           ],
           "pits": [
             {
-              "lap": 2,
-              "duration": 81.4
+              "lap": 19,
+              "duration": 22.0
             },
             {
-              "lap": 9,
-              "duration": 29.2
-            },
-            {
-              "lap": 33,
-              "duration": 28.3
-            },
-            {
-              "lap": 45,
-              "duration": 27.4
+              "lap": 42,
+              "duration": 21.2
             }
           ]
         },
@@ -7312,45 +7022,34 @@
           "stints": [
             {
               "stint": 1,
-              "compound": "INTERMEDIATE",
+              "compound": "MEDIUM",
               "lap_start": 1,
-              "lap_end": 1,
+              "lap_end": 19,
               "fresh": true
             },
             {
               "stint": 2,
-              "compound": "MEDIUM",
-              "lap_start": 2,
-              "lap_end": 2,
+              "compound": "HARD",
+              "lap_start": 20,
+              "lap_end": 43,
               "fresh": true
             },
             {
               "stint": 3,
-              "compound": "SOFT",
-              "lap_start": 3,
-              "lap_end": 9,
-              "fresh": true
-            },
-            {
-              "stint": 4,
-              "compound": "SOFT",
-              "lap_start": 10,
-              "lap_end": 49,
+              "compound": "HARD",
+              "lap_start": 44,
+              "lap_end": 71,
               "fresh": true
             }
           ],
           "pits": [
             {
-              "lap": 9,
-              "duration": 28.8
+              "lap": 19,
+              "duration": 21.2
             },
             {
-              "lap": 32,
-              "duration": 27.6
-            },
-            {
-              "lap": 44,
-              "duration": 27.7
+              "lap": 43,
+              "duration": 21.2
             }
           ]
         },
@@ -7362,45 +7061,23 @@
           "stints": [
             {
               "stint": 1,
-              "compound": "INTERMEDIATE",
+              "compound": "SOFT",
               "lap_start": 1,
-              "lap_end": 1,
+              "lap_end": 14,
               "fresh": true
             },
             {
               "stint": 2,
-              "compound": "SOFT",
-              "lap_start": 2,
-              "lap_end": 9,
-              "fresh": true
-            },
-            {
-              "stint": 3,
-              "compound": "HARD",
-              "lap_start": 10,
-              "lap_end": 26,
-              "fresh": true
-            },
-            {
-              "stint": 4,
-              "compound": "SOFT",
-              "lap_start": 27,
-              "lap_end": 55,
+              "compound": "MEDIUM",
+              "lap_start": 15,
+              "lap_end": 23,
               "fresh": true
             }
           ],
           "pits": [
             {
-              "lap": 9,
-              "duration": 32.0
-            },
-            {
-              "lap": 26,
-              "duration": 28.2
-            },
-            {
-              "lap": 42,
-              "duration": 39.6
+              "lap": 14,
+              "duration": 21.3
             }
           ]
         },
@@ -7414,54 +7091,21 @@
               "stint": 1,
               "compound": "MEDIUM",
               "lap_start": 1,
-              "lap_end": 1,
+              "lap_end": 24,
               "fresh": true
             },
             {
               "stint": 2,
-              "compound": "INTERMEDIATE",
-              "lap_start": 2,
-              "lap_end": 2,
-              "fresh": true
-            },
-            {
-              "stint": 3,
-              "compound": "HARD",
-              "lap_start": 3,
-              "lap_end": 9,
-              "fresh": true
-            },
-            {
-              "stint": 4,
-              "compound": "HARD",
-              "lap_start": 10,
-              "lap_end": 28,
-              "fresh": true
-            },
-            {
-              "stint": 5,
               "compound": "SOFT",
-              "lap_start": 29,
-              "lap_end": 55,
+              "lap_start": 25,
+              "lap_end": 45,
               "fresh": true
             }
           ],
           "pits": [
             {
-              "lap": 2,
-              "duration": 60.4
-            },
-            {
-              "lap": 9,
-              "duration": 28.0
-            },
-            {
-              "lap": 28,
-              "duration": 28.3
-            },
-            {
-              "lap": 43,
-              "duration": 27.4
+              "lap": 24,
+              "duration": 23.5
             }
           ]
         },
@@ -7473,61 +7117,50 @@
           "stints": [
             {
               "stint": 1,
-              "compound": "INTERMEDIATE",
+              "compound": "MEDIUM",
               "lap_start": 1,
-              "lap_end": 1,
+              "lap_end": 18,
               "fresh": true
             },
             {
               "stint": 2,
-              "compound": "SOFT",
-              "lap_start": 2,
-              "lap_end": 2,
+              "compound": "HARD",
+              "lap_start": 19,
+              "lap_end": 49,
               "fresh": true
             },
             {
               "stint": 3,
-              "compound": "SOFT",
-              "lap_start": 3,
-              "lap_end": 9,
-              "fresh": true
-            },
-            {
-              "stint": 4,
-              "compound": "SOFT",
-              "lap_start": 10,
-              "lap_end": 55,
+              "compound": "HARD",
+              "lap_start": 50,
+              "lap_end": 71,
               "fresh": true
             }
           ],
           "pits": [
             {
-              "lap": 9,
-              "duration": 27.6
+              "lap": 18,
+              "duration": 21.3
             },
             {
-              "lap": 33,
-              "duration": 27.8
-            },
-            {
-              "lap": 43,
-              "duration": 27.6
+              "lap": 49,
+              "duration": 21.2
             }
           ]
         }
       ]
     },
     {
-      "session_key": 11388,
-      "meeting_key": 1296,
-      "name": "Singapore GP \u00b7 2026",
-      "date": "2026-10-11",
-      "total_laps": 62,
+      "session_key": 11326,
+      "meeting_key": 1289,
+      "name": "British GP \u00b7 2026",
+      "date": "2026-07-05",
+      "total_laps": 52,
       "fastest_stop": {
-        "driver": 12,
-        "lap": 39,
-        "duration": 23.5,
-        "code": "ANT"
+        "driver": 63,
+        "lap": 34,
+        "duration": 28.3,
+        "code": "RUS"
       },
       "drivers": [
         {
@@ -7535,6 +7168,284 @@
           "code": "ALB",
           "name": "Albon",
           "team": "Williams",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 1,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 2,
+              "lap_end": 14,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "MEDIUM",
+              "lap_start": 15,
+              "lap_end": 23,
+              "fresh": false
+            },
+            {
+              "stint": 4,
+              "compound": "SOFT",
+              "lap_start": 24,
+              "lap_end": 35,
+              "fresh": false
+            },
+            {
+              "stint": 5,
+              "compound": "SOFT",
+              "lap_start": 36,
+              "lap_end": 40,
+              "fresh": false
+            },
+            {
+              "stint": 6,
+              "compound": "SOFT",
+              "lap_start": 41,
+              "lap_end": 43,
+              "fresh": false
+            }
+          ],
+          "pits": [
+            {
+              "lap": 1,
+              "duration": 44.1
+            },
+            {
+              "lap": 14,
+              "duration": 41.2
+            },
+            {
+              "lap": 23,
+              "duration": 39.6
+            },
+            {
+              "lap": 35,
+              "duration": 31.4
+            },
+            {
+              "lap": 40,
+              "duration": 32.5
+            }
+          ]
+        },
+        {
+          "driver_number": 14,
+          "code": "ALO",
+          "name": "Alonso",
+          "team": "Aston Martin",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 20,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 21,
+              "lap_end": 46,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "SOFT",
+              "lap_start": 47,
+              "lap_end": 51,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 20,
+              "duration": 28.7
+            },
+            {
+              "lap": 46,
+              "duration": 29.9
+            }
+          ]
+        },
+        {
+          "driver_number": 12,
+          "code": "ANT",
+          "name": "Antonelli",
+          "team": "Mercedes",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 35,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 36,
+              "lap_end": 41,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "MEDIUM",
+              "lap_start": 42,
+              "lap_end": 43,
+              "fresh": false
+            },
+            {
+              "stint": 4,
+              "compound": "MEDIUM",
+              "lap_start": 44,
+              "lap_end": 52,
+              "fresh": false
+            }
+          ],
+          "pits": [
+            {
+              "lap": 35,
+              "duration": 28.9
+            },
+            {
+              "lap": 41,
+              "duration": 41.2
+            },
+            {
+              "lap": 43,
+              "duration": 33.6
+            }
+          ]
+        },
+        {
+          "driver_number": 87,
+          "code": "BEA",
+          "name": "Bearman",
+          "team": "Haas F1 Team",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 29,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 30,
+              "lap_end": 47,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "SOFT",
+              "lap_start": 48,
+              "lap_end": 52,
+              "fresh": false
+            }
+          ],
+          "pits": [
+            {
+              "lap": 29,
+              "duration": 29.9
+            },
+            {
+              "lap": 47,
+              "duration": 30.2
+            }
+          ]
+        },
+        {
+          "driver_number": 5,
+          "code": "BOR",
+          "name": "Bortoleto",
+          "team": "Audi",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 26,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 27,
+              "lap_end": 47,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "SOFT",
+              "lap_start": 48,
+              "lap_end": 52,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 26,
+              "duration": 28.6
+            },
+            {
+              "lap": 47,
+              "duration": 29.9
+            }
+          ]
+        },
+        {
+          "driver_number": 77,
+          "code": "BOT",
+          "name": "Bottas",
+          "team": "Cadillac",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 29,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 30,
+              "lap_end": 46,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "SOFT",
+              "lap_start": 47,
+              "lap_end": 52,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 29,
+              "duration": 31.5
+            },
+            {
+              "lap": 46,
+              "duration": 29.5
+            }
+          ]
+        },
+        {
+          "driver_number": 43,
+          "code": "COL",
+          "name": "Colapinto",
+          "team": "Alpine",
           "stints": [
             {
               "stint": 1,
@@ -7545,184 +7456,29 @@
             },
             {
               "stint": 2,
-              "compound": "SOFT",
+              "compound": "HARD",
               "lap_start": 23,
-              "lap_end": 37,
+              "lap_end": 47,
               "fresh": true
             },
             {
               "stint": 3,
               "compound": "SOFT",
-              "lap_start": 38,
-              "lap_end": 59,
+              "lap_start": 48,
+              "lap_end": 52,
               "fresh": true
             }
           ],
           "pits": [
             {
               "lap": 22,
-              "duration": 24.0
+              "duration": 29.3
             },
             {
-              "lap": 37,
-              "duration": 25.8
+              "lap": 47,
+              "duration": 29.4
             }
           ]
-        },
-        {
-          "driver_number": 14,
-          "code": "ALO",
-          "name": "Alonso",
-          "team": "Aston Martin",
-          "stints": [
-            {
-              "stint": 1,
-              "compound": "SOFT",
-              "lap_start": 1,
-              "lap_end": 1,
-              "fresh": true
-            },
-            {
-              "stint": 2,
-              "compound": "MEDIUM",
-              "lap_start": 2,
-              "lap_end": 61,
-              "fresh": true
-            }
-          ],
-          "pits": [
-            {
-              "lap": 35,
-              "duration": 24.3
-            }
-          ]
-        },
-        {
-          "driver_number": 12,
-          "code": "ANT",
-          "name": "Antonelli",
-          "team": "Mercedes",
-          "stints": [
-            {
-              "stint": 1,
-              "compound": "SOFT",
-              "lap_start": 1,
-              "lap_end": 23,
-              "fresh": false
-            },
-            {
-              "stint": 2,
-              "compound": "MEDIUM",
-              "lap_start": 24,
-              "lap_end": 39,
-              "fresh": true
-            },
-            {
-              "stint": 3,
-              "compound": "SOFT",
-              "lap_start": 40,
-              "lap_end": 62,
-              "fresh": false
-            }
-          ],
-          "pits": [
-            {
-              "lap": 23,
-              "duration": 24.1
-            },
-            {
-              "lap": 39,
-              "duration": 23.5
-            }
-          ]
-        },
-        {
-          "driver_number": 87,
-          "code": "BEA",
-          "name": "Bearman",
-          "team": "Haas F1 Team",
-          "stints": [
-            {
-              "stint": 1,
-              "compound": "SOFT",
-              "lap_start": 1,
-              "lap_end": 33,
-              "fresh": true
-            },
-            {
-              "stint": 2,
-              "compound": "MEDIUM",
-              "lap_start": 34,
-              "lap_end": 61,
-              "fresh": true
-            }
-          ],
-          "pits": [
-            {
-              "lap": 33,
-              "duration": 24.8
-            }
-          ]
-        },
-        {
-          "driver_number": 5,
-          "code": "BOR",
-          "name": "Bortoleto",
-          "team": "Audi",
-          "stints": [
-            {
-              "stint": 1,
-              "compound": "MEDIUM",
-              "lap_start": 1,
-              "lap_end": 7,
-              "fresh": true
-            }
-          ],
-          "pits": []
-        },
-        {
-          "driver_number": 77,
-          "code": "BOT",
-          "name": "Bottas",
-          "team": "Cadillac",
-          "stints": [
-            {
-              "stint": 1,
-              "compound": "MEDIUM",
-              "lap_start": 1,
-              "lap_end": 28,
-              "fresh": true
-            },
-            {
-              "stint": 2,
-              "compound": "SOFT",
-              "lap_start": 29,
-              "lap_end": 59,
-              "fresh": true
-            }
-          ],
-          "pits": [
-            {
-              "lap": 28,
-              "duration": 29.2
-            }
-          ]
-        },
-        {
-          "driver_number": 43,
-          "code": "COL",
-          "name": "Colapinto",
-          "team": "Alpine",
-          "stints": [
-            {
-              "stint": 1,
-              "compound": "MEDIUM",
-              "lap_start": 1,
-              "lap_end": 29,
-              "fresh": true
-            }
-          ],
-          "pits": []
         },
         {
           "driver_number": 10,
@@ -7734,21 +7490,32 @@
               "stint": 1,
               "compound": "MEDIUM",
               "lap_start": 1,
-              "lap_end": 29,
+              "lap_end": 23,
               "fresh": true
             },
             {
               "stint": 2,
+              "compound": "HARD",
+              "lap_start": 24,
+              "lap_end": 48,
+              "fresh": true
+            },
+            {
+              "stint": 3,
               "compound": "SOFT",
-              "lap_start": 30,
-              "lap_end": 61,
-              "fresh": false
+              "lap_start": 49,
+              "lap_end": 52,
+              "fresh": true
             }
           ],
           "pits": [
             {
-              "lap": 29,
-              "duration": 24.5
+              "lap": 23,
+              "duration": 33.6
+            },
+            {
+              "lap": 48,
+              "duration": 28.7
             }
           ]
         },
@@ -7762,21 +7529,43 @@
               "stint": 1,
               "compound": "MEDIUM",
               "lap_start": 1,
-              "lap_end": 1,
+              "lap_end": 19,
               "fresh": true
             },
             {
               "stint": 2,
+              "compound": "HARD",
+              "lap_start": 20,
+              "lap_end": 38,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "MEDIUM",
+              "lap_start": 39,
+              "lap_end": 47,
+              "fresh": true
+            },
+            {
+              "stint": 4,
               "compound": "SOFT",
-              "lap_start": 2,
-              "lap_end": 62,
+              "lap_start": 48,
+              "lap_end": 52,
               "fresh": true
             }
           ],
           "pits": [
             {
-              "lap": 33,
-              "duration": 24.5
+              "lap": 19,
+              "duration": 29.9
+            },
+            {
+              "lap": 38,
+              "duration": 36.4
+            },
+            {
+              "lap": 47,
+              "duration": 29.6
             }
           ]
         },
@@ -7790,21 +7579,32 @@
               "stint": 1,
               "compound": "MEDIUM",
               "lap_start": 1,
-              "lap_end": 18,
+              "lap_end": 23,
               "fresh": true
             },
             {
               "stint": 2,
+              "compound": "HARD",
+              "lap_start": 24,
+              "lap_end": 48,
+              "fresh": true
+            },
+            {
+              "stint": 3,
               "compound": "SOFT",
-              "lap_start": 19,
-              "lap_end": 62,
+              "lap_start": 49,
+              "lap_end": 52,
               "fresh": false
             }
           ],
           "pits": [
             {
-              "lap": 18,
-              "duration": 24.0
+              "lap": 23,
+              "duration": 34.8
+            },
+            {
+              "lap": 48,
+              "duration": 28.7
             }
           ]
         },
@@ -7818,21 +7618,32 @@
               "stint": 1,
               "compound": "MEDIUM",
               "lap_start": 1,
-              "lap_end": 30,
+              "lap_end": 17,
               "fresh": true
             },
             {
               "stint": 2,
+              "compound": "HARD",
+              "lap_start": 18,
+              "lap_end": 34,
+              "fresh": true
+            },
+            {
+              "stint": 3,
               "compound": "SOFT",
-              "lap_start": 31,
-              "lap_end": 62,
+              "lap_start": 35,
+              "lap_end": 36,
               "fresh": true
             }
           ],
           "pits": [
             {
-              "lap": 30,
-              "duration": 24.3
+              "lap": 17,
+              "duration": 28.9
+            },
+            {
+              "lap": 34,
+              "duration": 35.8
             }
           ]
         },
@@ -7844,23 +7655,34 @@
           "stints": [
             {
               "stint": 1,
-              "compound": "SOFT",
+              "compound": "MEDIUM",
               "lap_start": 1,
-              "lap_end": 31,
-              "fresh": false
+              "lap_end": 28,
+              "fresh": true
             },
             {
               "stint": 2,
-              "compound": "MEDIUM",
-              "lap_start": 32,
-              "lap_end": 62,
+              "compound": "HARD",
+              "lap_start": 29,
+              "lap_end": 47,
               "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "SOFT",
+              "lap_start": 48,
+              "lap_end": 52,
+              "fresh": false
             }
           ],
           "pits": [
             {
-              "lap": 31,
-              "duration": 24.6
+              "lap": 28,
+              "duration": 28.7
+            },
+            {
+              "lap": 47,
+              "duration": 28.5
             }
           ]
         },
@@ -7872,34 +7694,34 @@
           "stints": [
             {
               "stint": 1,
-              "compound": "SOFT",
+              "compound": "MEDIUM",
               "lap_start": 1,
-              "lap_end": 24,
-              "fresh": false
+              "lap_end": 25,
+              "fresh": true
             },
             {
               "stint": 2,
-              "compound": "MEDIUM",
-              "lap_start": 25,
-              "lap_end": 39,
+              "compound": "HARD",
+              "lap_start": 26,
+              "lap_end": 48,
               "fresh": true
             },
             {
               "stint": 3,
               "compound": "SOFT",
-              "lap_start": 40,
-              "lap_end": 62,
+              "lap_start": 49,
+              "lap_end": 52,
               "fresh": false
             }
           ],
           "pits": [
             {
-              "lap": 24,
-              "duration": 24.6
+              "lap": 25,
+              "duration": 28.4
             },
             {
-              "lap": 39,
-              "duration": 24.1
+              "lap": 48,
+              "duration": 28.8
             }
           ]
         },
@@ -7913,21 +7735,32 @@
               "stint": 1,
               "compound": "MEDIUM",
               "lap_start": 1,
-              "lap_end": 26,
+              "lap_end": 27,
               "fresh": true
             },
             {
               "stint": 2,
+              "compound": "HARD",
+              "lap_start": 28,
+              "lap_end": 47,
+              "fresh": true
+            },
+            {
+              "stint": 3,
               "compound": "SOFT",
-              "lap_start": 27,
-              "lap_end": 61,
-              "fresh": false
+              "lap_start": 48,
+              "lap_end": 52,
+              "fresh": true
             }
           ],
           "pits": [
             {
-              "lap": 26,
-              "duration": 24.3
+              "lap": 27,
+              "duration": 28.9
+            },
+            {
+              "lap": 47,
+              "duration": 32.1
             }
           ]
         },
@@ -7939,23 +7772,45 @@
           "stints": [
             {
               "stint": 1,
-              "compound": "SOFT",
+              "compound": "MEDIUM",
               "lap_start": 1,
-              "lap_end": 32,
+              "lap_end": 28,
               "fresh": true
             },
             {
               "stint": 2,
-              "compound": "MEDIUM",
-              "lap_start": 33,
-              "lap_end": 62,
+              "compound": "HARD",
+              "lap_start": 29,
+              "lap_end": 38,
               "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "MEDIUM",
+              "lap_start": 39,
+              "lap_end": 48,
+              "fresh": false
+            },
+            {
+              "stint": 4,
+              "compound": "SOFT",
+              "lap_start": 49,
+              "lap_end": 52,
+              "fresh": false
             }
           ],
           "pits": [
             {
-              "lap": 32,
-              "duration": 23.9
+              "lap": 28,
+              "duration": 28.8
+            },
+            {
+              "lap": 38,
+              "duration": 29.8
+            },
+            {
+              "lap": 48,
+              "duration": 28.4
             }
           ]
         },
@@ -7967,23 +7822,34 @@
           "stints": [
             {
               "stint": 1,
-              "compound": "SOFT",
+              "compound": "MEDIUM",
               "lap_start": 1,
-              "lap_end": 28,
+              "lap_end": 21,
               "fresh": true
             },
             {
               "stint": 2,
-              "compound": "MEDIUM",
-              "lap_start": 29,
-              "lap_end": 61,
+              "compound": "HARD",
+              "lap_start": 22,
+              "lap_end": 47,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "SOFT",
+              "lap_start": 48,
+              "lap_end": 52,
               "fresh": true
             }
           ],
           "pits": [
             {
-              "lap": 28,
-              "duration": 24.9
+              "lap": 21,
+              "duration": 43.2
+            },
+            {
+              "lap": 47,
+              "duration": 31.2
             }
           ]
         },
@@ -7995,34 +7861,34 @@
           "stints": [
             {
               "stint": 1,
-              "compound": "SOFT",
+              "compound": "MEDIUM",
               "lap_start": 1,
               "lap_end": 21,
               "fresh": true
             },
             {
               "stint": 2,
-              "compound": "MEDIUM",
+              "compound": "HARD",
               "lap_start": 22,
-              "lap_end": 38,
+              "lap_end": 46,
               "fresh": true
             },
             {
               "stint": 3,
               "compound": "SOFT",
-              "lap_start": 39,
-              "lap_end": 60,
+              "lap_start": 47,
+              "lap_end": 52,
               "fresh": true
             }
           ],
           "pits": [
             {
               "lap": 21,
-              "duration": 25.2
+              "duration": 29.3
             },
             {
-              "lap": 38,
-              "duration": 24.8
+              "lap": 46,
+              "duration": 29.8
             }
           ]
         },
@@ -8034,34 +7900,45 @@
           "stints": [
             {
               "stint": 1,
-              "compound": "SOFT",
+              "compound": "MEDIUM",
               "lap_start": 1,
-              "lap_end": 33,
+              "lap_end": 2,
               "fresh": true
             },
             {
               "stint": 2,
-              "compound": "MEDIUM",
-              "lap_start": 34,
-              "lap_end": 41,
+              "compound": "HARD",
+              "lap_start": 3,
+              "lap_end": 36,
               "fresh": true
             },
             {
               "stint": 3,
-              "compound": "SOFT",
-              "lap_start": 42,
-              "lap_end": 62,
+              "compound": "MEDIUM",
+              "lap_start": 37,
+              "lap_end": 47,
               "fresh": true
+            },
+            {
+              "stint": 4,
+              "compound": "SOFT",
+              "lap_start": 48,
+              "lap_end": 52,
+              "fresh": false
             }
           ],
           "pits": [
             {
-              "lap": 33,
-              "duration": 25.7
+              "lap": 2,
+              "duration": 40.5
             },
             {
-              "lap": 41,
-              "duration": 24.0
+              "lap": 36,
+              "duration": 29.5
+            },
+            {
+              "lap": 47,
+              "duration": 29.0
             }
           ]
         },
@@ -8075,21 +7952,1603 @@
               "stint": 1,
               "compound": "MEDIUM",
               "lap_start": 1,
-              "lap_end": 39,
+              "lap_end": 23,
               "fresh": true
             },
             {
               "stint": 2,
+              "compound": "HARD",
+              "lap_start": 24,
+              "lap_end": 34,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "MEDIUM",
+              "lap_start": 35,
+              "lap_end": 52,
+              "fresh": false
+            }
+          ],
+          "pits": [
+            {
+              "lap": 23,
+              "duration": 28.6
+            },
+            {
+              "lap": 34,
+              "duration": 28.3
+            }
+          ]
+        },
+        {
+          "driver_number": 55,
+          "code": "SAI",
+          "name": "Sainz",
+          "team": "Williams",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 20,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 21,
+              "lap_end": 48,
+              "fresh": true
+            },
+            {
+              "stint": 3,
               "compound": "SOFT",
-              "lap_start": 40,
-              "lap_end": 62,
+              "lap_start": 49,
+              "lap_end": 52,
               "fresh": true
             }
           ],
           "pits": [
             {
+              "lap": 20,
+              "duration": 28.8
+            },
+            {
+              "lap": 48,
+              "duration": 29.2
+            }
+          ]
+        },
+        {
+          "driver_number": 18,
+          "code": "STR",
+          "name": "Stroll",
+          "team": "Aston Martin",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 18,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 19,
+              "lap_end": 46,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "SOFT",
+              "lap_start": 47,
+              "lap_end": 51,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 18,
+              "duration": 28.7
+            },
+            {
+              "lap": 46,
+              "duration": 46.2
+            }
+          ]
+        },
+        {
+          "driver_number": 3,
+          "code": "VER",
+          "name": "Verstappen",
+          "team": "Red Bull Racing",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 17,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 18,
+              "lap_end": 38,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "MEDIUM",
+              "lap_start": 39,
+              "lap_end": 46,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 17,
+              "duration": 28.7
+            },
+            {
+              "lap": 38,
+              "duration": 28.9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "session_key": 11334,
+      "meeting_key": 1290,
+      "name": "Belgian GP \u00b7 2026",
+      "date": "2026-07-19",
+      "total_laps": 45,
+      "fastest_stop": {
+        "driver": 23,
+        "lap": 18,
+        "duration": 22.638,
+        "code": "ALB"
+      },
+      "drivers": [
+        {
+          "driver_number": 23,
+          "code": "ALB",
+          "name": "Albon",
+          "team": "Williams",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 18,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 19,
+              "lap_end": 44,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 18,
+              "duration": 22.638
+            }
+          ]
+        },
+        {
+          "driver_number": 14,
+          "code": "ALO",
+          "name": "Alonso",
+          "team": "Aston Martin",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "HARD",
+              "lap_start": 1,
+              "lap_end": 19,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "SOFT",
+              "lap_start": 20,
+              "lap_end": 31,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "HARD",
+              "lap_start": 32,
+              "lap_end": 42,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 19,
+              "duration": 23.19
+            },
+            {
+              "lap": 31,
+              "duration": 24.746
+            }
+          ]
+        },
+        {
+          "driver_number": 12,
+          "code": "ANT",
+          "name": "Antonelli",
+          "team": "Mercedes",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 18,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 19,
+              "lap_end": 44,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "SOFT",
+              "lap_start": 45,
+              "lap_end": 45,
+              "fresh": false
+            }
+          ],
+          "pits": [
+            {
+              "lap": 18,
+              "duration": 23.093
+            }
+          ]
+        },
+        {
+          "driver_number": 87,
+          "code": "BEA",
+          "name": "Bearman",
+          "team": "Haas F1 Team",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 1,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 2,
+              "lap_end": 20,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "HARD",
+              "lap_start": 21,
+              "lap_end": 44,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 1,
+              "duration": 26.554
+            },
+            {
+              "lap": 20,
+              "duration": 28.982
+            }
+          ]
+        },
+        {
+          "driver_number": 5,
+          "code": "BOR",
+          "name": "Bortoleto",
+          "team": "Audi",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 20,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 21,
+              "lap_end": 44,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 20,
+              "duration": 23.127
+            }
+          ]
+        },
+        {
+          "driver_number": 77,
+          "code": "BOT",
+          "name": "Bottas",
+          "team": "Cadillac",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "SOFT",
+              "lap_start": 1,
+              "lap_end": 1,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 2,
+              "lap_end": 32,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "SOFT",
+              "lap_start": 33,
+              "lap_end": 43,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 1,
+              "duration": 30.594
+            },
+            {
+              "lap": 32,
+              "duration": 25.91
+            }
+          ]
+        },
+        {
+          "driver_number": 43,
+          "code": "COL",
+          "name": "Colapinto",
+          "team": "Alpine",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 15,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 16,
+              "lap_end": 44,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 15,
+              "duration": 24.146
+            }
+          ]
+        },
+        {
+          "driver_number": 10,
+          "code": "GAS",
+          "name": "Gasly",
+          "team": "Alpine",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 14,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 15,
+              "lap_end": 44,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 14,
+              "duration": 24.177
+            }
+          ]
+        },
+        {
+          "driver_number": 6,
+          "code": "HAD",
+          "name": "Hadjar",
+          "team": "Red Bull Racing",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "HARD",
+              "lap_start": 1,
+              "lap_end": 1,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "MEDIUM",
+              "lap_start": 2,
+              "lap_end": 2,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "HARD",
+              "lap_start": 3,
+              "lap_end": 20,
+              "fresh": true
+            },
+            {
+              "stint": 4,
+              "compound": "HARD",
+              "lap_start": 21,
+              "lap_end": 44,
+              "fresh": false
+            }
+          ],
+          "pits": [
+            {
+              "lap": 1,
+              "duration": 24.156
+            },
+            {
+              "lap": 2,
+              "duration": 22.997
+            },
+            {
+              "lap": 20,
+              "duration": 24.727
+            }
+          ]
+        },
+        {
+          "driver_number": 44,
+          "code": "HAM",
+          "name": "Hamilton",
+          "team": "Ferrari",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 20,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 21,
+              "lap_end": 44,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 20,
+              "duration": 32.201
+            }
+          ]
+        },
+        {
+          "driver_number": 27,
+          "code": "HUL",
+          "name": "Hulkenberg",
+          "team": "Audi",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 20,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 21,
+              "lap_end": 44,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 20,
+              "duration": 26.098
+            }
+          ]
+        },
+        {
+          "driver_number": 30,
+          "code": "LAW",
+          "name": "Lawson",
+          "team": "Racing Bulls",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 15,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 16,
+              "lap_end": 44,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 15,
+              "duration": 23.722
+            }
+          ]
+        },
+        {
+          "driver_number": 16,
+          "code": "LEC",
+          "name": "Leclerc",
+          "team": "Ferrari",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 20,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 21,
+              "lap_end": 44,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 20,
+              "duration": 23.164
+            }
+          ]
+        },
+        {
+          "driver_number": 41,
+          "code": "LIN",
+          "name": "Lindblad",
+          "team": "Racing Bulls",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 16,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 17,
+              "lap_end": 44,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 16,
+              "duration": 24.81
+            }
+          ]
+        },
+        {
+          "driver_number": 1,
+          "code": "NOR",
+          "name": "Norris",
+          "team": "McLaren",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "HARD",
+              "lap_start": 1,
+              "lap_end": 30,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "MEDIUM",
+              "lap_start": 31,
+              "lap_end": 44,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 30,
+              "duration": 28.314
+            }
+          ]
+        },
+        {
+          "driver_number": 31,
+          "code": "OCO",
+          "name": "Ocon",
+          "team": "Haas F1 Team",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 1,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 2,
+              "lap_end": 16,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "HARD",
+              "lap_start": 17,
+              "lap_end": 44,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 1,
+              "duration": 33.74
+            },
+            {
+              "lap": 16,
+              "duration": 24.124
+            }
+          ]
+        },
+        {
+          "driver_number": 11,
+          "code": "PER",
+          "name": "Perez",
+          "team": "Cadillac",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "HARD",
+              "lap_start": 1,
+              "lap_end": 1,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "SOFT",
+              "lap_start": 2,
+              "lap_end": 12,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "HARD",
+              "lap_start": 13,
+              "lap_end": 13,
+              "fresh": false
+            }
+          ],
+          "pits": [
+            {
+              "lap": 1,
+              "duration": 25.372
+            },
+            {
+              "lap": 12,
+              "duration": 27.617
+            }
+          ]
+        },
+        {
+          "driver_number": 81,
+          "code": "PIA",
+          "name": "Piastri",
+          "team": "McLaren",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 20,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 21,
+              "lap_end": 44,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 20,
+              "duration": 23.292
+            }
+          ]
+        },
+        {
+          "driver_number": 63,
+          "code": "RUS",
+          "name": "Russell",
+          "team": "Mercedes",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 1,
+              "fresh": true
+            }
+          ],
+          "pits": []
+        },
+        {
+          "driver_number": 55,
+          "code": "SAI",
+          "name": "Sainz",
+          "team": "Williams",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "SOFT",
+              "lap_start": 1,
+              "lap_end": 14,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 15,
+              "lap_end": 44,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 14,
+              "duration": 34.841
+            }
+          ]
+        },
+        {
+          "driver_number": 18,
+          "code": "STR",
+          "name": "Stroll",
+          "team": "Aston Martin",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "HARD",
+              "lap_start": 1,
+              "lap_end": 17,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "SOFT",
+              "lap_start": 18,
+              "lap_end": 25,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 17,
+              "duration": 31.649
+            }
+          ]
+        },
+        {
+          "driver_number": 3,
+          "code": "VER",
+          "name": "Verstappen",
+          "team": "Red Bull Racing",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 17,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 18,
+              "lap_end": 44,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 17,
+              "duration": 23.128
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "session_key": 11342,
+      "meeting_key": 1291,
+      "name": "Hungarian GP \u00b7 2026",
+      "date": "2026-07-26",
+      "total_laps": 70,
+      "fastest_stop": {
+        "driver": 41,
+        "lap": 20,
+        "duration": 21.3,
+        "code": "LIN"
+      },
+      "drivers": [
+        {
+          "driver_number": 23,
+          "code": "ALB",
+          "name": "Albon",
+          "team": "Williams",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 26,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 27,
+              "lap_end": 54,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "SOFT",
+              "lap_start": 55,
+              "lap_end": 68,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 26,
+              "duration": 22.1
+            },
+            {
+              "lap": 54,
+              "duration": 22.7
+            }
+          ]
+        },
+        {
+          "driver_number": 14,
+          "code": "ALO",
+          "name": "Alonso",
+          "team": "Aston Martin",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "SOFT",
+              "lap_start": 1,
+              "lap_end": 34,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "MEDIUM",
+              "lap_start": 35,
+              "lap_end": 55,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "SOFT",
+              "lap_start": 56,
+              "lap_end": 69,
+              "fresh": false
+            }
+          ],
+          "pits": [
+            {
+              "lap": 34,
+              "duration": 22.1
+            },
+            {
+              "lap": 55,
+              "duration": 22.6
+            }
+          ]
+        },
+        {
+          "driver_number": 12,
+          "code": "ANT",
+          "name": "Antonelli",
+          "team": "Mercedes",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 22,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 23,
+              "lap_end": 53,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "HARD",
+              "lap_start": 54,
+              "lap_end": 70,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 22,
+              "duration": 21.3
+            },
+            {
+              "lap": 53,
+              "duration": 21.3
+            }
+          ]
+        },
+        {
+          "driver_number": 87,
+          "code": "BEA",
+          "name": "Bearman",
+          "team": "Haas F1 Team",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 22,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 23,
+              "lap_end": 42,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "HARD",
+              "lap_start": 43,
+              "lap_end": 68,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 22,
+              "duration": 22.5
+            },
+            {
+              "lap": 42,
+              "duration": 22.3
+            }
+          ]
+        },
+        {
+          "driver_number": 5,
+          "code": "BOR",
+          "name": "Bortoleto",
+          "team": "Audi",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "SOFT",
+              "lap_start": 1,
+              "lap_end": 29,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 30,
+              "lap_end": 69,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 29,
+              "duration": 21.7
+            }
+          ]
+        },
+        {
+          "driver_number": 77,
+          "code": "BOT",
+          "name": "Bottas",
+          "team": "Cadillac",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 13,
+              "fresh": true
+            }
+          ],
+          "pits": []
+        },
+        {
+          "driver_number": 43,
+          "code": "COL",
+          "name": "Colapinto",
+          "team": "Alpine",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 15,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 16,
+              "lap_end": 37,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "HARD",
+              "lap_start": 38,
+              "lap_end": 68,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 15,
+              "duration": 22.9
+            },
+            {
+              "lap": 37,
+              "duration": 22.2
+            }
+          ]
+        },
+        {
+          "driver_number": 10,
+          "code": "GAS",
+          "name": "Gasly",
+          "team": "Alpine",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 16,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 17,
+              "lap_end": 39,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "HARD",
+              "lap_start": 40,
+              "lap_end": 55,
+              "fresh": true
+            },
+            {
+              "stint": 4,
+              "compound": "SOFT",
+              "lap_start": 56,
+              "lap_end": 69,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 16,
+              "duration": 21.4
+            },
+            {
               "lap": 39,
-              "duration": 23.6
+              "duration": 21.5
+            },
+            {
+              "lap": 55,
+              "duration": 21.7
+            }
+          ]
+        },
+        {
+          "driver_number": 6,
+          "code": "HAD",
+          "name": "Hadjar",
+          "team": "Red Bull Racing",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 19,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 20,
+              "lap_end": 42,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "HARD",
+              "lap_start": 43,
+              "lap_end": 70,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 19,
+              "duration": 21.8
+            },
+            {
+              "lap": 42,
+              "duration": 22.2
+            }
+          ]
+        },
+        {
+          "driver_number": 44,
+          "code": "HAM",
+          "name": "Hamilton",
+          "team": "Ferrari",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "SOFT",
+              "lap_start": 1,
+              "lap_end": 13,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 14,
+              "lap_end": 30,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "HARD",
+              "lap_start": 31,
+              "lap_end": 56,
+              "fresh": true
+            },
+            {
+              "stint": 4,
+              "compound": "SOFT",
+              "lap_start": 57,
+              "lap_end": 70,
+              "fresh": false
+            }
+          ],
+          "pits": [
+            {
+              "lap": 13,
+              "duration": 21.7
+            },
+            {
+              "lap": 30,
+              "duration": 21.6
+            },
+            {
+              "lap": 56,
+              "duration": 22.4
+            }
+          ]
+        },
+        {
+          "driver_number": 27,
+          "code": "HUL",
+          "name": "Hulkenberg",
+          "team": "Audi",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 19,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 20,
+              "lap_end": 39,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "SOFT",
+              "lap_start": 40,
+              "lap_end": 69,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 19,
+              "duration": 21.4
+            },
+            {
+              "lap": 39,
+              "duration": 22.1
+            }
+          ]
+        },
+        {
+          "driver_number": 30,
+          "code": "LAW",
+          "name": "Lawson",
+          "team": "Racing Bulls",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 21,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 22,
+              "lap_end": 42,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "SOFT",
+              "lap_start": 43,
+              "lap_end": 69,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 21,
+              "duration": 21.9
+            },
+            {
+              "lap": 42,
+              "duration": 21.5
+            }
+          ]
+        },
+        {
+          "driver_number": 16,
+          "code": "LEC",
+          "name": "Leclerc",
+          "team": "Ferrari",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "SOFT",
+              "lap_start": 1,
+              "lap_end": 16,
+              "fresh": false
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 17,
+              "lap_end": 36,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "HARD",
+              "lap_start": 37,
+              "lap_end": 56,
+              "fresh": true
+            },
+            {
+              "stint": 4,
+              "compound": "SOFT",
+              "lap_start": 57,
+              "lap_end": 70,
+              "fresh": false
+            }
+          ],
+          "pits": [
+            {
+              "lap": 16,
+              "duration": 21.9
+            },
+            {
+              "lap": 36,
+              "duration": 21.7
+            },
+            {
+              "lap": 56,
+              "duration": 21.9
+            }
+          ]
+        },
+        {
+          "driver_number": 41,
+          "code": "LIN",
+          "name": "Lindblad",
+          "team": "Racing Bulls",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 20,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 21,
+              "lap_end": 69,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 20,
+              "duration": 21.3
+            }
+          ]
+        },
+        {
+          "driver_number": 1,
+          "code": "NOR",
+          "name": "Norris",
+          "team": "McLaren",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 17,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 18,
+              "lap_end": 39,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "UNKNOWN",
+              "lap_start": 40,
+              "lap_end": 56,
+              "fresh": false
+            },
+            {
+              "stint": 4,
+              "compound": "SOFT",
+              "lap_start": 57,
+              "lap_end": 70,
+              "fresh": false
+            }
+          ],
+          "pits": [
+            {
+              "lap": 17,
+              "duration": 22.1
+            },
+            {
+              "lap": 56,
+              "duration": 21.8
+            }
+          ]
+        },
+        {
+          "driver_number": 31,
+          "code": "OCO",
+          "name": "Ocon",
+          "team": "Haas F1 Team",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 17,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 18,
+              "lap_end": 35,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "HARD",
+              "lap_start": 36,
+              "lap_end": 68,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 17,
+              "duration": 22.5
+            },
+            {
+              "lap": 35,
+              "duration": 22.3
+            }
+          ]
+        },
+        {
+          "driver_number": 11,
+          "code": "PER",
+          "name": "Perez",
+          "team": "Cadillac",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 1,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "MEDIUM",
+              "lap_start": 2,
+              "lap_end": 46,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "SOFT",
+              "lap_start": 47,
+              "lap_end": 48,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 21,
+              "duration": 23.2
+            },
+            {
+              "lap": 46,
+              "duration": 24.2
+            }
+          ]
+        },
+        {
+          "driver_number": 81,
+          "code": "PIA",
+          "name": "Piastri",
+          "team": "McLaren",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 16,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 17,
+              "lap_end": 33,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "HARD",
+              "lap_start": 34,
+              "lap_end": 55,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 16,
+              "duration": 21.7
+            },
+            {
+              "lap": 33,
+              "duration": 21.7
+            }
+          ]
+        },
+        {
+          "driver_number": 63,
+          "code": "RUS",
+          "name": "Russell",
+          "team": "Mercedes",
+          "stints": [
+            {
+              "stint": 1,
+              "compound": "MEDIUM",
+              "lap_start": 1,
+              "lap_end": 27,
+              "fresh": true
+            },
+            {
+              "stint": 2,
+              "compound": "HARD",
+              "lap_start": 28,
+              "lap_end": 54,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "HARD",
+              "lap_start": 55,
+              "lap_end": 70,
+              "fresh": true
+            }
+          ],
+          "pits": [
+            {
+              "lap": 27,
+              "duration": 22.2
+            },
+            {
+              "lap": 54,
+              "duration": 22.0
             }
           ]
         },
@@ -8103,21 +9562,43 @@
               "stint": 1,
               "compound": "SOFT",
               "lap_start": 1,
-              "lap_end": 31,
+              "lap_end": 18,
               "fresh": true
             },
             {
               "stint": 2,
               "compound": "MEDIUM",
-              "lap_start": 32,
-              "lap_end": 61,
+              "lap_start": 19,
+              "lap_end": 43,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "SOFT",
+              "lap_start": 44,
+              "lap_end": 54,
+              "fresh": false
+            },
+            {
+              "stint": 4,
+              "compound": "SOFT",
+              "lap_start": 55,
+              "lap_end": 68,
               "fresh": true
             }
           ],
           "pits": [
             {
-              "lap": 31,
-              "duration": 24.2
+              "lap": 18,
+              "duration": 21.6
+            },
+            {
+              "lap": 43,
+              "duration": 28.6
+            },
+            {
+              "lap": 54,
+              "duration": 22.0
             }
           ]
         },
@@ -8131,21 +9612,32 @@
               "stint": 1,
               "compound": "SOFT",
               "lap_start": 1,
-              "lap_end": 1,
+              "lap_end": 8,
               "fresh": true
             },
             {
               "stint": 2,
               "compound": "MEDIUM",
-              "lap_start": 2,
-              "lap_end": 36,
+              "lap_start": 9,
+              "lap_end": 37,
+              "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "SOFT",
+              "lap_start": 38,
+              "lap_end": 69,
               "fresh": true
             }
           ],
           "pits": [
             {
-              "lap": 26,
-              "duration": 23.6
+              "lap": 8,
+              "duration": 21.7
+            },
+            {
+              "lap": 37,
+              "duration": 24.2
             }
           ]
         },
@@ -8157,23 +9649,34 @@
           "stints": [
             {
               "stint": 1,
-              "compound": "SOFT",
+              "compound": "MEDIUM",
               "lap_start": 1,
-              "lap_end": 32,
+              "lap_end": 14,
               "fresh": true
             },
             {
               "stint": 2,
-              "compound": "MEDIUM",
-              "lap_start": 33,
-              "lap_end": 62,
+              "compound": "HARD",
+              "lap_start": 15,
+              "lap_end": 41,
               "fresh": true
+            },
+            {
+              "stint": 3,
+              "compound": "SOFT",
+              "lap_start": 42,
+              "lap_end": 70,
+              "fresh": false
             }
           ],
           "pits": [
             {
-              "lap": 32,
-              "duration": 23.6
+              "lap": 14,
+              "duration": 21.6
+            },
+            {
+              "lap": 41,
+              "duration": 22.0
             }
           ]
         }
